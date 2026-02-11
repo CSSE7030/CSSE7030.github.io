@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-02-10">
+<meta name="dcterms.date" content="2026-02-11">
 
-<title>Data Types and Control Structure(If, While loop)</title>
+<title>Data Types and Control Structure (If Statement, While Loop)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -2454,7 +2454,7 @@ display: none;
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Data Types and Control Structure(If, While loop)</h1>
+<h1 class="title">Data Types and Control Structure (If Statement, While Loop)</h1>
 <p class="subtitle lead">Introduction to Programming (CSSE7030)</p>
 </div>
 
@@ -2466,7 +2466,7 @@ display: none;
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 10, 2026</p>
+      <p class="date">February 11, 2026</p>
     </div>
   </div>
   
@@ -2499,10 +2499,13 @@ Whole numbers that can be positive, negative, or zero. They are the solid buildi
 </dl>
 <div class="idle-terminal console"><div class="idle-line code"><div class="idle-gutter prompt">&gt;&gt;&gt;</div><div class="idle-content"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">543210</span></span></div></div>
 <div class="idle-line code"><div class="idle-gutter prompt">&gt;&gt;&gt;</div><div class="idle-content"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="op">-</span><span class="dv">987</span></span></div></div>
+<div class="idle-line code"><div class="idle-gutter prompt">&gt;&gt;&gt;</div><div class="idle-content"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="dv">0</span></span></div></div>
 <div class="idle-line code"><div class="idle-gutter prompt">&gt;&gt;&gt;</div><div class="idle-content"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>a, <span class="bu">type</span>(a)</span></div></div>
 <div class="idle-line output"><div class="idle-gutter"> </div><div class="idle-content"><span class="idle-output">(543210, &lt;class &#39;int&#39;&gt;)</span></div></div>
 <div class="idle-line code"><div class="idle-gutter prompt">&gt;&gt;&gt;</div><div class="idle-content"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>b, <span class="bu">type</span>(b)</span></div></div>
-<div class="idle-line output"><div class="idle-gutter"> </div><div class="idle-content"><span class="idle-output">(-987, &lt;class &#39;int&#39;&gt;)</span></div></div></div>
+<div class="idle-line output"><div class="idle-gutter"> </div><div class="idle-content"><span class="idle-output">(-987, &lt;class &#39;int&#39;&gt;)</span></div></div>
+<div class="idle-line code"><div class="idle-gutter prompt">&gt;&gt;&gt;</div><div class="idle-content"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>c, <span class="bu">type</span>(c)</span></div></div>
+<div class="idle-line output"><div class="idle-gutter"> </div><div class="idle-content"><span class="idle-output">(0, &lt;class &#39;int&#39;&gt;)</span></div></div></div>
 <dl>
 <dt>Numerical Values-Floats</dt>
 <dd>
@@ -2511,10 +2514,13 @@ Numbers that contain a decimal point. Floats help us represent measurements, fra
 </dl>
 <div class="idle-terminal console"><div class="idle-line code"><div class="idle-gutter prompt">&gt;&gt;&gt;</div><div class="idle-content"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="fl">3.14</span></span></div></div>
 <div class="idle-line code"><div class="idle-gutter prompt">&gt;&gt;&gt;</div><div class="idle-content"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">4</span><span class="op">/</span><span class="dv">2</span></span></div></div>
+<div class="idle-line code"><div class="idle-gutter prompt">&gt;&gt;&gt;</div><div class="idle-content"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="fl">0.0</span></span></div></div>
 <div class="idle-line code"><div class="idle-gutter prompt">&gt;&gt;&gt;</div><div class="idle-content"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>a, <span class="bu">type</span>(a)</span></div></div>
 <div class="idle-line output"><div class="idle-gutter"> </div><div class="idle-content"><span class="idle-output">(3.14, &lt;class &#39;float&#39;&gt;)</span></div></div>
 <div class="idle-line code"><div class="idle-gutter prompt">&gt;&gt;&gt;</div><div class="idle-content"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>b, <span class="bu">type</span>(b)</span></div></div>
-<div class="idle-line output"><div class="idle-gutter"> </div><div class="idle-content"><span class="idle-output">(2.0, &lt;class &#39;float&#39;&gt;)</span></div></div></div>
+<div class="idle-line output"><div class="idle-gutter"> </div><div class="idle-content"><span class="idle-output">(2.0, &lt;class &#39;float&#39;&gt;)</span></div></div>
+<div class="idle-line code"><div class="idle-gutter prompt">&gt;&gt;&gt;</div><div class="idle-content"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>c, <span class="bu">type</span>(c)</span></div></div>
+<div class="idle-line output"><div class="idle-gutter"> </div><div class="idle-content"><span class="idle-output">(0.0, &lt;class &#39;float&#39;&gt;)</span></div></div></div>
 <dl>
 <dt>Strings</dt>
 <dd>
@@ -2550,12 +2556,12 @@ Sequences of characters enclosed in quotes.
 <h3 class="anchored" data-anchor-id="task">Task 1</h3>
 <p>Open your REPL and execute the following:</p>
 <ul>
-<li>Convert an float (e.g. 4.6) to an integer.</li>
-<li>Convert an integer (e.g., 250) to a float.</li>
-<li>convert a string like <code>&#39;three&#39;</code> to integer.</li>
+<li>Convert a float (e.g. 4.6) to an integer.</li>
+<li>Convert an integer (e.g. 250) to a float.</li>
+<li>Convert a string like <code>&#39;three&#39;</code> to integer.</li>
 </ul>
 <div id="exr-" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1</strong></span> What output do you get when converting <code>&#39;three&#39;</code> to an integer?</p>
+<p><span class="theorem-title"><strong>Exercise 1</strong></span> What output do you get when converting <code>&#39;three&#39;</code> to an integer? Why do you think you get this result?</p>
 </div>
 <div class="answer answer-scheduled" data-release-date="2026-03-06" style="display: none;">
 <div class="callout callout-style-simple callout-none no-icon callout-titled">
@@ -2598,12 +2604,12 @@ Caution
 </div>
 </section>
 </section>
-<section id="control-structure" class="level2">
-<h2 class="anchored" data-anchor-id="control-structure">Control Structure</h2>
-<p>This week we learned that blocks of the code can be <em>selected</em> or <em>skipped</em> using an <em>if</em> satement, and pieces of code can be <em>repeated</em> or <em>iterated</em> using <em>for</em> or <em>while</em> loops. <em>While</em> loops are are especially useful when we do not know in advance how many times an action needs to be repeated.</p>
+<section id="control-structures" class="level2">
+<h2 class="anchored" data-anchor-id="control-structures">Control Structures</h2>
+<p>This week we learned that blocks of code can be <em>selected</em> or <em>skipped</em> using an <em>if</em> satement, and <em>repeated</em> or <em>iterated</em> using <em>for</em> or <em>while</em> loops. <em>While</em> loops are especially useful when we do not know in advance how many times an action needs to be repeated.</p>
 <section id="task-leap-years" class="level3">
 <h3 class="anchored" data-anchor-id="task-leap-years">Task 2 : Leap Years</h3>
-<p>A leap year occurs when the year is a multiple of four, unless the year is a multiple of 100. However, if the year is a multiple of 400, then it is a leap year. For instance, 2016 and 2000 are leap years, but 1900 is not. Create a new Python source file, and write a program called <code>leap year.py</code> which asks the user to enter an integer (representing a year), and prints <code>True</code> if the year is a leap year, and <code>False</code> if not.</p>
+<p>A leap year occurs when the year is a multiple of four, unless the year is a multiple of 100. However, if the year is a multiple of 400, then it is a leap year. For instance, 2016 and 2000 are leap years, but 1900 is not. Create a new Python source file, and write a program called <code>leap_year.py</code> which asks the user to enter an integer (representing a year), and prints <code>True</code> if the year is a leap year, and <code>False</code> if not.</p>
 <p>Example Output</p>
 <div class="idle-terminal console"><div class="idle-line code"><div class="idle-gutter prompt">&gt;&gt;&gt;</div><div class="idle-content"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">=============</span> RESTART H:<span class="op">/</span>CSSE7030<span class="op">/</span>PythonCode<span class="op">/</span>Week2<span class="op">/</span>leap_year.py <span class="op">=============</span></span></div></div>
 <div class="idle-line output"><div class="idle-gutter"> </div><div class="idle-content"><span class="idle-output">Please enter a year: </span><span class="idle-user-input">2018</span></div></div>
@@ -2636,11 +2642,11 @@ Caution
 <div class="idle-filename-header">
 <div class="code-with-filename-file"><pre><svg width="18" height="18" viewbox="0 0 110 110" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
  <defs>
-  <lineargradient id="grad-698a8986-e092" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
-  <lineargradient id="grad-698a8986-37da" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e0b-158b5" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e0b-17639" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
  </defs>
- <path style="fill:url(#grad-698a8986-e092)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
- <path style="fill:url(#grad-698a8986-37da)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e0b-158b5)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e0b-17639)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
 </svg>
 <strong>leap_year.py</strong></pre></div>
 <button class="idle-download-btn" data-filename="leap_year.py" data-code="year%20%3D%20int%28input%28%22Please%20enter%20a%20year%3A%20%22%29%29%20%23%20Ask%20the%20user%20to%20enter%20a%20year%0D%0Aif%20year%20%25%20400%20%3D%3D%200%3A%20%23%20If%20the%20year%20is%20a%20multiple%20of%20400%0D%0A%20%20%20%20print%28True%29%0D%0Aelif%20year%20%25%20100%20%3D%3D%200%3A%20%23%20If%20the%20year%20is%20a%20multiple%20of%20100%0D%0A%20%20%20%20print%28False%29%0D%0Aelif%20year%20%25%204%20%3D%3D%200%3A%20%23%20If%20the%20year%20is%20a%20multiple%20of%204%0D%0A%20%20%20%20print%28True%29%0D%0Aelse%3A%20%23%20Otherwise%20it%20is%20not%20a%20leap%20year%0D%0A%20%20%20%20print%28False%29" title="Download leap_year.py"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2791,11 +2797,11 @@ Caution
 <div class="idle-filename-header">
 <div class="code-with-filename-file"><pre><svg width="18" height="18" viewbox="0 0 110 110" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
  <defs>
-  <lineargradient id="grad-698a8986-c544" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
-  <lineargradient id="grad-698a8986-3662" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e0b-b087" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e0b-bfb1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
  </defs>
- <path style="fill:url(#grad-698a8986-c544)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
- <path style="fill:url(#grad-698a8986-3662)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e0b-b087)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e0b-bfb1)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
 </svg>
 <strong>powers_of_two.py</strong></pre></div>
 <button class="idle-download-btn" data-filename="powers_of_two.py" data-code="power%20%3D%20int%28input%28%22Enter%20the%20power%3A%20%22%29%29%20%0D%0Ai%20%3D%200%0D%0Awhile%20i%20%3C%3D%20power%3A%0D%0A%20%20%20%20print%28i%2C%202%20%2A%2A%20i%29%0D%0A%20%20%20%20i%20%2B%3D%201" title="Download powers_of_two.py"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2893,7 +2899,7 @@ Caution
 </section>
 <section id="task-guess-a-number" class="level3">
 <h3 class="anchored" data-anchor-id="task-guess-a-number">Task 4 : Guess a Number</h3>
-<p>Write a program that asks a user to guess a number between 1 and 100. The program should generate a random number and repeatedly ask the user to input a number until they guess the correct number. When they guess the correct number, the program should output <code>Congratulations!</code> and then terminate. The user may give up by entering -1 and the program will output the number the user was trying to guess and then terminate. The output of the program, if run in IDLE, should look like:</p>
+<p>Write a program that asks a user to guess a number between 1 and 100. The program should generate a random number and repeatedly ask the user to input a number until they guess the correct number. When they guess the correct number, the program should output <code>Congratulations!</code> and then terminate. The user may give up by entering -1 and the program will output the number the user was trying to guess and then terminate. The output of the program, if run in IDLE, should look similar to the following (though each run of the program should look different, due to the random number generation):</p>
 <div class="idle-terminal console"><div class="idle-line code"><div class="idle-gutter prompt">&gt;&gt;&gt;</div><div class="idle-content"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a> <span class="op">=============</span> RESTART H:<span class="op">/</span>CSSE7030<span class="op">/</span>PythonCode<span class="op">/</span>Week2<span class="op">/</span>guess_a_number.py <span class="op">=============</span></span></div></div>
 <div class="idle-line output"><div class="idle-gutter"> </div><div class="idle-content"><span class="idle-output">Try to guess the number I am thinking of between 1 and 100.</span></div></div>
 <div class="idle-line output"><div class="idle-gutter"> </div><div class="idle-content"><span class="idle-output">Please enter your guess: </span><span class="idle-user-input">50</span></div></div>
@@ -2925,7 +2931,7 @@ Tip
 <div class="idle-line code"><div class="idle-gutter prompt">&gt;&gt;&gt;</div><div class="idle-content"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> random.randint(<span class="dv">1</span>, <span class="dv">100</span>)</span></div></div>
 <div class="idle-line code"><div class="idle-gutter prompt">&gt;&gt;&gt;</div><div class="idle-content"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x</span></div></div>
 <div class="idle-line output"><div class="idle-gutter"> </div><div class="idle-content"><span class="idle-output">22</span></div></div></div>
-<p>You can also type »&gt; <code>help(random.randint)</code> at the prompt to get more information. Type <code>help(random)</code> or <code>dir(random)</code> to find more functions in the random module, or look at the online documentation.</p>
+<p>You can also type &gt;&gt;&gt; <code>help(random.randint)</code> at the prompt to get more information. Type <code>help(random)</code> or <code>dir(random)</code> to find more functions in the random module, or look at the online documentation.</p>
 </div>
 </div>
 <div class="answer answer-scheduled" data-release-date="2026-03-06" style="display: none;">
@@ -2947,11 +2953,11 @@ Tip
 <div class="idle-filename-header">
 <div class="code-with-filename-file"><pre><svg width="18" height="18" viewbox="0 0 110 110" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
  <defs>
-  <lineargradient id="grad-698a8986-caff" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
-  <lineargradient id="grad-698a8986-153e3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e0b-14d0c" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e0b-8e65" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
  </defs>
- <path style="fill:url(#grad-698a8986-caff)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
- <path style="fill:url(#grad-698a8986-153e3)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e0b-14d0c)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e0b-8e65)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
 </svg>
 <strong>guess_a_number.py</strong></pre></div>
 <button class="idle-download-btn" data-filename="guess_a_number.py" data-code="%23%20import%20the%20random%20module%20to%20allow%20us%20to%20generate%20random%20numbers%0D%0Aimport%20random%20%0D%0A%0D%0A%23%20Generate%20a%20random%20number%20between%201%20and%20100%0D%0Anumber_to_guess%20%3D%20random.randint%281%2C%20100%29%20%0D%0Aprint%28%22Try%20to%20guess%20the%20number%20I%20am%20thinking%20of%20between%201%20and%20100.%22%29%0D%0A%0D%0A%23%20repeatedly%20ask%20the%20user%20to%20guess%20the%20number%0D%0Awhile%20True%3A%0D%0A%20%20%20%20%23%20Ask%20the%20user%20to%20enter%20a%20guess%0D%0A%20%20%20%20guess%20%3D%20int%28input%28%22Please%20enter%20your%20guess%3A%20%22%29%29%0D%0A%20%20%20%20if%20guess%20%3D%3D%20-1%3A%0D%0A%20%20%20%20%20%20%20%20print%28%22The%20number%20you%20were%20trying%20to%20guess%20was%22%2C%20number_to_guess%29%0D%0A%20%20%20%20%20%20%20%20break%0D%0A%20%20%20%20elif%20guess%20%3D%3D%20number_to_guess%3A%0D%0A%20%20%20%20%20%20%20%20print%28%22Congratulations%21%22%29%0D%0A%20%20%20%20%20%20%20%20break%0D%0A%20%20%20%20else%3A%0D%0A%20%20%20%20%20%20%20%20print%28%22Sorry%20that%20is%20not%20correct.%22%29" title="Download guess_a_number.py"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

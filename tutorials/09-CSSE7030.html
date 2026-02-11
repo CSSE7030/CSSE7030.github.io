@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-02-10">
+<meta name="dcterms.date" content="2026-02-11">
 
 <title>Inheritance and Composition</title>
 <style>
@@ -2466,7 +2466,7 @@ display: none;
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 10, 2026</p>
+      <p class="date">February 11, 2026</p>
     </div>
   </div>
   
@@ -2483,20 +2483,20 @@ display: none;
 <!-- This should be the basics only -->
 <section id="extending-students" class="level2">
 <h2 class="anchored" data-anchor-id="extending-students">Extending Students</h2>
-<p>In last week’s tutorial, we wrote a <code>Student</code> class which aimed to store, retrieve, and perform computations on, information about a university student. The following contains a much simpler model of a student which we will extend to allow for students who live in college. In addition to paying tuition fees, college students must also pay an extra fee to live on campus.</p>
+<p>In last week’s tutorial we wrote a <code>Student</code> class which aimed to store, retrieve, and perform computations on information about a university student. The following contains a much simpler model of a student which we will extend to allow for students who live in college. In addition to paying tuition fees, college students must also pay an extra fee to live on campus.</p>
 <div class="idle-script-wrapper">
 <div>
 <div class="idle-filename-header">
 <div class="code-with-filename-file"><pre><svg width="18" height="18" viewbox="0 0 110 110" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
  <defs>
-  <lineargradient id="grad-698a89b5-f99d" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
-  <lineargradient id="grad-698a89b5-11fb6" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e3d-14715" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e3d-94e1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
  </defs>
- <path style="fill:url(#grad-698a89b5-f99d)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
- <path style="fill:url(#grad-698a89b5-11fb6)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e3d-14715)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e3d-94e1)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
 </svg>
 <strong>student.py</strong></pre></div>
-<button class="idle-download-btn" data-filename="student.py" data-code="class%20Student%28%29%3A%0D%0A%20%20%20%20%22%22%22Simple%20model%20of%20a%20university%20student%22%22%22%0D%0A%20%20%20%20def%20__init__%28self%2C%20name%3A%20str%2C%20student_num%3A%20int%29%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20name%20%28str%29%3A%20The%20student%27s%20name%20in%20%22first_name%20last_name%22%20format.%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20student_num%20%28str%29%3A%20The%20student%27s%20unique%20student%20id%20number.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20self._name%20%3D%20name%0D%0A%20%20%20%20%20%20%20%20self._student_num%20%3D%20student_num%0D%0A%20%20%20%20%20%20%20%20self._enrolments%20%3D%20%5B%5D%20%20%23%20list%20of%20tuples%20%28course%20code%2C%20tuition%20fee%29%0D%0A%0D%0A%20%20%20%20def%20get_name%28self%29%20-%3E%20str%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22Return%20the%20name%20of%20the%20student%20%22first_name%20last_name%22.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20return%20self._name%0D%0A%0D%0A%20%20%20%20def%20get_student_num%28self%29%20-%3E%20int%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22Return%20the%20students%20student%20number.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20return%20self._student_num%0D%0A%0D%0A%20%20%20%20def%20enrol%28self%2C%20course_code%3A%20str%2C%20fee%3A%20int%29%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22Enrol%20in%20a%20course%2C%20at%20a%20given%20fee.%0D%0A%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20course_code%20%28str%29%3A%20Unique%20course%20code%20in%20which%20Student%20is%20enrolling.%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20fee%20%28int%29%3A%20The%20fee%20for%20taking%20this%20course%20%28in%20whole%20dollar%20amount%29.%0D%0A%0D%0A%20%20%20%20%20%20%20%20Preconditions%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20fee%20%3E%200%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20self._enrolments.append%28%28course_code%2C%20fee%29%29%0D%0A%0D%0A%20%20%20%20def%20get_enrolments%28self%29%20-%3E%20list%5Btuple%5Bstr%2C%20int%5D%5D%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22Return%20a%20list%20of%20courses%20the%20student%20is%20enrolled%20in.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20return%20self._enrolments%0D%0A%0D%0A%20%20%20%20def%20calculate_fees%28self%29%20-%3E%20int%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22Return%20the%20total%20tuition%20fee%20for%20this%20student..%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20total%20%3D%200%0D%0A%20%20%20%20%20%20%20%20for%20course_code%2C%20fee%20in%20self._enrolments%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20total%20%2B%3D%20fee%0D%0A%20%20%20%20%20%20%20%20return%20total" title="Download student.py"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<button class="idle-download-btn" data-filename="student.py" data-code="class%20Student%3A%0D%0A%20%20%20%20%22%22%22Simple%20model%20of%20a%20university%20student%22%22%22%0D%0A%0D%0A%20%20%20%20def%20__init__%28self%2C%20name%3A%20str%2C%20student_num%3A%20int%29%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20name%20%28str%29%3A%20The%20student%27s%20name%20in%20%22first_name%20last_name%22%20format.%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20student_num%20%28str%29%3A%20The%20student%27s%20unique%20student%20id%20number.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20self._name%20%3D%20name%0D%0A%20%20%20%20%20%20%20%20self._student_num%20%3D%20student_num%0D%0A%20%20%20%20%20%20%20%20self._enrolments%20%3D%20%5B%5D%20%20%23%20list%20of%20tuples%20%28course%20code%2C%20tuition%20fee%29%0D%0A%0D%0A%20%20%20%20def%20get_name%28self%29%20-%3E%20str%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22%20Returns%20the%20name%20of%20the%20student%20%22first_name%20last_name%22.%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20return%20self._name%0D%0A%0D%0A%20%20%20%20def%20get_student_num%28self%29%20-%3E%20int%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22%20Returns%20the%20student%27s%20student%20number.%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20return%20self._student_num%0D%0A%0D%0A%20%20%20%20def%20enrol%28self%2C%20course_code%3A%20str%2C%20fee%3A%20int%29%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22%20Enrol%20in%20a%20course%2C%20at%20a%20given%20fee.%0D%0A%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20course_code%20%28str%29%3A%20Unique%20course%20code%20in%20which%20Student%20is%20enrolling.%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20fee%20%28int%29%3A%20The%20fee%20for%20taking%20this%20course%20%28in%20whole%20dollar%20amount%29.%0D%0A%0D%0A%20%20%20%20%20%20%20%20Preconditions%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20fee%20%3E%200%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20self._enrolments.append%28%28course_code%2C%20fee%29%29%0D%0A%0D%0A%20%20%20%20def%20get_enrolments%28self%29%20-%3E%20list%5Btuple%5Bstr%2C%20int%5D%5D%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22%20Returns%20a%20list%20of%20courses%20the%20student%20is%20enrolled%20in.%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20return%20self._enrolments%0D%0A%0D%0A%20%20%20%20def%20calculate_fees%28self%29%20-%3E%20int%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22%20Returns%20the%20total%20tuition%20fee%20for%20this%20student.%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20total%20%3D%200%0D%0A%20%20%20%20%20%20%20%20for%20course_code%2C%20fee%20in%20self._enrolments%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20total%20%2B%3D%20fee%0D%0A%20%20%20%20%20%20%20%20return%20total" title="Download student.py"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
   <polyline points="7 10 12 15 17 10"></polyline>
   <line x1="12" y1="15" x2="12" y2="3"></line>
@@ -2504,52 +2504,49 @@ display: none;
 </button>
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">class</span> Student():</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">class</span> Student:</span>
 <span id="cb1-2"><a href="#cb1-2"></a>    <span class="co">&quot;&quot;&quot;Simple model of a university student&quot;&quot;&quot;</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name: <span class="bu">str</span>, student_num: <span class="bu">int</span>):</span>
-<span id="cb1-4"><a href="#cb1-4"></a>        <span class="co">&quot;&quot;&quot;</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="co">        Parameters:</span></span>
-<span id="cb1-6"><a href="#cb1-6"></a><span class="co">            name (str): The student&#39;s name in &quot;first_name last_name&quot; format.</span></span>
-<span id="cb1-7"><a href="#cb1-7"></a><span class="co">            student_num (str): The student&#39;s unique student id number.</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a><span class="co">        &quot;&quot;&quot;</span></span>
-<span id="cb1-9"><a href="#cb1-9"></a>        <span class="va">self</span>._name <span class="op">=</span> name</span>
-<span id="cb1-10"><a href="#cb1-10"></a>        <span class="va">self</span>._student_num <span class="op">=</span> student_num</span>
-<span id="cb1-11"><a href="#cb1-11"></a>        <span class="va">self</span>._enrolments <span class="op">=</span> []  <span class="co"># list of tuples (course code, tuition fee)</span></span>
-<span id="cb1-12"><a href="#cb1-12"></a></span>
-<span id="cb1-13"><a href="#cb1-13"></a>    <span class="kw">def</span> get_name(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
-<span id="cb1-14"><a href="#cb1-14"></a>        <span class="co">&quot;&quot;&quot;Return the name of the student &quot;first_name last_name&quot;.</span></span>
-<span id="cb1-15"><a href="#cb1-15"></a><span class="co">        &quot;&quot;&quot;</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name: <span class="bu">str</span>, student_num: <span class="bu">int</span>):</span>
+<span id="cb1-5"><a href="#cb1-5"></a>        <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="co">        Parameters:</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="co">            name (str): The student&#39;s name in &quot;first_name last_name&quot; format.</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="co">            student_num (str): The student&#39;s unique student id number.</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="co">        &quot;&quot;&quot;</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a>        <span class="va">self</span>._name <span class="op">=</span> name</span>
+<span id="cb1-11"><a href="#cb1-11"></a>        <span class="va">self</span>._student_num <span class="op">=</span> student_num</span>
+<span id="cb1-12"><a href="#cb1-12"></a>        <span class="va">self</span>._enrolments <span class="op">=</span> []  <span class="co"># list of tuples (course code, tuition fee)</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a></span>
+<span id="cb1-14"><a href="#cb1-14"></a>    <span class="kw">def</span> get_name(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
+<span id="cb1-15"><a href="#cb1-15"></a>        <span class="co">&quot;&quot;&quot; Returns the name of the student &quot;first_name last_name&quot;. &quot;&quot;&quot;</span></span>
 <span id="cb1-16"><a href="#cb1-16"></a>        <span class="cf">return</span> <span class="va">self</span>._name</span>
 <span id="cb1-17"><a href="#cb1-17"></a></span>
 <span id="cb1-18"><a href="#cb1-18"></a>    <span class="kw">def</span> get_student_num(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
-<span id="cb1-19"><a href="#cb1-19"></a>        <span class="co">&quot;&quot;&quot;Return the students student number.</span></span>
-<span id="cb1-20"><a href="#cb1-20"></a><span class="co">        &quot;&quot;&quot;</span></span>
-<span id="cb1-21"><a href="#cb1-21"></a>        <span class="cf">return</span> <span class="va">self</span>._student_num</span>
-<span id="cb1-22"><a href="#cb1-22"></a></span>
-<span id="cb1-23"><a href="#cb1-23"></a>    <span class="kw">def</span> enrol(<span class="va">self</span>, course_code: <span class="bu">str</span>, fee: <span class="bu">int</span>):</span>
-<span id="cb1-24"><a href="#cb1-24"></a>        <span class="co">&quot;&quot;&quot;Enrol in a course, at a given fee.</span></span>
-<span id="cb1-25"><a href="#cb1-25"></a></span>
-<span id="cb1-26"><a href="#cb1-26"></a><span class="co">        Parameters:</span></span>
-<span id="cb1-27"><a href="#cb1-27"></a><span class="co">            course_code (str): Unique course code in which Student is enrolling.</span></span>
-<span id="cb1-28"><a href="#cb1-28"></a><span class="co">            fee (int): The fee for taking this course (in whole dollar amount).</span></span>
-<span id="cb1-29"><a href="#cb1-29"></a></span>
-<span id="cb1-30"><a href="#cb1-30"></a><span class="co">        Preconditions:</span></span>
-<span id="cb1-31"><a href="#cb1-31"></a><span class="co">            fee &gt; 0</span></span>
-<span id="cb1-32"><a href="#cb1-32"></a><span class="co">        &quot;&quot;&quot;</span></span>
-<span id="cb1-33"><a href="#cb1-33"></a>        <span class="va">self</span>._enrolments.append((course_code, fee))</span>
-<span id="cb1-34"><a href="#cb1-34"></a></span>
-<span id="cb1-35"><a href="#cb1-35"></a>    <span class="kw">def</span> get_enrolments(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">list</span>[<span class="bu">tuple</span>[<span class="bu">str</span>, <span class="bu">int</span>]]:</span>
-<span id="cb1-36"><a href="#cb1-36"></a>        <span class="co">&quot;&quot;&quot;Return a list of courses the student is enrolled in.</span></span>
-<span id="cb1-37"><a href="#cb1-37"></a><span class="co">        &quot;&quot;&quot;</span></span>
-<span id="cb1-38"><a href="#cb1-38"></a>        <span class="cf">return</span> <span class="va">self</span>._enrolments</span>
-<span id="cb1-39"><a href="#cb1-39"></a></span>
-<span id="cb1-40"><a href="#cb1-40"></a>    <span class="kw">def</span> calculate_fees(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
-<span id="cb1-41"><a href="#cb1-41"></a>        <span class="co">&quot;&quot;&quot;Return the total tuition fee for this student..</span></span>
-<span id="cb1-42"><a href="#cb1-42"></a><span class="co">        &quot;&quot;&quot;</span></span>
-<span id="cb1-43"><a href="#cb1-43"></a>        total <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb1-44"><a href="#cb1-44"></a>        <span class="cf">for</span> course_code, fee <span class="kw">in</span> <span class="va">self</span>._enrolments:</span>
-<span id="cb1-45"><a href="#cb1-45"></a>            total <span class="op">+=</span> fee</span>
-<span id="cb1-46"><a href="#cb1-46"></a>        <span class="cf">return</span> total</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-19"><a href="#cb1-19"></a>        <span class="co">&quot;&quot;&quot; Returns the student&#39;s student number. &quot;&quot;&quot;</span></span>
+<span id="cb1-20"><a href="#cb1-20"></a>        <span class="cf">return</span> <span class="va">self</span>._student_num</span>
+<span id="cb1-21"><a href="#cb1-21"></a></span>
+<span id="cb1-22"><a href="#cb1-22"></a>    <span class="kw">def</span> enrol(<span class="va">self</span>, course_code: <span class="bu">str</span>, fee: <span class="bu">int</span>):</span>
+<span id="cb1-23"><a href="#cb1-23"></a>        <span class="co">&quot;&quot;&quot; Enrol in a course, at a given fee.</span></span>
+<span id="cb1-24"><a href="#cb1-24"></a></span>
+<span id="cb1-25"><a href="#cb1-25"></a><span class="co">        Parameters:</span></span>
+<span id="cb1-26"><a href="#cb1-26"></a><span class="co">            course_code (str): Unique course code in which Student is enrolling.</span></span>
+<span id="cb1-27"><a href="#cb1-27"></a><span class="co">            fee (int): The fee for taking this course (in whole dollar amount).</span></span>
+<span id="cb1-28"><a href="#cb1-28"></a></span>
+<span id="cb1-29"><a href="#cb1-29"></a><span class="co">        Preconditions:</span></span>
+<span id="cb1-30"><a href="#cb1-30"></a><span class="co">            fee &gt; 0</span></span>
+<span id="cb1-31"><a href="#cb1-31"></a><span class="co">        &quot;&quot;&quot;</span></span>
+<span id="cb1-32"><a href="#cb1-32"></a>        <span class="va">self</span>._enrolments.append((course_code, fee))</span>
+<span id="cb1-33"><a href="#cb1-33"></a></span>
+<span id="cb1-34"><a href="#cb1-34"></a>    <span class="kw">def</span> get_enrolments(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">list</span>[<span class="bu">tuple</span>[<span class="bu">str</span>, <span class="bu">int</span>]]:</span>
+<span id="cb1-35"><a href="#cb1-35"></a>        <span class="co">&quot;&quot;&quot; Returns a list of courses the student is enrolled in. &quot;&quot;&quot;</span></span>
+<span id="cb1-36"><a href="#cb1-36"></a>        <span class="cf">return</span> <span class="va">self</span>._enrolments</span>
+<span id="cb1-37"><a href="#cb1-37"></a></span>
+<span id="cb1-38"><a href="#cb1-38"></a>    <span class="kw">def</span> calculate_fees(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
+<span id="cb1-39"><a href="#cb1-39"></a>        <span class="co">&quot;&quot;&quot; Returns the total tuition fee for this student. &quot;&quot;&quot;</span></span>
+<span id="cb1-40"><a href="#cb1-40"></a>        total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb1-41"><a href="#cb1-41"></a>        <span class="cf">for</span> course_code, fee <span class="kw">in</span> <span class="va">self</span>._enrolments:</span>
+<span id="cb1-42"><a href="#cb1-42"></a>            total <span class="op">+=</span> fee</span>
+<span id="cb1-43"><a href="#cb1-43"></a>        <span class="cf">return</span> total</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <script>
 (function() {
   try {
@@ -2626,7 +2623,7 @@ display: none;
 </div>
 <section id="task" class="level3">
 <h3 class="anchored" data-anchor-id="task">Task 1</h3>
-<p>Write a class <code>CollegeStudent</code> which inherits from <code>Student</code>, and implements the following functionality:</p>
+<p>Write a class <code>CollegeStudent</code> which <em>inherits</em> from <code>Student</code>, and implements the following functionality:</p>
 <ul class="task-list">
 <li><p><label><input type="checkbox">The constructor should take an extra two arguments, the name of the student’s college (as a string), and their college fee (as an integer).</label></p></li>
 <li><p><label><input type="checkbox">Add a method <code>get_college</code> which returns the name of the student’s college.</label></p></li>
@@ -2660,14 +2657,14 @@ display: none;
 <div class="idle-filename-header">
 <div class="code-with-filename-file"><pre><svg width="18" height="18" viewbox="0 0 110 110" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
  <defs>
-  <lineargradient id="grad-698a89b5-890b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
-  <lineargradient id="grad-698a89b5-9424" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e3d-73d2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e3d-12b7f" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
  </defs>
- <path style="fill:url(#grad-698a89b5-890b)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
- <path style="fill:url(#grad-698a89b5-9424)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e3d-73d2)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e3d-12b7f)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
 </svg>
 <strong>students.py</strong></pre></div>
-<button class="idle-download-btn" data-filename="students.py" data-code="class%20Student%28%29%3A%0D%0A%20%20%20%20%22%22%22Simple%20model%20of%20a%20university%20student%22%22%22%0D%0A%20%20%20%20def%20__init__%28self%2C%20name%3A%20str%2C%20student_num%3A%20int%29%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20name%20%28str%29%3A%20The%20student%27s%20name%20in%20%22first_name%20last_name%22%20format.%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20student_num%20%28str%29%3A%20The%20student%27s%20unique%20student%20id%20number.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20self._name%20%3D%20name%0D%0A%20%20%20%20%20%20%20%20self._student_num%20%3D%20student_num%0D%0A%20%20%20%20%20%20%20%20self._enrolments%20%3D%20%5B%5D%20%20%23%20list%20of%20tuples%20%28course%20code%2C%20tuition%20fee%29%0D%0A%0D%0A%20%20%20%20def%20get_name%28self%29%20-%3E%20str%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22Return%20the%20name%20of%20the%20student%20%22first_name%20last_name%22.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20return%20self._name%0D%0A%0D%0A%20%20%20%20def%20get_student_num%28self%29%20-%3E%20int%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22Return%20the%20students%20student%20number.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20return%20self._student_num%0D%0A%0D%0A%20%20%20%20def%20enrol%28self%2C%20course_code%3A%20str%2C%20fee%3A%20int%29%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22Enrol%20in%20a%20course%2C%20at%20a%20given%20fee.%0D%0A%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20course_code%20%28str%29%3A%20Unique%20course%20code%20in%20which%20Student%20is%20enrolling.%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20fee%20%28int%29%3A%20The%20fee%20for%20taking%20this%20course%20%28in%20whole%20dollar%20amount%29.%0D%0A%0D%0A%20%20%20%20%20%20%20%20Preconditions%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20fee%20%3E%200%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20self._enrolments.append%28%28course_code%2C%20fee%29%29%0D%0A%0D%0A%20%20%20%20def%20get_enrolments%28self%29%20-%3E%20list%5Btuple%5Bstr%2C%20int%5D%5D%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22Return%20a%20list%20of%20courses%20the%20student%20is%20enrolled%20in.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20return%20self._enrolments%0D%0A%0D%0A%20%20%20%20def%20calculate_fees%28self%29%20-%3E%20int%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22Return%20the%20total%20tuition%20fee%20for%20this%20student..%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20total%20%3D%200%0D%0A%20%20%20%20%20%20%20%20for%20course_code%2C%20fee%20in%20self._enrolments%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20total%20%2B%3D%20fee%0D%0A%20%20%20%20%20%20%20%20return%20total%0D%0A%0D%0Aclass%20CollegeStudent%28Student%29%3A%0D%0A%20%20%20%20%22%22%22Simple%20model%20for%20a%20student%20living%20in%20college.%22%22%22%0D%0A%20%20%20%20def%20__init__%28self%2C%20name%3A%20str%2C%20student_num%3A%20int%2C%20college_name%3A%20int%2C%20%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20college_fee%3A%20int%29%20%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20name%20%28str%29%3A%20The%20student%27s%20name%20in%20%22first_name%20last_name%22%20format.%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20student_num%20%28int%29%3A%20The%20student%27s%20unique%20student%20id%20number.%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20college_name%20%28str%29%3A%20Name%20of%20the%20college%20providing%20accommodation.%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20college_fee%20%28int%29%3A%20Fee%20for%20living%20in%20the%20college%20in%20whole%20dollars.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20%23%20First%20initialize%20this%20instance%20of%20CollegeStudent%20as%20a%20Student%20with%0D%0A%20%20%20%20%20%20%20%20%23%20the%20appropriate%20name%20and%20student%20number%20%28student_num%29.%0D%0A%20%20%20%20%20%20%20%20super%28%29.__init__%28name%2C%20student_num%29%0D%0A%0D%0A%20%20%20%20%20%20%20%20%23%20Keep%20a%20reference%20to%20the%20college%20name%20and%20college%20fee%20for%20this%0D%0A%20%20%20%20%20%20%20%20%23%20CollegeStudent%0D%0A%20%20%20%20%20%20%20%20self._college_name%20%3D%20college_name%0D%0A%20%20%20%20%20%20%20%20self._college_fee%20%3D%20college_fee%0D%0A%0D%0A%20%20%20%20def%20get_college%28self%29%20-%3E%20str%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22Return%20the%20name%20of%20the%20college%20that%20this%20CollegeStudent%0D%0A%20%20%20%20%20%20%20%20belongs%20to.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20return%20self._college_name%0D%0A%0D%0A%20%20%20%20def%20calculate_fees%28self%29%20-%3E%20int%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22Return%20the%20total%20fees%20for%20this%20CollegeStudent%20in%20dollars.%22%22%22%0D%0A%0D%0A%20%20%20%20%20%20%20%20%23%20---------------------------------------------------------------------%0D%0A%20%20%20%20%20%20%20%20%23%20For%20this%20method%2C%20we%20need%20to%20calculate%20the%20sum%20of%20the%20CollegeStudent%27s%0D%0A%20%20%20%20%20%20%20%20%23%20tuition%20fees%20%28i.e.%20for%20courses%29%20and%20their%20college%20fee%20%28i.e.%20for%0D%0A%20%20%20%20%20%20%20%20%23%20staying%20in%20their%20college%29.%0D%0A%20%20%20%20%20%20%20%20%23%20%0D%0A%20%20%20%20%20%20%20%20%23%20We%20can%20calculate%20the%20tuition%20fees%20by%20utilizing%20the%20calculate_fees%0D%0A%20%20%20%20%20%20%20%20%23%20method%20of%20the%20Student%20class%20which%20CollegeStudent%20extends%2C%20and%20the%0D%0A%20%20%20%20%20%20%20%20%23%20college%20fee%20is%20stored%20in%20._college_fee%0D%0A%20%20%20%20%20%20%20%20%23%20---------------------------------------------------------------------%0D%0A%0D%0A%20%20%20%20%20%20%20%20%23%20Calculate%20the%20student%20fees%20by%20calling%20the%20calculate_fees%20method%20of%0D%0A%20%20%20%20%20%20%20%20%23%20Student%20on%20this%20instance%20of%20CollegeStudent%20%28i.e.%20self%29%0D%0A%20%20%20%20%20%20%20%20tuition_fees%20%3D%20super%28%29.calculate_fees%28%29%0D%0A%0D%0A%20%20%20%20%20%20%20%20%23%20Return%20the%20sum%20of%20the%20tuition%20fees%20and%20the%20college%20fee%0D%0A%20%20%20%20%20%20%20%20return%20tuition_fees%20%2B%20self._college_fee%0D%0A%0D%0Afred%20%3D%20CollegeStudent%28%22fred%22%2C%2043214321%2C%20%22St.%20Leo%27s%22%2C%2018000%29%0D%0Aprint%28fred.get_college%28%29%29%0D%0Aprint%28fred.calculate_fees%28%29%29%0D%0Afred.enrol%28%27CSSE7030%27%2C%201000%29%0D%0Afred.enrol%28%27LAWS1000%27%2C%201300%29%0D%0Aprint%28fred.calculate_fees%28%29%29" title="Download students.py"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<button class="idle-download-btn" data-filename="students.py" data-code="class%20Student%3A%0D%0A%20%20%20%20%22%22%22Simple%20model%20of%20a%20university%20student%22%22%22%0D%0A%0D%0A%20%20%20%20def%20__init__%28self%2C%20name%3A%20str%2C%20student_num%3A%20int%29%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20name%20%28str%29%3A%20The%20student%27s%20name%20in%20%22first_name%20last_name%22%20format.%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20student_num%20%28str%29%3A%20The%20student%27s%20unique%20student%20id%20number.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20self._name%20%3D%20name%0D%0A%20%20%20%20%20%20%20%20self._student_num%20%3D%20student_num%0D%0A%20%20%20%20%20%20%20%20self._enrolments%20%3D%20%5B%5D%20%20%23%20list%20of%20tuples%20%28course%20code%2C%20tuition%20fee%29%0D%0A%0D%0A%20%20%20%20def%20get_name%28self%29%20-%3E%20str%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22%20Returns%20the%20name%20of%20the%20student%20%22first_name%20last_name%22.%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20return%20self._name%0D%0A%0D%0A%20%20%20%20def%20get_student_num%28self%29%20-%3E%20int%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22%20Returns%20the%20student%27s%20student%20number.%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20return%20self._student_num%0D%0A%0D%0A%20%20%20%20def%20enrol%28self%2C%20course_code%3A%20str%2C%20fee%3A%20int%29%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22%20Enrol%20in%20a%20course%2C%20at%20a%20given%20fee.%0D%0A%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20course_code%20%28str%29%3A%20Unique%20course%20code%20in%20which%20Student%20is%20enrolling.%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20fee%20%28int%29%3A%20The%20fee%20for%20taking%20this%20course%20%28in%20whole%20dollar%20amount%29.%0D%0A%0D%0A%20%20%20%20%20%20%20%20Preconditions%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20fee%20%3E%200%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20self._enrolments.append%28%28course_code%2C%20fee%29%29%0D%0A%0D%0A%20%20%20%20def%20get_enrolments%28self%29%20-%3E%20list%5Btuple%5Bstr%2C%20int%5D%5D%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22%20Returns%20a%20list%20of%20courses%20the%20student%20is%20enrolled%20in.%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20return%20self._enrolments%0D%0A%0D%0A%20%20%20%20def%20calculate_fees%28self%29%20-%3E%20int%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22%20Returns%20the%20total%20tuition%20fee%20for%20this%20student.%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20total%20%3D%200%0D%0A%20%20%20%20%20%20%20%20for%20course_code%2C%20fee%20in%20self._enrolments%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20total%20%2B%3D%20fee%0D%0A%20%20%20%20%20%20%20%20return%20total%0D%0A%0D%0A%0D%0Aclass%20CollegeStudent%28Student%29%3A%0D%0A%20%20%20%20%22%22%22Simple%20model%20for%20a%20student%20living%20in%20college.%22%22%22%0D%0A%0D%0A%20%20%20%20def%20__init__%28self%2C%20name%3A%20str%2C%20student_num%3A%20int%2C%20college_name%3A%20int%2C%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20college_fee%3A%20int%29%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20name%20%28str%29%3A%20The%20student%27s%20name%20in%20%22first_name%20last_name%22%20format.%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20student_num%20%28int%29%3A%20The%20student%27s%20unique%20student%20id%20number.%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20college_name%20%28str%29%3A%20Name%20of%20the%20college%20providing%20accommodation.%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20college_fee%20%28int%29%3A%20Fee%20for%20living%20in%20the%20college%20in%20whole%20dollars.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20%23%20First%20initialize%20this%20instance%20of%20CollegeStudent%20as%20a%20Student%20with%0D%0A%20%20%20%20%20%20%20%20%23%20the%20appropriate%20name%20and%20student%20number%20%28student_num%29.%0D%0A%20%20%20%20%20%20%20%20super%28%29.__init__%28name%2C%20student_num%29%0D%0A%0D%0A%20%20%20%20%20%20%20%20%23%20Keep%20a%20reference%20to%20the%20college%20name%20and%20college%20fee%20for%20this%0D%0A%20%20%20%20%20%20%20%20%23%20CollegeStudent%0D%0A%20%20%20%20%20%20%20%20self._college_name%20%3D%20college_name%0D%0A%20%20%20%20%20%20%20%20self._college_fee%20%3D%20college_fee%0D%0A%0D%0A%20%20%20%20def%20get_college%28self%29%20-%3E%20str%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22Return%20the%20name%20of%20the%20college%20that%20this%20CollegeStudent%0D%0A%20%20%20%20%20%20%20%20belongs%20to.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20return%20self._college_name%0D%0A%0D%0A%20%20%20%20def%20calculate_fees%28self%29%20-%3E%20int%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22Return%20the%20total%20fees%20for%20this%20CollegeStudent%20in%20dollars.%22%22%22%0D%0A%0D%0A%20%20%20%20%20%20%20%20%23%20---------------------------------------------------------------------%0D%0A%20%20%20%20%20%20%20%20%23%20For%20this%20method%2C%20we%20need%20to%20calculate%20the%20sum%20of%20the%20CollegeStudent%27s%0D%0A%20%20%20%20%20%20%20%20%23%20tuition%20fees%20%28i.e.%20for%20courses%29%20and%20their%20college%20fee%20%28i.e.%20for%0D%0A%20%20%20%20%20%20%20%20%23%20staying%20in%20their%20college%29.%0D%0A%20%20%20%20%20%20%20%20%23%0D%0A%20%20%20%20%20%20%20%20%23%20We%20can%20calculate%20the%20tuition%20fees%20by%20utilizing%20the%20calculate_fees%0D%0A%20%20%20%20%20%20%20%20%23%20method%20of%20the%20Student%20class%20which%20CollegeStudent%20extends%2C%20and%20the%0D%0A%20%20%20%20%20%20%20%20%23%20college%20fee%20is%20stored%20in%20._college_fee%0D%0A%20%20%20%20%20%20%20%20%23%20---------------------------------------------------------------------%0D%0A%0D%0A%20%20%20%20%20%20%20%20%23%20Calculate%20the%20student%20fees%20by%20calling%20the%20calculate_fees%20method%20of%0D%0A%20%20%20%20%20%20%20%20%23%20Student%20on%20this%20instance%20of%20CollegeStudent%20%28i.e.%20self%29%0D%0A%20%20%20%20%20%20%20%20tuition_fees%20%3D%20super%28%29.calculate_fees%28%29%0D%0A%0D%0A%20%20%20%20%20%20%20%20%23%20Return%20the%20sum%20of%20the%20tuition%20fees%20and%20the%20college%20fee%0D%0A%20%20%20%20%20%20%20%20return%20tuition_fees%20%2B%20self._college_fee%0D%0A%0D%0A%0D%0Afred%20%3D%20CollegeStudent%28%22fred%22%2C%2043214321%2C%20%22St.%20Leo%27s%22%2C%2018000%29%0D%0Aprint%28fred.get_college%28%29%29%0D%0Aprint%28fred.calculate_fees%28%29%29%0D%0Afred.enrol%28%27CSSE7030%27%2C%201000%29%0D%0Afred.enrol%28%27LAWS1000%27%2C%201300%29%0D%0Aprint%28fred.calculate_fees%28%29%29" title="Download students.py"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
   <polyline points="7 10 12 15 17 10"></polyline>
   <line x1="12" y1="15" x2="12" y2="3"></line>
@@ -2675,98 +2672,98 @@ display: none;
 </button>
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">class</span> Student():</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">class</span> Student:</span>
 <span id="cb2-2"><a href="#cb2-2"></a>    <span class="co">&quot;&quot;&quot;Simple model of a university student&quot;&quot;&quot;</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name: <span class="bu">str</span>, student_num: <span class="bu">int</span>):</span>
-<span id="cb2-4"><a href="#cb2-4"></a>        <span class="co">&quot;&quot;&quot;</span></span>
-<span id="cb2-5"><a href="#cb2-5"></a><span class="co">        Parameters:</span></span>
-<span id="cb2-6"><a href="#cb2-6"></a><span class="co">            name (str): The student&#39;s name in &quot;first_name last_name&quot; format.</span></span>
-<span id="cb2-7"><a href="#cb2-7"></a><span class="co">            student_num (str): The student&#39;s unique student id number.</span></span>
-<span id="cb2-8"><a href="#cb2-8"></a><span class="co">        &quot;&quot;&quot;</span></span>
-<span id="cb2-9"><a href="#cb2-9"></a>        <span class="va">self</span>._name <span class="op">=</span> name</span>
-<span id="cb2-10"><a href="#cb2-10"></a>        <span class="va">self</span>._student_num <span class="op">=</span> student_num</span>
-<span id="cb2-11"><a href="#cb2-11"></a>        <span class="va">self</span>._enrolments <span class="op">=</span> []  <span class="co"># list of tuples (course code, tuition fee)</span></span>
-<span id="cb2-12"><a href="#cb2-12"></a></span>
-<span id="cb2-13"><a href="#cb2-13"></a>    <span class="kw">def</span> get_name(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
-<span id="cb2-14"><a href="#cb2-14"></a>        <span class="co">&quot;&quot;&quot;Return the name of the student &quot;first_name last_name&quot;.</span></span>
-<span id="cb2-15"><a href="#cb2-15"></a><span class="co">        &quot;&quot;&quot;</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a></span>
+<span id="cb2-4"><a href="#cb2-4"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name: <span class="bu">str</span>, student_num: <span class="bu">int</span>):</span>
+<span id="cb2-5"><a href="#cb2-5"></a>        <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="co">        Parameters:</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="co">            name (str): The student&#39;s name in &quot;first_name last_name&quot; format.</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="co">            student_num (str): The student&#39;s unique student id number.</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a><span class="co">        &quot;&quot;&quot;</span></span>
+<span id="cb2-10"><a href="#cb2-10"></a>        <span class="va">self</span>._name <span class="op">=</span> name</span>
+<span id="cb2-11"><a href="#cb2-11"></a>        <span class="va">self</span>._student_num <span class="op">=</span> student_num</span>
+<span id="cb2-12"><a href="#cb2-12"></a>        <span class="va">self</span>._enrolments <span class="op">=</span> []  <span class="co"># list of tuples (course code, tuition fee)</span></span>
+<span id="cb2-13"><a href="#cb2-13"></a></span>
+<span id="cb2-14"><a href="#cb2-14"></a>    <span class="kw">def</span> get_name(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
+<span id="cb2-15"><a href="#cb2-15"></a>        <span class="co">&quot;&quot;&quot; Returns the name of the student &quot;first_name last_name&quot;. &quot;&quot;&quot;</span></span>
 <span id="cb2-16"><a href="#cb2-16"></a>        <span class="cf">return</span> <span class="va">self</span>._name</span>
 <span id="cb2-17"><a href="#cb2-17"></a></span>
 <span id="cb2-18"><a href="#cb2-18"></a>    <span class="kw">def</span> get_student_num(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
-<span id="cb2-19"><a href="#cb2-19"></a>        <span class="co">&quot;&quot;&quot;Return the students student number.</span></span>
-<span id="cb2-20"><a href="#cb2-20"></a><span class="co">        &quot;&quot;&quot;</span></span>
-<span id="cb2-21"><a href="#cb2-21"></a>        <span class="cf">return</span> <span class="va">self</span>._student_num</span>
-<span id="cb2-22"><a href="#cb2-22"></a></span>
-<span id="cb2-23"><a href="#cb2-23"></a>    <span class="kw">def</span> enrol(<span class="va">self</span>, course_code: <span class="bu">str</span>, fee: <span class="bu">int</span>):</span>
-<span id="cb2-24"><a href="#cb2-24"></a>        <span class="co">&quot;&quot;&quot;Enrol in a course, at a given fee.</span></span>
-<span id="cb2-25"><a href="#cb2-25"></a></span>
-<span id="cb2-26"><a href="#cb2-26"></a><span class="co">        Parameters:</span></span>
-<span id="cb2-27"><a href="#cb2-27"></a><span class="co">            course_code (str): Unique course code in which Student is enrolling.</span></span>
-<span id="cb2-28"><a href="#cb2-28"></a><span class="co">            fee (int): The fee for taking this course (in whole dollar amount).</span></span>
-<span id="cb2-29"><a href="#cb2-29"></a></span>
-<span id="cb2-30"><a href="#cb2-30"></a><span class="co">        Preconditions:</span></span>
-<span id="cb2-31"><a href="#cb2-31"></a><span class="co">            fee &gt; 0</span></span>
-<span id="cb2-32"><a href="#cb2-32"></a><span class="co">        &quot;&quot;&quot;</span></span>
-<span id="cb2-33"><a href="#cb2-33"></a>        <span class="va">self</span>._enrolments.append((course_code, fee))</span>
-<span id="cb2-34"><a href="#cb2-34"></a></span>
-<span id="cb2-35"><a href="#cb2-35"></a>    <span class="kw">def</span> get_enrolments(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">list</span>[<span class="bu">tuple</span>[<span class="bu">str</span>, <span class="bu">int</span>]]:</span>
-<span id="cb2-36"><a href="#cb2-36"></a>        <span class="co">&quot;&quot;&quot;Return a list of courses the student is enrolled in.</span></span>
-<span id="cb2-37"><a href="#cb2-37"></a><span class="co">        &quot;&quot;&quot;</span></span>
-<span id="cb2-38"><a href="#cb2-38"></a>        <span class="cf">return</span> <span class="va">self</span>._enrolments</span>
-<span id="cb2-39"><a href="#cb2-39"></a></span>
-<span id="cb2-40"><a href="#cb2-40"></a>    <span class="kw">def</span> calculate_fees(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
-<span id="cb2-41"><a href="#cb2-41"></a>        <span class="co">&quot;&quot;&quot;Return the total tuition fee for this student..</span></span>
-<span id="cb2-42"><a href="#cb2-42"></a><span class="co">        &quot;&quot;&quot;</span></span>
-<span id="cb2-43"><a href="#cb2-43"></a>        total <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb2-44"><a href="#cb2-44"></a>        <span class="cf">for</span> course_code, fee <span class="kw">in</span> <span class="va">self</span>._enrolments:</span>
-<span id="cb2-45"><a href="#cb2-45"></a>            total <span class="op">+=</span> fee</span>
-<span id="cb2-46"><a href="#cb2-46"></a>        <span class="cf">return</span> total</span>
-<span id="cb2-47"><a href="#cb2-47"></a></span>
-<span id="cb2-48"><a href="#cb2-48"></a><span class="kw">class</span> CollegeStudent(Student):</span>
-<span id="cb2-49"><a href="#cb2-49"></a>    <span class="co">&quot;&quot;&quot;Simple model for a student living in college.&quot;&quot;&quot;</span></span>
-<span id="cb2-50"><a href="#cb2-50"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name: <span class="bu">str</span>, student_num: <span class="bu">int</span>, college_name: <span class="bu">int</span>, </span>
-<span id="cb2-51"><a href="#cb2-51"></a>                 college_fee: <span class="bu">int</span>) :</span>
-<span id="cb2-52"><a href="#cb2-52"></a>        <span class="co">&quot;&quot;&quot;</span></span>
-<span id="cb2-53"><a href="#cb2-53"></a><span class="co">        Parameters:</span></span>
-<span id="cb2-54"><a href="#cb2-54"></a><span class="co">            name (str): The student&#39;s name in &quot;first_name last_name&quot; format.</span></span>
-<span id="cb2-55"><a href="#cb2-55"></a><span class="co">            student_num (int): The student&#39;s unique student id number.</span></span>
-<span id="cb2-56"><a href="#cb2-56"></a><span class="co">            college_name (str): Name of the college providing accommodation.</span></span>
-<span id="cb2-57"><a href="#cb2-57"></a><span class="co">            college_fee (int): Fee for living in the college in whole dollars.</span></span>
-<span id="cb2-58"><a href="#cb2-58"></a><span class="co">        &quot;&quot;&quot;</span></span>
-<span id="cb2-59"><a href="#cb2-59"></a>        <span class="co"># First initialize this instance of CollegeStudent as a Student with</span></span>
-<span id="cb2-60"><a href="#cb2-60"></a>        <span class="co"># the appropriate name and student number (student_num).</span></span>
-<span id="cb2-61"><a href="#cb2-61"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>(name, student_num)</span>
-<span id="cb2-62"><a href="#cb2-62"></a></span>
-<span id="cb2-63"><a href="#cb2-63"></a>        <span class="co"># Keep a reference to the college name and college fee for this</span></span>
-<span id="cb2-64"><a href="#cb2-64"></a>        <span class="co"># CollegeStudent</span></span>
-<span id="cb2-65"><a href="#cb2-65"></a>        <span class="va">self</span>._college_name <span class="op">=</span> college_name</span>
-<span id="cb2-66"><a href="#cb2-66"></a>        <span class="va">self</span>._college_fee <span class="op">=</span> college_fee</span>
-<span id="cb2-67"><a href="#cb2-67"></a></span>
-<span id="cb2-68"><a href="#cb2-68"></a>    <span class="kw">def</span> get_college(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
-<span id="cb2-69"><a href="#cb2-69"></a>        <span class="co">&quot;&quot;&quot;Return the name of the college that this CollegeStudent</span></span>
-<span id="cb2-70"><a href="#cb2-70"></a><span class="co">        belongs to.</span></span>
-<span id="cb2-71"><a href="#cb2-71"></a><span class="co">        &quot;&quot;&quot;</span></span>
-<span id="cb2-72"><a href="#cb2-72"></a>        <span class="cf">return</span> <span class="va">self</span>._college_name</span>
-<span id="cb2-73"><a href="#cb2-73"></a></span>
-<span id="cb2-74"><a href="#cb2-74"></a>    <span class="kw">def</span> calculate_fees(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
-<span id="cb2-75"><a href="#cb2-75"></a>        <span class="co">&quot;&quot;&quot;Return the total fees for this CollegeStudent in dollars.&quot;&quot;&quot;</span></span>
-<span id="cb2-76"><a href="#cb2-76"></a></span>
-<span id="cb2-77"><a href="#cb2-77"></a>        <span class="co"># ---------------------------------------------------------------------</span></span>
-<span id="cb2-78"><a href="#cb2-78"></a>        <span class="co"># For this method, we need to calculate the sum of the CollegeStudent&#39;s</span></span>
-<span id="cb2-79"><a href="#cb2-79"></a>        <span class="co"># tuition fees (i.e. for courses) and their college fee (i.e. for</span></span>
-<span id="cb2-80"><a href="#cb2-80"></a>        <span class="co"># staying in their college).</span></span>
-<span id="cb2-81"><a href="#cb2-81"></a>        <span class="co"># </span></span>
-<span id="cb2-82"><a href="#cb2-82"></a>        <span class="co"># We can calculate the tuition fees by utilizing the calculate_fees</span></span>
-<span id="cb2-83"><a href="#cb2-83"></a>        <span class="co"># method of the Student class which CollegeStudent extends, and the</span></span>
-<span id="cb2-84"><a href="#cb2-84"></a>        <span class="co"># college fee is stored in ._college_fee</span></span>
-<span id="cb2-85"><a href="#cb2-85"></a>        <span class="co"># ---------------------------------------------------------------------</span></span>
-<span id="cb2-86"><a href="#cb2-86"></a></span>
-<span id="cb2-87"><a href="#cb2-87"></a>        <span class="co"># Calculate the student fees by calling the calculate_fees method of</span></span>
-<span id="cb2-88"><a href="#cb2-88"></a>        <span class="co"># Student on this instance of CollegeStudent (i.e. self)</span></span>
-<span id="cb2-89"><a href="#cb2-89"></a>        tuition_fees <span class="op">=</span> <span class="bu">super</span>().calculate_fees()</span>
-<span id="cb2-90"><a href="#cb2-90"></a></span>
-<span id="cb2-91"><a href="#cb2-91"></a>        <span class="co"># Return the sum of the tuition fees and the college fee</span></span>
-<span id="cb2-92"><a href="#cb2-92"></a>        <span class="cf">return</span> tuition_fees <span class="op">+</span> <span class="va">self</span>._college_fee</span>
+<span id="cb2-19"><a href="#cb2-19"></a>        <span class="co">&quot;&quot;&quot; Returns the student&#39;s student number. &quot;&quot;&quot;</span></span>
+<span id="cb2-20"><a href="#cb2-20"></a>        <span class="cf">return</span> <span class="va">self</span>._student_num</span>
+<span id="cb2-21"><a href="#cb2-21"></a></span>
+<span id="cb2-22"><a href="#cb2-22"></a>    <span class="kw">def</span> enrol(<span class="va">self</span>, course_code: <span class="bu">str</span>, fee: <span class="bu">int</span>):</span>
+<span id="cb2-23"><a href="#cb2-23"></a>        <span class="co">&quot;&quot;&quot; Enrol in a course, at a given fee.</span></span>
+<span id="cb2-24"><a href="#cb2-24"></a></span>
+<span id="cb2-25"><a href="#cb2-25"></a><span class="co">        Parameters:</span></span>
+<span id="cb2-26"><a href="#cb2-26"></a><span class="co">            course_code (str): Unique course code in which Student is enrolling.</span></span>
+<span id="cb2-27"><a href="#cb2-27"></a><span class="co">            fee (int): The fee for taking this course (in whole dollar amount).</span></span>
+<span id="cb2-28"><a href="#cb2-28"></a></span>
+<span id="cb2-29"><a href="#cb2-29"></a><span class="co">        Preconditions:</span></span>
+<span id="cb2-30"><a href="#cb2-30"></a><span class="co">            fee &gt; 0</span></span>
+<span id="cb2-31"><a href="#cb2-31"></a><span class="co">        &quot;&quot;&quot;</span></span>
+<span id="cb2-32"><a href="#cb2-32"></a>        <span class="va">self</span>._enrolments.append((course_code, fee))</span>
+<span id="cb2-33"><a href="#cb2-33"></a></span>
+<span id="cb2-34"><a href="#cb2-34"></a>    <span class="kw">def</span> get_enrolments(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">list</span>[<span class="bu">tuple</span>[<span class="bu">str</span>, <span class="bu">int</span>]]:</span>
+<span id="cb2-35"><a href="#cb2-35"></a>        <span class="co">&quot;&quot;&quot; Returns a list of courses the student is enrolled in. &quot;&quot;&quot;</span></span>
+<span id="cb2-36"><a href="#cb2-36"></a>        <span class="cf">return</span> <span class="va">self</span>._enrolments</span>
+<span id="cb2-37"><a href="#cb2-37"></a></span>
+<span id="cb2-38"><a href="#cb2-38"></a>    <span class="kw">def</span> calculate_fees(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
+<span id="cb2-39"><a href="#cb2-39"></a>        <span class="co">&quot;&quot;&quot; Returns the total tuition fee for this student. &quot;&quot;&quot;</span></span>
+<span id="cb2-40"><a href="#cb2-40"></a>        total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb2-41"><a href="#cb2-41"></a>        <span class="cf">for</span> course_code, fee <span class="kw">in</span> <span class="va">self</span>._enrolments:</span>
+<span id="cb2-42"><a href="#cb2-42"></a>            total <span class="op">+=</span> fee</span>
+<span id="cb2-43"><a href="#cb2-43"></a>        <span class="cf">return</span> total</span>
+<span id="cb2-44"><a href="#cb2-44"></a></span>
+<span id="cb2-45"><a href="#cb2-45"></a></span>
+<span id="cb2-46"><a href="#cb2-46"></a><span class="kw">class</span> CollegeStudent(Student):</span>
+<span id="cb2-47"><a href="#cb2-47"></a>    <span class="co">&quot;&quot;&quot;Simple model for a student living in college.&quot;&quot;&quot;</span></span>
+<span id="cb2-48"><a href="#cb2-48"></a></span>
+<span id="cb2-49"><a href="#cb2-49"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name: <span class="bu">str</span>, student_num: <span class="bu">int</span>, college_name: <span class="bu">int</span>,</span>
+<span id="cb2-50"><a href="#cb2-50"></a>                 college_fee: <span class="bu">int</span>):</span>
+<span id="cb2-51"><a href="#cb2-51"></a>        <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb2-52"><a href="#cb2-52"></a><span class="co">        Parameters:</span></span>
+<span id="cb2-53"><a href="#cb2-53"></a><span class="co">            name (str): The student&#39;s name in &quot;first_name last_name&quot; format.</span></span>
+<span id="cb2-54"><a href="#cb2-54"></a><span class="co">            student_num (int): The student&#39;s unique student id number.</span></span>
+<span id="cb2-55"><a href="#cb2-55"></a><span class="co">            college_name (str): Name of the college providing accommodation.</span></span>
+<span id="cb2-56"><a href="#cb2-56"></a><span class="co">            college_fee (int): Fee for living in the college in whole dollars.</span></span>
+<span id="cb2-57"><a href="#cb2-57"></a><span class="co">        &quot;&quot;&quot;</span></span>
+<span id="cb2-58"><a href="#cb2-58"></a>        <span class="co"># First initialize this instance of CollegeStudent as a Student with</span></span>
+<span id="cb2-59"><a href="#cb2-59"></a>        <span class="co"># the appropriate name and student number (student_num).</span></span>
+<span id="cb2-60"><a href="#cb2-60"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>(name, student_num)</span>
+<span id="cb2-61"><a href="#cb2-61"></a></span>
+<span id="cb2-62"><a href="#cb2-62"></a>        <span class="co"># Keep a reference to the college name and college fee for this</span></span>
+<span id="cb2-63"><a href="#cb2-63"></a>        <span class="co"># CollegeStudent</span></span>
+<span id="cb2-64"><a href="#cb2-64"></a>        <span class="va">self</span>._college_name <span class="op">=</span> college_name</span>
+<span id="cb2-65"><a href="#cb2-65"></a>        <span class="va">self</span>._college_fee <span class="op">=</span> college_fee</span>
+<span id="cb2-66"><a href="#cb2-66"></a></span>
+<span id="cb2-67"><a href="#cb2-67"></a>    <span class="kw">def</span> get_college(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
+<span id="cb2-68"><a href="#cb2-68"></a>        <span class="co">&quot;&quot;&quot;Return the name of the college that this CollegeStudent</span></span>
+<span id="cb2-69"><a href="#cb2-69"></a><span class="co">        belongs to.</span></span>
+<span id="cb2-70"><a href="#cb2-70"></a><span class="co">        &quot;&quot;&quot;</span></span>
+<span id="cb2-71"><a href="#cb2-71"></a>        <span class="cf">return</span> <span class="va">self</span>._college_name</span>
+<span id="cb2-72"><a href="#cb2-72"></a></span>
+<span id="cb2-73"><a href="#cb2-73"></a>    <span class="kw">def</span> calculate_fees(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
+<span id="cb2-74"><a href="#cb2-74"></a>        <span class="co">&quot;&quot;&quot;Return the total fees for this CollegeStudent in dollars.&quot;&quot;&quot;</span></span>
+<span id="cb2-75"><a href="#cb2-75"></a></span>
+<span id="cb2-76"><a href="#cb2-76"></a>        <span class="co"># ---------------------------------------------------------------------</span></span>
+<span id="cb2-77"><a href="#cb2-77"></a>        <span class="co"># For this method, we need to calculate the sum of the CollegeStudent&#39;s</span></span>
+<span id="cb2-78"><a href="#cb2-78"></a>        <span class="co"># tuition fees (i.e. for courses) and their college fee (i.e. for</span></span>
+<span id="cb2-79"><a href="#cb2-79"></a>        <span class="co"># staying in their college).</span></span>
+<span id="cb2-80"><a href="#cb2-80"></a>        <span class="co">#</span></span>
+<span id="cb2-81"><a href="#cb2-81"></a>        <span class="co"># We can calculate the tuition fees by utilizing the calculate_fees</span></span>
+<span id="cb2-82"><a href="#cb2-82"></a>        <span class="co"># method of the Student class which CollegeStudent extends, and the</span></span>
+<span id="cb2-83"><a href="#cb2-83"></a>        <span class="co"># college fee is stored in ._college_fee</span></span>
+<span id="cb2-84"><a href="#cb2-84"></a>        <span class="co"># ---------------------------------------------------------------------</span></span>
+<span id="cb2-85"><a href="#cb2-85"></a></span>
+<span id="cb2-86"><a href="#cb2-86"></a>        <span class="co"># Calculate the student fees by calling the calculate_fees method of</span></span>
+<span id="cb2-87"><a href="#cb2-87"></a>        <span class="co"># Student on this instance of CollegeStudent (i.e. self)</span></span>
+<span id="cb2-88"><a href="#cb2-88"></a>        tuition_fees <span class="op">=</span> <span class="bu">super</span>().calculate_fees()</span>
+<span id="cb2-89"><a href="#cb2-89"></a></span>
+<span id="cb2-90"><a href="#cb2-90"></a>        <span class="co"># Return the sum of the tuition fees and the college fee</span></span>
+<span id="cb2-91"><a href="#cb2-91"></a>        <span class="cf">return</span> tuition_fees <span class="op">+</span> <span class="va">self</span>._college_fee</span>
+<span id="cb2-92"><a href="#cb2-92"></a></span>
 <span id="cb2-93"><a href="#cb2-93"></a></span>
 <span id="cb2-94"><a href="#cb2-94"></a>fred <span class="op">=</span> CollegeStudent(<span class="st">&quot;fred&quot;</span>, <span class="dv">43214321</span>, <span class="st">&quot;St. Leo&#39;s&quot;</span>, <span class="dv">18000</span>)</span>
 <span id="cb2-95"><a href="#cb2-95"></a><span class="bu">print</span>(fred.get_college())</span>
@@ -2780,11 +2777,11 @@ display: none;
  Run Code</button>
 <div class="idle-output-header"><svg width="18" height="18" viewbox="0 0 110 110" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
  <defs>
-  <lineargradient id="grad-698a89b5-c4f8" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
-  <lineargradient id="grad-698a89b5-fb3c" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e3d-110b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e3d-c7e0" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
  </defs>
- <path style="fill:url(#grad-698a89b5-c4f8)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
- <path style="fill:url(#grad-698a89b5-fb3c)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e3d-110b)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e3d-c7e0)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
 </svg>
 Output</div>
 <div class="cell-output cell-output-stdout idle-output-box">
@@ -2873,7 +2870,7 @@ Output</div>
 </section>
 <section id="inheritance-vs.-composition" class="level3">
 <h3 class="anchored" data-anchor-id="inheritance-vs.-composition">Inheritance vs. Composition</h3>
-<p>We used inheritance to say a <code>CollegeStudent</code> is a <code>Student</code>, and that makes sense. But imagine if later on, we wanted students to switch colleges, or attend two at once, or even have no college at all. In those cases, maybe it is better to say a student has a college, rather than being a special kind of student. This idea is called composition, and it is another powerful way to build classes, where one class contains another as a field, rather than inheriting from it.</p>
+<p>We used inheritance to say a <code>CollegeStudent</code> is a <code>Student</code>, and that makes sense. But imagine if later on, we wanted students to switch colleges, or attend two at once, or even stop attending college while remaining as a student. In those cases, maybe it is better to say a student has a college, rather than being a special kind of student. This idea is called composition, and it is another powerful way to build classes, where one class contains another as a field, rather than inheriting from it.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -2905,14 +2902,14 @@ Output</div>
 <div class="idle-filename-header">
 <div class="code-with-filename-file"><pre><svg width="18" height="18" viewbox="0 0 110 110" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
  <defs>
-  <lineargradient id="grad-698a89b5-11850" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
-  <lineargradient id="grad-698a89b5-54ec" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e3d-b14f" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e3d-15594" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
  </defs>
- <path style="fill:url(#grad-698a89b5-11850)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
- <path style="fill:url(#grad-698a89b5-54ec)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e3d-b14f)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e3d-15594)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
 </svg>
 <strong>college.py</strong></pre></div>
-<button class="idle-download-btn" data-filename="college.py" data-code="class%20College%28%29%3A%0D%0A%20%20%20%20%22%22%22Simple%20model%20of%20a%20college.%22%22%22%0D%0A%20%20%20%20def%20__init__%28self%2C%20name%2C%20fee%29%20-%3E%20None%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20name%20%28str%29%3A%20The%20name%20of%20the%20college.%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20fee%20%28int%29%3A%20The%20cost%20of%20attending%20the%20college.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20self._name%20%3D%20name%0D%0A%20%20%20%20%20%20%20%20self._fee%20%3D%20fee%0D%0A%0D%0A%20%20%20%20def%20get_name%28self%29%20-%3E%20str%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22Return%20the%20college%20name.%22%22%22%0D%0A%20%20%20%20%20%20%20%20return%20self._name%0D%0A%0D%0A%20%20%20%20def%20get_fee%28self%29%20-%3E%20int%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22Return%20the%20college%20fee.%22%22%22%0D%0A%20%20%20%20%20%20%20%20return%20self._fee%0D%0A%0D%0Aclass%20ComposedStudent%28%29%3A%0D%0A%20%20%20%20%22%22%22%0D%0A%20%20%20%20A%20student%20who%20is%20associated%20with%20a%20college.%0D%0A%20%20%20%20This%20class%20uses%20composition%20to%20include%20a%20College%20object%20as%20an%20attribute%2C%0D%0A%20%20%20%20rather%20than%20using%20inheritance%20to%20extend%20behavior.%0D%0A%20%20%20%20%22%22%22%0D%0A%20%20%20%20def%20__init__%28self%2C%20name%3A%20str%2C%20student_number%3A%20int%2C%20college%3A%20College%3DNone%29%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20name%20%28str%29%3A%20The%20student%27s%20name%20in%20%22first_name%20last_name%22%20format.%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20student_num%20%28str%29%3A%20The%20student%27s%20unique%20student%20id%20number.%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20courses%20%28list%20of%20tuple%29%3A%20Each%20tuple%20contains%20a%20course%20name%20%28str%29%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20and%20its%20associated%20fee%20%28int%29%2C%20e.g.%2C%20%28%27CSSE1001%27%2C%201300%29.%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20college%20%28College%29%3A%20A%20College%20object%20representing%20their%20college%2C%20or%20None%20if%20not%20associated%20with%20any.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20self._name%20%3D%20name%0D%0A%20%20%20%20%20%20%20%20self._student_number%20%3D%20student_number%0D%0A%20%20%20%20%20%20%20%20self._enrolments%20%3D%20%5B%5D%20%20%20%20%20%20%20%23%20Stores%20%28course_name%2C%20fee%29%20tuples%0D%0A%20%20%20%20%20%20%20%20self._college%20%3D%20college%20%20%23%20Student%20%22has%20a%22%20College%20%28composition%29%0D%0A%0D%0A%20%20%20%20def%20enrol%28self%2C%20course%2C%20fee%29%20-%3E%20None%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20Enroll%20the%20student%20in%20a%20course.%0D%0A%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20course%20%28str%29%3A%20The%20name%20of%20the%20course.%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20fee%20%28int%29%3A%20The%20tuition%20fee%20for%20the%20course.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20self._enrolments.append%28%28course%2C%20fee%29%29%0D%0A%0D%0A%20%20%20%20def%20calculate_fees%28self%29%20-%3E%20int%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20Calculate%20total%20fees%20including%20all%20enrolled%20courses%20and%20college%20fee%20if%20applicable.%0D%0A%0D%0A%20%20%20%20%20%20%20%20%28int%29%20Returns%20the%20total%20amount%20owed%20by%20the%20student.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20total%20%3D%200%0D%0A%20%20%20%20%20%20%20%20for%20course_code%2C%20fee%20in%20self._enrolments%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20total%20%2B%3D%20fee%0D%0A%0D%0A%20%20%20%20%20%20%20%20if%20self._college%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20total%20%2B%3D%20self._college.get_fee%28%29%0D%0A%20%20%20%20%20%20%20%20return%20total%0D%0A%20%20%20%20%0D%0Aleo%20%3D%20College%28%22St.%20Leo%27s%22%2C%2018000%29%0D%0Aalice%20%3D%20ComposedStudent%28%22Alice%20Smith%22%2C%2098765432%2C%20leo%29%0D%0Aalice.calculate_fees%28%29%0D%0Aalice.enrol%28%22HIST1010%22%2C%201500%29%0D%0Aalice.calculate_fees%28%29" title="Download college.py"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<button class="idle-download-btn" data-filename="college.py" data-code="class%20College%3A%0D%0A%20%20%20%20%22%22%22Simple%20model%20of%20a%20college.%22%22%22%0D%0A%0D%0A%20%20%20%20def%20__init__%28self%2C%20name%2C%20fee%29%20-%3E%20None%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20name%20%28str%29%3A%20The%20name%20of%20the%20college.%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20fee%20%28int%29%3A%20The%20cost%20of%20attending%20the%20college.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20self._name%20%3D%20name%0D%0A%20%20%20%20%20%20%20%20self._fee%20%3D%20fee%0D%0A%0D%0A%20%20%20%20def%20get_name%28self%29%20-%3E%20str%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22Return%20the%20college%20name.%22%22%22%0D%0A%20%20%20%20%20%20%20%20return%20self._name%0D%0A%0D%0A%20%20%20%20def%20get_fee%28self%29%20-%3E%20int%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22Return%20the%20college%20fee.%22%22%22%0D%0A%20%20%20%20%20%20%20%20return%20self._fee%0D%0A%0D%0A%0D%0Aclass%20ComposedStudent%28%29%3A%0D%0A%20%20%20%20%22%22%22%0D%0A%20%20%20%20A%20student%20who%20is%20associated%20with%20a%20college.%0D%0A%20%20%20%20This%20class%20uses%20composition%20to%20include%20a%20College%20object%20as%20an%20attribute%2C%0D%0A%20%20%20%20rather%20than%20using%20inheritance%20to%20extend%20behavior.%0D%0A%20%20%20%20%22%22%22%0D%0A%0D%0A%20%20%20%20def%20__init__%28self%2C%20name%3A%20str%2C%20student_number%3A%20int%2C%20college%3A%20College%20%3D%20None%29%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20name%20%28str%29%3A%20The%20student%27s%20name%20in%20%22first_name%20last_name%22%20format.%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20student_num%20%28str%29%3A%20The%20student%27s%20unique%20student%20id%20number.%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20courses%20%28list%20of%20tuple%29%3A%20Each%20tuple%20contains%20a%20course%20name%20%28str%29%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20and%20its%20associated%20fee%20%28int%29%2C%20e.g.%2C%20%28%27CSSE1001%27%2C%201300%29.%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20college%20%28College%29%3A%20A%20College%20object%20representing%20their%20college%2C%20or%20None%20if%20not%20associated%20with%20any.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20self._name%20%3D%20name%0D%0A%20%20%20%20%20%20%20%20self._student_number%20%3D%20student_number%0D%0A%20%20%20%20%20%20%20%20self._enrolments%20%3D%20%5B%5D%20%20%20%20%20%20%20%23%20Stores%20%28course_name%2C%20fee%29%20tuples%0D%0A%20%20%20%20%20%20%20%20self._college%20%3D%20college%20%20%23%20Student%20%22has%20a%22%20College%20%28composition%29%0D%0A%0D%0A%20%20%20%20def%20enrol%28self%2C%20course%2C%20fee%29%20-%3E%20None%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20Enroll%20the%20student%20in%20a%20course.%0D%0A%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20course%20%28str%29%3A%20The%20name%20of%20the%20course.%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20fee%20%28int%29%3A%20The%20tuition%20fee%20for%20the%20course.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20self._enrolments.append%28%28course%2C%20fee%29%29%0D%0A%0D%0A%20%20%20%20def%20calculate_fees%28self%29%20-%3E%20int%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20Calculate%20total%20fees%20including%20all%20enrolled%20courses%20and%20college%20fee%20if%20applicable.%0D%0A%0D%0A%20%20%20%20%20%20%20%20%28int%29%20Returns%20the%20total%20amount%20owed%20by%20the%20student.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20total%20%3D%200%0D%0A%20%20%20%20%20%20%20%20for%20course_code%2C%20fee%20in%20self._enrolments%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20total%20%2B%3D%20fee%0D%0A%0D%0A%20%20%20%20%20%20%20%20if%20self._college%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20total%20%2B%3D%20self._college.get_fee%28%29%0D%0A%20%20%20%20%20%20%20%20return%20total%0D%0A%0D%0A%0D%0Aleo%20%3D%20College%28%22St.%20Leo%27s%22%2C%2018000%29%0D%0Aalice%20%3D%20ComposedStudent%28%22Alice%20Smith%22%2C%2098765432%2C%20leo%29%0D%0Aalice.calculate_fees%28%29%0D%0Aalice.enrol%28%22HIST1010%22%2C%201500%29%0D%0Aalice.calculate_fees%28%29" title="Download college.py"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
   <polyline points="7 10 12 15 17 10"></polyline>
   <line x1="12" y1="15" x2="12" y2="3"></line>
@@ -2920,85 +2917,89 @@ Output</div>
 </button>
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">class</span> College():</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">class</span> College:</span>
 <span id="cb4-2"><a href="#cb4-2"></a>    <span class="co">&quot;&quot;&quot;Simple model of a college.&quot;&quot;&quot;</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, fee) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
-<span id="cb4-4"><a href="#cb4-4"></a>        <span class="co">&quot;&quot;&quot;</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a><span class="co">        Parameters:</span></span>
-<span id="cb4-6"><a href="#cb4-6"></a><span class="co">            name (str): The name of the college.</span></span>
-<span id="cb4-7"><a href="#cb4-7"></a><span class="co">            fee (int): The cost of attending the college.</span></span>
-<span id="cb4-8"><a href="#cb4-8"></a><span class="co">        &quot;&quot;&quot;</span></span>
-<span id="cb4-9"><a href="#cb4-9"></a>        <span class="va">self</span>._name <span class="op">=</span> name</span>
-<span id="cb4-10"><a href="#cb4-10"></a>        <span class="va">self</span>._fee <span class="op">=</span> fee</span>
-<span id="cb4-11"><a href="#cb4-11"></a></span>
-<span id="cb4-12"><a href="#cb4-12"></a>    <span class="kw">def</span> get_name(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
-<span id="cb4-13"><a href="#cb4-13"></a>        <span class="co">&quot;&quot;&quot;Return the college name.&quot;&quot;&quot;</span></span>
-<span id="cb4-14"><a href="#cb4-14"></a>        <span class="cf">return</span> <span class="va">self</span>._name</span>
-<span id="cb4-15"><a href="#cb4-15"></a></span>
-<span id="cb4-16"><a href="#cb4-16"></a>    <span class="kw">def</span> get_fee(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
-<span id="cb4-17"><a href="#cb4-17"></a>        <span class="co">&quot;&quot;&quot;Return the college fee.&quot;&quot;&quot;</span></span>
-<span id="cb4-18"><a href="#cb4-18"></a>        <span class="cf">return</span> <span class="va">self</span>._fee</span>
-<span id="cb4-19"><a href="#cb4-19"></a></span>
-<span id="cb4-20"><a href="#cb4-20"></a><span class="kw">class</span> ComposedStudent():</span>
-<span id="cb4-21"><a href="#cb4-21"></a>    <span class="co">&quot;&quot;&quot;</span></span>
-<span id="cb4-22"><a href="#cb4-22"></a><span class="co">    A student who is associated with a college.</span></span>
-<span id="cb4-23"><a href="#cb4-23"></a><span class="co">    This class uses composition to include a College object as an attribute,</span></span>
-<span id="cb4-24"><a href="#cb4-24"></a><span class="co">    rather than using inheritance to extend behavior.</span></span>
-<span id="cb4-25"><a href="#cb4-25"></a><span class="co">    &quot;&quot;&quot;</span></span>
-<span id="cb4-26"><a href="#cb4-26"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name: <span class="bu">str</span>, student_number: <span class="bu">int</span>, college: College<span class="op">=</span><span class="va">None</span>):</span>
-<span id="cb4-27"><a href="#cb4-27"></a>        <span class="co">&quot;&quot;&quot;</span></span>
-<span id="cb4-28"><a href="#cb4-28"></a><span class="co">        Parameters:</span></span>
-<span id="cb4-29"><a href="#cb4-29"></a><span class="co">            name (str): The student&#39;s name in &quot;first_name last_name&quot; format.</span></span>
-<span id="cb4-30"><a href="#cb4-30"></a><span class="co">            student_num (str): The student&#39;s unique student id number.</span></span>
-<span id="cb4-31"><a href="#cb4-31"></a><span class="co">            courses (list of tuple): Each tuple contains a course name (str)</span></span>
-<span id="cb4-32"><a href="#cb4-32"></a><span class="co">            and its associated fee (int), e.g., (&#39;CSSE1001&#39;, 1300).</span></span>
-<span id="cb4-33"><a href="#cb4-33"></a><span class="co">            college (College): A College object representing their college, or None if not associated with any.</span></span>
-<span id="cb4-34"><a href="#cb4-34"></a><span class="co">        &quot;&quot;&quot;</span></span>
-<span id="cb4-35"><a href="#cb4-35"></a>        <span class="va">self</span>._name <span class="op">=</span> name</span>
-<span id="cb4-36"><a href="#cb4-36"></a>        <span class="va">self</span>._student_number <span class="op">=</span> student_number</span>
-<span id="cb4-37"><a href="#cb4-37"></a>        <span class="va">self</span>._enrolments <span class="op">=</span> []       <span class="co"># Stores (course_name, fee) tuples</span></span>
-<span id="cb4-38"><a href="#cb4-38"></a>        <span class="va">self</span>._college <span class="op">=</span> college  <span class="co"># Student &quot;has a&quot; College (composition)</span></span>
-<span id="cb4-39"><a href="#cb4-39"></a></span>
-<span id="cb4-40"><a href="#cb4-40"></a>    <span class="kw">def</span> enrol(<span class="va">self</span>, course, fee) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
-<span id="cb4-41"><a href="#cb4-41"></a>        <span class="co">&quot;&quot;&quot;</span></span>
-<span id="cb4-42"><a href="#cb4-42"></a><span class="co">        Enroll the student in a course.</span></span>
-<span id="cb4-43"><a href="#cb4-43"></a></span>
-<span id="cb4-44"><a href="#cb4-44"></a><span class="co">        Parameters:</span></span>
-<span id="cb4-45"><a href="#cb4-45"></a><span class="co">            course (str): The name of the course.</span></span>
-<span id="cb4-46"><a href="#cb4-46"></a><span class="co">            fee (int): The tuition fee for the course.</span></span>
-<span id="cb4-47"><a href="#cb4-47"></a><span class="co">        &quot;&quot;&quot;</span></span>
-<span id="cb4-48"><a href="#cb4-48"></a>        <span class="va">self</span>._enrolments.append((course, fee))</span>
-<span id="cb4-49"><a href="#cb4-49"></a></span>
-<span id="cb4-50"><a href="#cb4-50"></a>    <span class="kw">def</span> calculate_fees(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
-<span id="cb4-51"><a href="#cb4-51"></a>        <span class="co">&quot;&quot;&quot;</span></span>
-<span id="cb4-52"><a href="#cb4-52"></a><span class="co">        Calculate total fees including all enrolled courses and college fee if applicable.</span></span>
-<span id="cb4-53"><a href="#cb4-53"></a></span>
-<span id="cb4-54"><a href="#cb4-54"></a><span class="co">        (int) Returns the total amount owed by the student.</span></span>
-<span id="cb4-55"><a href="#cb4-55"></a><span class="co">        &quot;&quot;&quot;</span></span>
-<span id="cb4-56"><a href="#cb4-56"></a>        total <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb4-57"><a href="#cb4-57"></a>        <span class="cf">for</span> course_code, fee <span class="kw">in</span> <span class="va">self</span>._enrolments:</span>
-<span id="cb4-58"><a href="#cb4-58"></a>            total <span class="op">+=</span> fee</span>
-<span id="cb4-59"><a href="#cb4-59"></a></span>
-<span id="cb4-60"><a href="#cb4-60"></a>        <span class="cf">if</span> <span class="va">self</span>._college:</span>
-<span id="cb4-61"><a href="#cb4-61"></a>            total <span class="op">+=</span> <span class="va">self</span>._college.get_fee()</span>
-<span id="cb4-62"><a href="#cb4-62"></a>        <span class="cf">return</span> total</span>
-<span id="cb4-63"><a href="#cb4-63"></a>    </span>
-<span id="cb4-64"><a href="#cb4-64"></a>leo <span class="op">=</span> College(<span class="st">&quot;St. Leo&#39;s&quot;</span>, <span class="dv">18000</span>)</span>
-<span id="cb4-65"><a href="#cb4-65"></a>alice <span class="op">=</span> ComposedStudent(<span class="st">&quot;Alice Smith&quot;</span>, <span class="dv">98765432</span>, leo)</span>
-<span id="cb4-66"><a href="#cb4-66"></a>alice.calculate_fees()</span>
-<span id="cb4-67"><a href="#cb4-67"></a>alice.enrol(<span class="st">&quot;HIST1010&quot;</span>, <span class="dv">1500</span>)</span>
-<span id="cb4-68"><a href="#cb4-68"></a>alice.calculate_fees()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-3"><a href="#cb4-3"></a></span>
+<span id="cb4-4"><a href="#cb4-4"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, fee) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
+<span id="cb4-5"><a href="#cb4-5"></a>        <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="co">        Parameters:</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="co">            name (str): The name of the college.</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="co">            fee (int): The cost of attending the college.</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="co">        &quot;&quot;&quot;</span></span>
+<span id="cb4-10"><a href="#cb4-10"></a>        <span class="va">self</span>._name <span class="op">=</span> name</span>
+<span id="cb4-11"><a href="#cb4-11"></a>        <span class="va">self</span>._fee <span class="op">=</span> fee</span>
+<span id="cb4-12"><a href="#cb4-12"></a></span>
+<span id="cb4-13"><a href="#cb4-13"></a>    <span class="kw">def</span> get_name(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
+<span id="cb4-14"><a href="#cb4-14"></a>        <span class="co">&quot;&quot;&quot;Return the college name.&quot;&quot;&quot;</span></span>
+<span id="cb4-15"><a href="#cb4-15"></a>        <span class="cf">return</span> <span class="va">self</span>._name</span>
+<span id="cb4-16"><a href="#cb4-16"></a></span>
+<span id="cb4-17"><a href="#cb4-17"></a>    <span class="kw">def</span> get_fee(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
+<span id="cb4-18"><a href="#cb4-18"></a>        <span class="co">&quot;&quot;&quot;Return the college fee.&quot;&quot;&quot;</span></span>
+<span id="cb4-19"><a href="#cb4-19"></a>        <span class="cf">return</span> <span class="va">self</span>._fee</span>
+<span id="cb4-20"><a href="#cb4-20"></a></span>
+<span id="cb4-21"><a href="#cb4-21"></a></span>
+<span id="cb4-22"><a href="#cb4-22"></a><span class="kw">class</span> ComposedStudent():</span>
+<span id="cb4-23"><a href="#cb4-23"></a>    <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb4-24"><a href="#cb4-24"></a><span class="co">    A student who is associated with a college.</span></span>
+<span id="cb4-25"><a href="#cb4-25"></a><span class="co">    This class uses composition to include a College object as an attribute,</span></span>
+<span id="cb4-26"><a href="#cb4-26"></a><span class="co">    rather than using inheritance to extend behavior.</span></span>
+<span id="cb4-27"><a href="#cb4-27"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb4-28"><a href="#cb4-28"></a></span>
+<span id="cb4-29"><a href="#cb4-29"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name: <span class="bu">str</span>, student_number: <span class="bu">int</span>, college: College <span class="op">=</span> <span class="va">None</span>):</span>
+<span id="cb4-30"><a href="#cb4-30"></a>        <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb4-31"><a href="#cb4-31"></a><span class="co">        Parameters:</span></span>
+<span id="cb4-32"><a href="#cb4-32"></a><span class="co">            name (str): The student&#39;s name in &quot;first_name last_name&quot; format.</span></span>
+<span id="cb4-33"><a href="#cb4-33"></a><span class="co">            student_num (str): The student&#39;s unique student id number.</span></span>
+<span id="cb4-34"><a href="#cb4-34"></a><span class="co">            courses (list of tuple): Each tuple contains a course name (str)</span></span>
+<span id="cb4-35"><a href="#cb4-35"></a><span class="co">            and its associated fee (int), e.g., (&#39;CSSE1001&#39;, 1300).</span></span>
+<span id="cb4-36"><a href="#cb4-36"></a><span class="co">            college (College): A College object representing their college, or None if not associated with any.</span></span>
+<span id="cb4-37"><a href="#cb4-37"></a><span class="co">        &quot;&quot;&quot;</span></span>
+<span id="cb4-38"><a href="#cb4-38"></a>        <span class="va">self</span>._name <span class="op">=</span> name</span>
+<span id="cb4-39"><a href="#cb4-39"></a>        <span class="va">self</span>._student_number <span class="op">=</span> student_number</span>
+<span id="cb4-40"><a href="#cb4-40"></a>        <span class="va">self</span>._enrolments <span class="op">=</span> []       <span class="co"># Stores (course_name, fee) tuples</span></span>
+<span id="cb4-41"><a href="#cb4-41"></a>        <span class="va">self</span>._college <span class="op">=</span> college  <span class="co"># Student &quot;has a&quot; College (composition)</span></span>
+<span id="cb4-42"><a href="#cb4-42"></a></span>
+<span id="cb4-43"><a href="#cb4-43"></a>    <span class="kw">def</span> enrol(<span class="va">self</span>, course, fee) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
+<span id="cb4-44"><a href="#cb4-44"></a>        <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb4-45"><a href="#cb4-45"></a><span class="co">        Enroll the student in a course.</span></span>
+<span id="cb4-46"><a href="#cb4-46"></a></span>
+<span id="cb4-47"><a href="#cb4-47"></a><span class="co">        Parameters:</span></span>
+<span id="cb4-48"><a href="#cb4-48"></a><span class="co">            course (str): The name of the course.</span></span>
+<span id="cb4-49"><a href="#cb4-49"></a><span class="co">            fee (int): The tuition fee for the course.</span></span>
+<span id="cb4-50"><a href="#cb4-50"></a><span class="co">        &quot;&quot;&quot;</span></span>
+<span id="cb4-51"><a href="#cb4-51"></a>        <span class="va">self</span>._enrolments.append((course, fee))</span>
+<span id="cb4-52"><a href="#cb4-52"></a></span>
+<span id="cb4-53"><a href="#cb4-53"></a>    <span class="kw">def</span> calculate_fees(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
+<span id="cb4-54"><a href="#cb4-54"></a>        <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb4-55"><a href="#cb4-55"></a><span class="co">        Calculate total fees including all enrolled courses and college fee if applicable.</span></span>
+<span id="cb4-56"><a href="#cb4-56"></a></span>
+<span id="cb4-57"><a href="#cb4-57"></a><span class="co">        (int) Returns the total amount owed by the student.</span></span>
+<span id="cb4-58"><a href="#cb4-58"></a><span class="co">        &quot;&quot;&quot;</span></span>
+<span id="cb4-59"><a href="#cb4-59"></a>        total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb4-60"><a href="#cb4-60"></a>        <span class="cf">for</span> course_code, fee <span class="kw">in</span> <span class="va">self</span>._enrolments:</span>
+<span id="cb4-61"><a href="#cb4-61"></a>            total <span class="op">+=</span> fee</span>
+<span id="cb4-62"><a href="#cb4-62"></a></span>
+<span id="cb4-63"><a href="#cb4-63"></a>        <span class="cf">if</span> <span class="va">self</span>._college:</span>
+<span id="cb4-64"><a href="#cb4-64"></a>            total <span class="op">+=</span> <span class="va">self</span>._college.get_fee()</span>
+<span id="cb4-65"><a href="#cb4-65"></a>        <span class="cf">return</span> total</span>
+<span id="cb4-66"><a href="#cb4-66"></a></span>
+<span id="cb4-67"><a href="#cb4-67"></a></span>
+<span id="cb4-68"><a href="#cb4-68"></a>leo <span class="op">=</span> College(<span class="st">&quot;St. Leo&#39;s&quot;</span>, <span class="dv">18000</span>)</span>
+<span id="cb4-69"><a href="#cb4-69"></a>alice <span class="op">=</span> ComposedStudent(<span class="st">&quot;Alice Smith&quot;</span>, <span class="dv">98765432</span>, leo)</span>
+<span id="cb4-70"><a href="#cb4-70"></a>alice.calculate_fees()</span>
+<span id="cb4-71"><a href="#cb4-71"></a>alice.enrol(<span class="st">&quot;HIST1010&quot;</span>, <span class="dv">1500</span>)</span>
+<span id="cb4-72"><a href="#cb4-72"></a>alice.calculate_fees()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <button class="idle-run-btn"><svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor">
   <polygon points="5 3 19 12 5 21 5 3"></polygon>
 </svg>
  Run Code</button>
 <div class="idle-output-header"><svg width="18" height="18" viewbox="0 0 110 110" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
  <defs>
-  <lineargradient id="grad-698a89b5-13d94" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
-  <lineargradient id="grad-698a89b5-13769" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e3d-13843" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e3d-d0f7" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
  </defs>
- <path style="fill:url(#grad-698a89b5-13d94)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
- <path style="fill:url(#grad-698a89b5-13769)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e3d-13843)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e3d-d0f7)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
 </svg>
 Output</div>
 <div class="cell-output cell-output-display idle-output-box" data-execution_count="3">
@@ -3092,14 +3093,14 @@ Output</div>
 <div class="idle-filename-header">
 <div class="code-with-filename-file"><pre><svg width="18" height="18" viewbox="0 0 110 110" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
  <defs>
-  <lineargradient id="grad-698a89b5-a4bc" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
-  <lineargradient id="grad-698a89b5-157ed" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e3d-b2c" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e3d-f4ee" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
  </defs>
- <path style="fill:url(#grad-698a89b5-a4bc)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
- <path style="fill:url(#grad-698a89b5-157ed)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e3d-b2c)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e3d-f4ee)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
 </svg>
 <strong>game.py</strong></pre></div>
-<button class="idle-download-btn" data-filename="game.py" data-code="from%20__future__%20import%20annotations%0D%0A%0D%0Aclass%20Character%28%29%3A%0D%0A%20%20%20%20%22%22%22An%20abstract%20base%20class%20for%20game%20characters.%22%22%22%0D%0A%0D%0A%20%20%20%20def%20__init__%28self%2C%20name%3A%20str%2C%20health%3A%20int%29%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22Initialise%20a%20new%20Character%20with%20a%20name%20and%20health.%0D%0A%20%20%20%20%20%20%20%20%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20name%20%28str%29%3A%20The%20name%20of%20the%20character.%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20health%20%28int%29%3A%20The%20health%20of%20the%20character.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20self._name%20%3D%20name%0D%0A%20%20%20%20%20%20%20%20self._health%20%3D%20health%0D%0A%20%20%20%20%0D%0A%20%20%20%20def%20get_health%28self%29%20-%3E%20int%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22Return%20the%20current%20health%20of%20the%20character.%22%22%22%0D%0A%20%20%20%20%20%20%20%20%0D%0A%20%20%20%20%20%20%20%20return%20self._health%0D%0A%20%20%20%20%0D%0A%20%20%20%20def%20get_name%28self%29%20-%3E%20str%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22Return%20the%20name%20of%20the%20character%22%22%22%0D%0A%20%20%20%20%20%20%20%0D%0A%20%20%20%20%20%20%20%20return%20self._name%0D%0A%0D%0A%20%20%20%20def%20attack%28self%2C%20target%3A%20Character%29%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22Attack%20another%20character.%0D%0A%20%20%20%20%20%20%20%20%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20target%3A%20The%20character%20to%20attack.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20%0D%0A%20%20%20%20%20%20%20%20pass%20%23%20By%20default%20a%20character%20cannot%20attack%20%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20unless%20specified%20in%20a%20subclass%0D%0A%0D%0A%20%20%20%20def%20take_damage%28self%2C%20damage%3A%20int%29%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22Reduce%20the%20character%27s%20health%20by%20the%20given%20damage%20amount.%0D%0A%20%20%20%20%20%20%20%20%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20damage%3A%20The%20amount%20of%20damage%20to%20take.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20self._health%20-%3D%20damage%0D%0A%20%20%20%20%20%20%20%20if%20self._health%20%3C%200%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20self._health%20%3D%200" title="Download game.py"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<button class="idle-download-btn" data-filename="game.py" data-code="from%20__future__%20import%20annotations%0D%0A%0D%0Aclass%20Character%3A%0D%0A%20%20%20%20%22%22%22An%20abstract%20base%20class%20for%20game%20characters.%22%22%22%0D%0A%0D%0A%20%20%20%20def%20__init__%28self%2C%20name%3A%20str%2C%20health%3A%20int%29%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22Initialise%20a%20new%20Character%20with%20a%20name%20and%20health.%0D%0A%20%20%20%20%20%20%20%20%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20name%20%28str%29%3A%20The%20name%20of%20the%20character.%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20health%20%28int%29%3A%20The%20health%20of%20the%20character.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20self._name%20%3D%20name%0D%0A%20%20%20%20%20%20%20%20self._health%20%3D%20health%0D%0A%20%20%20%20%0D%0A%20%20%20%20def%20get_health%28self%29%20-%3E%20int%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22%20Returns%20the%20current%20health%20of%20the%20character.%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20return%20self._health%0D%0A%20%20%20%20%0D%0A%20%20%20%20def%20get_name%28self%29%20-%3E%20str%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22%20Returns%20the%20name%20of%20the%20character.%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20return%20self._name%0D%0A%0D%0A%20%20%20%20def%20attack%28self%2C%20target%3A%20Character%29%20-%3E%20None%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22%20Attack%20another%20character.%0D%0A%20%20%20%20%20%20%20%20%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20target%3A%20The%20character%20to%20attack.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20pass%20%23%20By%20default%20a%20character%20cannot%20attack%20%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20unless%20specified%20in%20a%20subclass%0D%0A%0D%0A%20%20%20%20def%20take_damage%28self%2C%20damage%3A%20int%29%20-%3E%20None%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22%20Reduces%20the%20character%27s%20health%20by%20the%20given%20damage%20amount.%0D%0A%20%20%20%20%20%20%20%20%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20damage%3A%20The%20amount%20of%20damage%20to%20take.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20self._health%20-%3D%20damage%0D%0A%20%20%20%20%20%20%20%20if%20self._health%20%3C%200%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20self._health%20%3D%200" title="Download game.py"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
   <polyline points="7 10 12 15 17 10"></polyline>
   <line x1="12" y1="15" x2="12" y2="3"></line>
@@ -3109,7 +3110,7 @@ Output</div>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">from</span> __future__ <span class="im">import</span> annotations</span>
 <span id="cb6-2"><a href="#cb6-2"></a></span>
-<span id="cb6-3"><a href="#cb6-3"></a><span class="kw">class</span> Character():</span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="kw">class</span> Character:</span>
 <span id="cb6-4"><a href="#cb6-4"></a>    <span class="co">&quot;&quot;&quot;An abstract base class for game characters.&quot;&quot;&quot;</span></span>
 <span id="cb6-5"><a href="#cb6-5"></a></span>
 <span id="cb6-6"><a href="#cb6-6"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name: <span class="bu">str</span>, health: <span class="bu">int</span>):</span>
@@ -3123,34 +3124,31 @@ Output</div>
 <span id="cb6-14"><a href="#cb6-14"></a>        <span class="va">self</span>._health <span class="op">=</span> health</span>
 <span id="cb6-15"><a href="#cb6-15"></a>    </span>
 <span id="cb6-16"><a href="#cb6-16"></a>    <span class="kw">def</span> get_health(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
-<span id="cb6-17"><a href="#cb6-17"></a>        <span class="co">&quot;&quot;&quot;Return the current health of the character.&quot;&quot;&quot;</span></span>
-<span id="cb6-18"><a href="#cb6-18"></a>        </span>
-<span id="cb6-19"><a href="#cb6-19"></a>        <span class="cf">return</span> <span class="va">self</span>._health</span>
-<span id="cb6-20"><a href="#cb6-20"></a>    </span>
-<span id="cb6-21"><a href="#cb6-21"></a>    <span class="kw">def</span> get_name(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
-<span id="cb6-22"><a href="#cb6-22"></a>        <span class="co">&quot;&quot;&quot;Return the name of the character&quot;&quot;&quot;</span></span>
-<span id="cb6-23"><a href="#cb6-23"></a>       </span>
-<span id="cb6-24"><a href="#cb6-24"></a>        <span class="cf">return</span> <span class="va">self</span>._name</span>
-<span id="cb6-25"><a href="#cb6-25"></a></span>
-<span id="cb6-26"><a href="#cb6-26"></a>    <span class="kw">def</span> attack(<span class="va">self</span>, target: Character):</span>
-<span id="cb6-27"><a href="#cb6-27"></a>        <span class="co">&quot;&quot;&quot;Attack another character.</span></span>
-<span id="cb6-28"><a href="#cb6-28"></a><span class="co">        </span></span>
-<span id="cb6-29"><a href="#cb6-29"></a><span class="co">        Parameters:</span></span>
-<span id="cb6-30"><a href="#cb6-30"></a><span class="co">            target: The character to attack.</span></span>
-<span id="cb6-31"><a href="#cb6-31"></a><span class="co">        &quot;&quot;&quot;</span></span>
-<span id="cb6-32"><a href="#cb6-32"></a>        </span>
-<span id="cb6-33"><a href="#cb6-33"></a>        <span class="cf">pass</span> <span class="co"># By default a character cannot attack </span></span>
-<span id="cb6-34"><a href="#cb6-34"></a>             <span class="co"># unless specified in a subclass</span></span>
-<span id="cb6-35"><a href="#cb6-35"></a></span>
-<span id="cb6-36"><a href="#cb6-36"></a>    <span class="kw">def</span> take_damage(<span class="va">self</span>, damage: <span class="bu">int</span>):</span>
-<span id="cb6-37"><a href="#cb6-37"></a>        <span class="co">&quot;&quot;&quot;Reduce the character&#39;s health by the given damage amount.</span></span>
-<span id="cb6-38"><a href="#cb6-38"></a><span class="co">        </span></span>
-<span id="cb6-39"><a href="#cb6-39"></a><span class="co">        Parameters:</span></span>
-<span id="cb6-40"><a href="#cb6-40"></a><span class="co">            damage: The amount of damage to take.</span></span>
-<span id="cb6-41"><a href="#cb6-41"></a><span class="co">        &quot;&quot;&quot;</span></span>
-<span id="cb6-42"><a href="#cb6-42"></a>        <span class="va">self</span>._health <span class="op">-=</span> damage</span>
-<span id="cb6-43"><a href="#cb6-43"></a>        <span class="cf">if</span> <span class="va">self</span>._health <span class="op">&lt;</span> <span class="dv">0</span>:</span>
-<span id="cb6-44"><a href="#cb6-44"></a>            <span class="va">self</span>._health <span class="op">=</span> <span class="dv">0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb6-17"><a href="#cb6-17"></a>        <span class="co">&quot;&quot;&quot; Returns the current health of the character. &quot;&quot;&quot;</span></span>
+<span id="cb6-18"><a href="#cb6-18"></a>        <span class="cf">return</span> <span class="va">self</span>._health</span>
+<span id="cb6-19"><a href="#cb6-19"></a>    </span>
+<span id="cb6-20"><a href="#cb6-20"></a>    <span class="kw">def</span> get_name(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
+<span id="cb6-21"><a href="#cb6-21"></a>        <span class="co">&quot;&quot;&quot; Returns the name of the character. &quot;&quot;&quot;</span></span>
+<span id="cb6-22"><a href="#cb6-22"></a>        <span class="cf">return</span> <span class="va">self</span>._name</span>
+<span id="cb6-23"><a href="#cb6-23"></a></span>
+<span id="cb6-24"><a href="#cb6-24"></a>    <span class="kw">def</span> attack(<span class="va">self</span>, target: Character) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
+<span id="cb6-25"><a href="#cb6-25"></a>        <span class="co">&quot;&quot;&quot; Attack another character.</span></span>
+<span id="cb6-26"><a href="#cb6-26"></a><span class="co">        </span></span>
+<span id="cb6-27"><a href="#cb6-27"></a><span class="co">        Parameters:</span></span>
+<span id="cb6-28"><a href="#cb6-28"></a><span class="co">            target: The character to attack.</span></span>
+<span id="cb6-29"><a href="#cb6-29"></a><span class="co">        &quot;&quot;&quot;</span></span>
+<span id="cb6-30"><a href="#cb6-30"></a>        <span class="cf">pass</span> <span class="co"># By default a character cannot attack </span></span>
+<span id="cb6-31"><a href="#cb6-31"></a>             <span class="co"># unless specified in a subclass</span></span>
+<span id="cb6-32"><a href="#cb6-32"></a></span>
+<span id="cb6-33"><a href="#cb6-33"></a>    <span class="kw">def</span> take_damage(<span class="va">self</span>, damage: <span class="bu">int</span>) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
+<span id="cb6-34"><a href="#cb6-34"></a>        <span class="co">&quot;&quot;&quot; Reduces the character&#39;s health by the given damage amount.</span></span>
+<span id="cb6-35"><a href="#cb6-35"></a><span class="co">        </span></span>
+<span id="cb6-36"><a href="#cb6-36"></a><span class="co">        Parameters:</span></span>
+<span id="cb6-37"><a href="#cb6-37"></a><span class="co">            damage: The amount of damage to take.</span></span>
+<span id="cb6-38"><a href="#cb6-38"></a><span class="co">        &quot;&quot;&quot;</span></span>
+<span id="cb6-39"><a href="#cb6-39"></a>        <span class="va">self</span>._health <span class="op">-=</span> damage</span>
+<span id="cb6-40"><a href="#cb6-40"></a>        <span class="cf">if</span> <span class="va">self</span>._health <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb6-41"><a href="#cb6-41"></a>            <span class="va">self</span>._health <span class="op">=</span> <span class="dv">0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <script>
 (function() {
   try {
@@ -3225,7 +3223,10 @@ Output</div>
 </script>
 
 </div>
-<p>We would like you to implement two subclasses of Character: Barbarian and Mage. Each subclass should implement the following functionality: - The Barbarian class should have an additional attribute rage (an integer) which starts at 0. The attack method for a Barbarian should deal 10 damage to the target character, and increase the Barbarian’s rage by 5 (In that order!). If the Barbarian’s rage reaches 20 or more, the next attack should deal double damage (20 damage) and reset the rage to 0. The example below demonstrates this behaviour:</p>
+<p>We would like you to implement two subclasses of Character: Warrior and Mage. The subclasses should implement the following functionality:</p>
+<ul>
+<li>The Warrior class should have an additional attribute rage (an integer) which starts at 0. The attack method for a Warrior should deal 10 damage to the target character, and increase the Warrior’s rage by 5 (in that order!). If the Warrior’s rage reaches 20 or more, the next attack should deal double damage (20 damage) and reset the rage to 0. The example below demonstrates this behaviour:</li>
+</ul>
 <div class="idle-terminal console"><div class="idle-line code"><div class="idle-gutter prompt">&gt;&gt;&gt;</div><div class="idle-content"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>bob <span class="op">=</span> Warrior(<span class="st">&quot;Bob&quot;</span>, <span class="dv">100</span>)</span></div></div>
 <div class="idle-line code"><div class="idle-gutter prompt">&gt;&gt;&gt;</div><div class="idle-content"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>alice <span class="op">=</span> Character(<span class="st">&quot;Alice&quot;</span>, <span class="dv">100</span>)</span></div></div>
 <div class="idle-line code"><div class="idle-gutter prompt">&gt;&gt;&gt;</div><div class="idle-content"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>bob.attack(alice)</span></div></div>
@@ -3261,14 +3262,14 @@ Output</div>
 <div class="idle-filename-header">
 <div class="code-with-filename-file"><pre><svg width="18" height="18" viewbox="0 0 110 110" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
  <defs>
-  <lineargradient id="grad-698a89b5-15ff1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
-  <lineargradient id="grad-698a89b5-16ee2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e3d-16c0f" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e3d-16af" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
  </defs>
- <path style="fill:url(#grad-698a89b5-15ff1)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
- <path style="fill:url(#grad-698a89b5-16ee2)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e3d-16c0f)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e3d-16af)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
 </svg>
 <strong>game.py</strong></pre></div>
-<button class="idle-download-btn" data-filename="game.py" data-code="from%20__future__%20import%20annotations%0D%0Aclass%20Warrior%28Character%29%3A%0D%0A%20%20%20%20%22%22%22A%20Barbarian%20character%20in%20the%20game.%22%22%22%0D%0A%0D%0A%20%20%20%20def%20__init__%28self%2C%20name%3A%20str%2C%20health%3A%20int%29%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22Initialise%20a%20new%20Barbarian%20with%20a%20name%2C%20health%2C%20and%20rage.%0D%0A%20%20%20%20%20%20%20%20%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20name%3A%20The%20name%20of%20the%20character.%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20health%3A%20The%20health%20of%20the%20character.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20super%28%29.__init__%28name%2C%20health%29%0D%0A%20%20%20%20%20%20%20%20self._rage%20%3D%200%0D%0A%0D%0A%20%20%20%20def%20attack%28self%2C%20target%3A%20Character%29%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22Attack%20another%20character.%0D%0A%20%20%20%20%20%20%20%20%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20target%3A%20The%20character%20to%20attack.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20if%20self._rage%20%3E%3D%2020%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20damage%20%3D%2020%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20self._rage%20%3D%200%0D%0A%20%20%20%20%20%20%20%20else%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20damage%20%3D%2010%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20self._rage%20%2B%3D%205%0D%0A%20%20%20%20%20%20%20%20%0D%0A%20%20%20%20%20%20%20%20target.take_damage%28damage%29%0D%0A%0D%0Abob%20%3D%20Warrior%28%22Bob%22%2C%20100%29%0D%0Aalice%20%3D%20Character%28%22Alice%22%2C%20100%29%0D%0Abob.attack%28alice%29%0D%0Aprint%28alice.get_health%28%29%29%0D%0Abob.attack%28alice%29%0D%0Aprint%28alice.get_health%28%29%29%0D%0Abob.attack%28alice%29%0D%0Aprint%28alice.get_health%28%29%29%0D%0Abob.attack%28alice%29%0D%0Aprint%28alice.get_health%28%29%29%0D%0Abob.attack%28alice%29%0D%0Aprint%28alice.get_health%28%29%29" title="Download game.py"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<button class="idle-download-btn" data-filename="game.py" data-code="from%20__future__%20import%20annotations%0D%0A%0D%0Aclass%20Warrior%28Character%29%3A%0D%0A%20%20%20%20%22%22%22A%20Warrior%20character%20in%20the%20game.%22%22%22%0D%0A%0D%0A%20%20%20%20def%20__init__%28self%2C%20name%3A%20str%2C%20health%3A%20int%29%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22Initialise%20a%20new%20Warrior%20with%20a%20name%2C%20health%2C%20and%20rage.%0D%0A%20%20%20%20%20%20%20%20%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20name%3A%20The%20name%20of%20the%20character.%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20health%3A%20The%20health%20of%20the%20character.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20super%28%29.__init__%28name%2C%20health%29%0D%0A%20%20%20%20%20%20%20%20self._rage%20%3D%200%0D%0A%0D%0A%20%20%20%20def%20attack%28self%2C%20target%3A%20Character%29%20-%3E%20None%3A%0D%0A%20%20%20%20%20%20%20%20if%20self._rage%20%3E%3D%2020%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20damage%20%3D%2020%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20self._rage%20%3D%200%0D%0A%20%20%20%20%20%20%20%20else%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20damage%20%3D%2010%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20self._rage%20%2B%3D%205%0D%0A%20%20%20%20%20%20%20%20%0D%0A%20%20%20%20%20%20%20%20target.take_damage%28damage%29%0D%0A%0D%0Abob%20%3D%20Warrior%28%22Bob%22%2C%20100%29%0D%0Aalice%20%3D%20Character%28%22Alice%22%2C%20100%29%0D%0Abob.attack%28alice%29%0D%0Aprint%28alice.get_health%28%29%29%0D%0Abob.attack%28alice%29%0D%0Aprint%28alice.get_health%28%29%29%0D%0Abob.attack%28alice%29%0D%0Aprint%28alice.get_health%28%29%29%0D%0Abob.attack%28alice%29%0D%0Aprint%28alice.get_health%28%29%29%0D%0Abob.attack%28alice%29%0D%0Aprint%28alice.get_health%28%29%29" title="Download game.py"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
   <polyline points="7 10 12 15 17 10"></polyline>
   <line x1="12" y1="15" x2="12" y2="3"></line>
@@ -3277,57 +3278,53 @@ Output</div>
 </div>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="im">from</span> __future__ <span class="im">import</span> annotations</span>
-<span id="cb7-2"><a href="#cb7-2"></a><span class="kw">class</span> Warrior(Character):</span>
-<span id="cb7-3"><a href="#cb7-3"></a>    <span class="co">&quot;&quot;&quot;A Barbarian character in the game.&quot;&quot;&quot;</span></span>
-<span id="cb7-4"><a href="#cb7-4"></a></span>
-<span id="cb7-5"><a href="#cb7-5"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name: <span class="bu">str</span>, health: <span class="bu">int</span>):</span>
-<span id="cb7-6"><a href="#cb7-6"></a>        <span class="co">&quot;&quot;&quot;Initialise a new Barbarian with a name, health, and rage.</span></span>
-<span id="cb7-7"><a href="#cb7-7"></a><span class="co">        </span></span>
-<span id="cb7-8"><a href="#cb7-8"></a><span class="co">        Parameters:</span></span>
-<span id="cb7-9"><a href="#cb7-9"></a><span class="co">            name: The name of the character.</span></span>
-<span id="cb7-10"><a href="#cb7-10"></a><span class="co">            health: The health of the character.</span></span>
-<span id="cb7-11"><a href="#cb7-11"></a><span class="co">        &quot;&quot;&quot;</span></span>
-<span id="cb7-12"><a href="#cb7-12"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>(name, health)</span>
-<span id="cb7-13"><a href="#cb7-13"></a>        <span class="va">self</span>._rage <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb7-14"><a href="#cb7-14"></a></span>
-<span id="cb7-15"><a href="#cb7-15"></a>    <span class="kw">def</span> attack(<span class="va">self</span>, target: Character):</span>
-<span id="cb7-16"><a href="#cb7-16"></a>        <span class="co">&quot;&quot;&quot;Attack another character.</span></span>
-<span id="cb7-17"><a href="#cb7-17"></a><span class="co">        </span></span>
-<span id="cb7-18"><a href="#cb7-18"></a><span class="co">        Parameters:</span></span>
-<span id="cb7-19"><a href="#cb7-19"></a><span class="co">            target: The character to attack.</span></span>
-<span id="cb7-20"><a href="#cb7-20"></a><span class="co">        &quot;&quot;&quot;</span></span>
-<span id="cb7-21"><a href="#cb7-21"></a>        <span class="cf">if</span> <span class="va">self</span>._rage <span class="op">&gt;=</span> <span class="dv">20</span>:</span>
-<span id="cb7-22"><a href="#cb7-22"></a>            damage <span class="op">=</span> <span class="dv">20</span></span>
-<span id="cb7-23"><a href="#cb7-23"></a>            <span class="va">self</span>._rage <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb7-24"><a href="#cb7-24"></a>        <span class="cf">else</span>:</span>
-<span id="cb7-25"><a href="#cb7-25"></a>            damage <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb7-26"><a href="#cb7-26"></a>            <span class="va">self</span>._rage <span class="op">+=</span> <span class="dv">5</span></span>
-<span id="cb7-27"><a href="#cb7-27"></a>        </span>
-<span id="cb7-28"><a href="#cb7-28"></a>        target.take_damage(damage)</span>
-<span id="cb7-29"><a href="#cb7-29"></a></span>
-<span id="cb7-30"><a href="#cb7-30"></a>bob <span class="op">=</span> Warrior(<span class="st">&quot;Bob&quot;</span>, <span class="dv">100</span>)</span>
-<span id="cb7-31"><a href="#cb7-31"></a>alice <span class="op">=</span> Character(<span class="st">&quot;Alice&quot;</span>, <span class="dv">100</span>)</span>
+<span id="cb7-2"><a href="#cb7-2"></a></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="kw">class</span> Warrior(Character):</span>
+<span id="cb7-4"><a href="#cb7-4"></a>    <span class="co">&quot;&quot;&quot;A Warrior character in the game.&quot;&quot;&quot;</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a></span>
+<span id="cb7-6"><a href="#cb7-6"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name: <span class="bu">str</span>, health: <span class="bu">int</span>):</span>
+<span id="cb7-7"><a href="#cb7-7"></a>        <span class="co">&quot;&quot;&quot;Initialise a new Warrior with a name, health, and rage.</span></span>
+<span id="cb7-8"><a href="#cb7-8"></a><span class="co">        </span></span>
+<span id="cb7-9"><a href="#cb7-9"></a><span class="co">        Parameters:</span></span>
+<span id="cb7-10"><a href="#cb7-10"></a><span class="co">            name: The name of the character.</span></span>
+<span id="cb7-11"><a href="#cb7-11"></a><span class="co">            health: The health of the character.</span></span>
+<span id="cb7-12"><a href="#cb7-12"></a><span class="co">        &quot;&quot;&quot;</span></span>
+<span id="cb7-13"><a href="#cb7-13"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>(name, health)</span>
+<span id="cb7-14"><a href="#cb7-14"></a>        <span class="va">self</span>._rage <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb7-15"><a href="#cb7-15"></a></span>
+<span id="cb7-16"><a href="#cb7-16"></a>    <span class="kw">def</span> attack(<span class="va">self</span>, target: Character) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
+<span id="cb7-17"><a href="#cb7-17"></a>        <span class="cf">if</span> <span class="va">self</span>._rage <span class="op">&gt;=</span> <span class="dv">20</span>:</span>
+<span id="cb7-18"><a href="#cb7-18"></a>            damage <span class="op">=</span> <span class="dv">20</span></span>
+<span id="cb7-19"><a href="#cb7-19"></a>            <span class="va">self</span>._rage <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb7-20"><a href="#cb7-20"></a>        <span class="cf">else</span>:</span>
+<span id="cb7-21"><a href="#cb7-21"></a>            damage <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb7-22"><a href="#cb7-22"></a>            <span class="va">self</span>._rage <span class="op">+=</span> <span class="dv">5</span></span>
+<span id="cb7-23"><a href="#cb7-23"></a>        </span>
+<span id="cb7-24"><a href="#cb7-24"></a>        target.take_damage(damage)</span>
+<span id="cb7-25"><a href="#cb7-25"></a></span>
+<span id="cb7-26"><a href="#cb7-26"></a>bob <span class="op">=</span> Warrior(<span class="st">&quot;Bob&quot;</span>, <span class="dv">100</span>)</span>
+<span id="cb7-27"><a href="#cb7-27"></a>alice <span class="op">=</span> Character(<span class="st">&quot;Alice&quot;</span>, <span class="dv">100</span>)</span>
+<span id="cb7-28"><a href="#cb7-28"></a>bob.attack(alice)</span>
+<span id="cb7-29"><a href="#cb7-29"></a><span class="bu">print</span>(alice.get_health())</span>
+<span id="cb7-30"><a href="#cb7-30"></a>bob.attack(alice)</span>
+<span id="cb7-31"><a href="#cb7-31"></a><span class="bu">print</span>(alice.get_health())</span>
 <span id="cb7-32"><a href="#cb7-32"></a>bob.attack(alice)</span>
 <span id="cb7-33"><a href="#cb7-33"></a><span class="bu">print</span>(alice.get_health())</span>
 <span id="cb7-34"><a href="#cb7-34"></a>bob.attack(alice)</span>
 <span id="cb7-35"><a href="#cb7-35"></a><span class="bu">print</span>(alice.get_health())</span>
 <span id="cb7-36"><a href="#cb7-36"></a>bob.attack(alice)</span>
-<span id="cb7-37"><a href="#cb7-37"></a><span class="bu">print</span>(alice.get_health())</span>
-<span id="cb7-38"><a href="#cb7-38"></a>bob.attack(alice)</span>
-<span id="cb7-39"><a href="#cb7-39"></a><span class="bu">print</span>(alice.get_health())</span>
-<span id="cb7-40"><a href="#cb7-40"></a>bob.attack(alice)</span>
-<span id="cb7-41"><a href="#cb7-41"></a><span class="bu">print</span>(alice.get_health())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb7-37"><a href="#cb7-37"></a><span class="bu">print</span>(alice.get_health())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <button class="idle-run-btn"><svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor">
   <polygon points="5 3 19 12 5 21 5 3"></polygon>
 </svg>
  Run Code</button>
 <div class="idle-output-header"><svg width="18" height="18" viewbox="0 0 110 110" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
  <defs>
-  <lineargradient id="grad-698a89b5-14ee1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
-  <lineargradient id="grad-698a89b5-97cf" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e3d-6601" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e3d-82dd" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
  </defs>
- <path style="fill:url(#grad-698a89b5-14ee1)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
- <path style="fill:url(#grad-698a89b5-97cf)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e3d-6601)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e3d-82dd)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
 </svg>
 Output</div>
 <div class="cell-output cell-output-stdout idle-output-box">
@@ -3454,14 +3451,14 @@ Output</div>
 <div class="idle-filename-header">
 <div class="code-with-filename-file"><pre><svg width="18" height="18" viewbox="0 0 110 110" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
  <defs>
-  <lineargradient id="grad-698a89b5-8120" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
-  <lineargradient id="grad-698a89b5-d523" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e3d-3499" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e3d-5b32" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
  </defs>
- <path style="fill:url(#grad-698a89b5-8120)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
- <path style="fill:url(#grad-698a89b5-d523)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e3d-3499)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e3d-5b32)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
 </svg>
 <strong>game.py</strong></pre></div>
-<button class="idle-download-btn" data-filename="game.py" data-code="from%20__future__%20import%20annotations%0D%0Aclass%20Mage%28Character%29%3A%0D%0A%20%20%20%20%22%22%22A%20Mage%20character%20in%20the%20game.%22%22%22%0D%0A%0D%0A%20%20%20%20def%20__init__%28self%2C%20name%3A%20str%2C%20health%3A%20int%29%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22Initialise%20a%20new%20Mage%20with%20a%20name%2C%20health%2C%20and%20mana.%0D%0A%20%20%20%20%20%20%20%20%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20name%3A%20The%20name%20of%20the%20character.%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20health%3A%20The%20health%20of%20the%20character.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20super%28%29.__init__%28name%2C%20health%29%0D%0A%20%20%20%20%20%20%20%20self._mana%20%3D%20100%0D%0A%0D%0A%20%20%20%20def%20attack%28self%2C%20target%3A%20Character%29%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22Attack%20another%20character.%0D%0A%20%20%20%20%20%20%20%20%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20target%3A%20The%20character%20to%20attack.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20if%20self._mana%20%3C%2010%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20print%28%22Out%20of%20mana%21%22%29%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20return%0D%0A%20%20%20%20%20%20%20%20%0D%0A%20%20%20%20%20%20%20%20damage%20%3D%2015%0D%0A%20%20%20%20%20%20%20%20self._mana%20-%3D%2030%0D%0A%20%20%20%20%20%20%20%20target.take_damage%28damage%29%0D%0A%0D%0Amerlin%20%3D%20Mage%28%22Merlin%22%2C%20100%29%0D%0Agandalf%20%3D%20Mage%28%22Gandalf%22%2C%20100%29%0D%0Amerlin.attack%28gandalf%29%0D%0Aprint%28gandalf.get_health%28%29%29%0D%0Amerlin.attack%28gandalf%29%0D%0Aprint%28gandalf.get_health%28%29%29%0D%0Amerlin.attack%28gandalf%29%0D%0Aprint%28gandalf.get_health%28%29%29%0D%0Amerlin.attack%28gandalf%29%0D%0Aprint%28gandalf.get_health%28%29%29%0D%0Amerlin.attack%28gandalf%29%0D%0Aprint%28gandalf.get_health%28%29%29" title="Download game.py"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<button class="idle-download-btn" data-filename="game.py" data-code="from%20__future__%20import%20annotations%0D%0Aclass%20Mage%28Character%29%3A%0D%0A%20%20%20%20%22%22%22A%20Mage%20character%20in%20the%20game.%22%22%22%0D%0A%0D%0A%20%20%20%20def%20__init__%28self%2C%20name%3A%20str%2C%20health%3A%20int%29%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22Initialise%20a%20new%20Mage%20with%20a%20name%2C%20health%2C%20and%20mana.%0D%0A%20%20%20%20%20%20%20%20%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20name%3A%20The%20name%20of%20the%20character.%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20health%3A%20The%20health%20of%20the%20character.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20super%28%29.__init__%28name%2C%20health%29%0D%0A%20%20%20%20%20%20%20%20self._mana%20%3D%20100%0D%0A%0D%0A%20%20%20%20def%20attack%28self%2C%20target%3A%20Character%29%3A%0D%0A%20%20%20%20%20%20%20%20if%20self._mana%20%3C%2010%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20print%28%22Out%20of%20mana%21%22%29%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20return%0D%0A%20%20%20%20%20%20%20%20%0D%0A%20%20%20%20%20%20%20%20damage%20%3D%2015%0D%0A%20%20%20%20%20%20%20%20self._mana%20-%3D%2030%0D%0A%20%20%20%20%20%20%20%20target.take_damage%28damage%29%0D%0A%0D%0Amerlin%20%3D%20Mage%28%22Merlin%22%2C%20100%29%0D%0Agandalf%20%3D%20Mage%28%22Gandalf%22%2C%20100%29%0D%0Amerlin.attack%28gandalf%29%0D%0Aprint%28gandalf.get_health%28%29%29%0D%0Amerlin.attack%28gandalf%29%0D%0Aprint%28gandalf.get_health%28%29%29%0D%0Amerlin.attack%28gandalf%29%0D%0Aprint%28gandalf.get_health%28%29%29%0D%0Amerlin.attack%28gandalf%29%0D%0Aprint%28gandalf.get_health%28%29%29%0D%0Amerlin.attack%28gandalf%29%0D%0Aprint%28gandalf.get_health%28%29%29" title="Download game.py"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
   <polyline points="7 10 12 15 17 10"></polyline>
   <line x1="12" y1="15" x2="12" y2="3"></line>
@@ -3484,42 +3481,37 @@ Output</div>
 <span id="cb9-13"><a href="#cb9-13"></a>        <span class="va">self</span>._mana <span class="op">=</span> <span class="dv">100</span></span>
 <span id="cb9-14"><a href="#cb9-14"></a></span>
 <span id="cb9-15"><a href="#cb9-15"></a>    <span class="kw">def</span> attack(<span class="va">self</span>, target: Character):</span>
-<span id="cb9-16"><a href="#cb9-16"></a>        <span class="co">&quot;&quot;&quot;Attack another character.</span></span>
-<span id="cb9-17"><a href="#cb9-17"></a><span class="co">        </span></span>
-<span id="cb9-18"><a href="#cb9-18"></a><span class="co">        Parameters:</span></span>
-<span id="cb9-19"><a href="#cb9-19"></a><span class="co">            target: The character to attack.</span></span>
-<span id="cb9-20"><a href="#cb9-20"></a><span class="co">        &quot;&quot;&quot;</span></span>
-<span id="cb9-21"><a href="#cb9-21"></a>        <span class="cf">if</span> <span class="va">self</span>._mana <span class="op">&lt;</span> <span class="dv">10</span>:</span>
-<span id="cb9-22"><a href="#cb9-22"></a>            <span class="bu">print</span>(<span class="st">&quot;Out of mana!&quot;</span>)</span>
-<span id="cb9-23"><a href="#cb9-23"></a>            <span class="cf">return</span></span>
-<span id="cb9-24"><a href="#cb9-24"></a>        </span>
-<span id="cb9-25"><a href="#cb9-25"></a>        damage <span class="op">=</span> <span class="dv">15</span></span>
-<span id="cb9-26"><a href="#cb9-26"></a>        <span class="va">self</span>._mana <span class="op">-=</span> <span class="dv">30</span></span>
-<span id="cb9-27"><a href="#cb9-27"></a>        target.take_damage(damage)</span>
-<span id="cb9-28"><a href="#cb9-28"></a></span>
-<span id="cb9-29"><a href="#cb9-29"></a>merlin <span class="op">=</span> Mage(<span class="st">&quot;Merlin&quot;</span>, <span class="dv">100</span>)</span>
-<span id="cb9-30"><a href="#cb9-30"></a>gandalf <span class="op">=</span> Mage(<span class="st">&quot;Gandalf&quot;</span>, <span class="dv">100</span>)</span>
-<span id="cb9-31"><a href="#cb9-31"></a>merlin.attack(gandalf)</span>
-<span id="cb9-32"><a href="#cb9-32"></a><span class="bu">print</span>(gandalf.get_health())</span>
-<span id="cb9-33"><a href="#cb9-33"></a>merlin.attack(gandalf)</span>
-<span id="cb9-34"><a href="#cb9-34"></a><span class="bu">print</span>(gandalf.get_health())</span>
-<span id="cb9-35"><a href="#cb9-35"></a>merlin.attack(gandalf)</span>
-<span id="cb9-36"><a href="#cb9-36"></a><span class="bu">print</span>(gandalf.get_health())</span>
-<span id="cb9-37"><a href="#cb9-37"></a>merlin.attack(gandalf)</span>
-<span id="cb9-38"><a href="#cb9-38"></a><span class="bu">print</span>(gandalf.get_health())</span>
-<span id="cb9-39"><a href="#cb9-39"></a>merlin.attack(gandalf)</span>
-<span id="cb9-40"><a href="#cb9-40"></a><span class="bu">print</span>(gandalf.get_health())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb9-16"><a href="#cb9-16"></a>        <span class="cf">if</span> <span class="va">self</span>._mana <span class="op">&lt;</span> <span class="dv">10</span>:</span>
+<span id="cb9-17"><a href="#cb9-17"></a>            <span class="bu">print</span>(<span class="st">&quot;Out of mana!&quot;</span>)</span>
+<span id="cb9-18"><a href="#cb9-18"></a>            <span class="cf">return</span></span>
+<span id="cb9-19"><a href="#cb9-19"></a>        </span>
+<span id="cb9-20"><a href="#cb9-20"></a>        damage <span class="op">=</span> <span class="dv">15</span></span>
+<span id="cb9-21"><a href="#cb9-21"></a>        <span class="va">self</span>._mana <span class="op">-=</span> <span class="dv">30</span></span>
+<span id="cb9-22"><a href="#cb9-22"></a>        target.take_damage(damage)</span>
+<span id="cb9-23"><a href="#cb9-23"></a></span>
+<span id="cb9-24"><a href="#cb9-24"></a>merlin <span class="op">=</span> Mage(<span class="st">&quot;Merlin&quot;</span>, <span class="dv">100</span>)</span>
+<span id="cb9-25"><a href="#cb9-25"></a>gandalf <span class="op">=</span> Mage(<span class="st">&quot;Gandalf&quot;</span>, <span class="dv">100</span>)</span>
+<span id="cb9-26"><a href="#cb9-26"></a>merlin.attack(gandalf)</span>
+<span id="cb9-27"><a href="#cb9-27"></a><span class="bu">print</span>(gandalf.get_health())</span>
+<span id="cb9-28"><a href="#cb9-28"></a>merlin.attack(gandalf)</span>
+<span id="cb9-29"><a href="#cb9-29"></a><span class="bu">print</span>(gandalf.get_health())</span>
+<span id="cb9-30"><a href="#cb9-30"></a>merlin.attack(gandalf)</span>
+<span id="cb9-31"><a href="#cb9-31"></a><span class="bu">print</span>(gandalf.get_health())</span>
+<span id="cb9-32"><a href="#cb9-32"></a>merlin.attack(gandalf)</span>
+<span id="cb9-33"><a href="#cb9-33"></a><span class="bu">print</span>(gandalf.get_health())</span>
+<span id="cb9-34"><a href="#cb9-34"></a>merlin.attack(gandalf)</span>
+<span id="cb9-35"><a href="#cb9-35"></a><span class="bu">print</span>(gandalf.get_health())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <button class="idle-run-btn"><svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor">
   <polygon points="5 3 19 12 5 21 5 3"></polygon>
 </svg>
  Run Code</button>
 <div class="idle-output-header"><svg width="18" height="18" viewbox="0 0 110 110" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
  <defs>
-  <lineargradient id="grad-698a89b5-c97c" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
-  <lineargradient id="grad-698a89b5-114a3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e3d-f27c" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e3d-c7c" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
  </defs>
- <path style="fill:url(#grad-698a89b5-c97c)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
- <path style="fill:url(#grad-698a89b5-114a3)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e3d-f27c)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e3d-c7c)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
 </svg>
 Output</div>
 <div class="cell-output cell-output-stdout idle-output-box">

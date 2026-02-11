@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-02-10">
+<meta name="dcterms.date" content="2026-02-11">
 
 <title>Recursion</title>
 <style>
@@ -2605,7 +2605,7 @@ display: none;
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 10, 2026</p>
+      <p class="date">February 11, 2026</p>
     </div>
   </div>
   
@@ -2619,11 +2619,11 @@ display: none;
 
 <section id="review-recursion" class="level2">
 <h2 class="anchored" data-anchor-id="review-recursion">Review: Recursion</h2>
-<p>A recursive function is one which makes a call to itself in its body, with a smaller input. This repeats until no self-calls are made (hits the base case); this is known as a base case (without a base case, the function will call itself endlessly).</p>
-<p>Recall this is done by:</p>
+<p>A recursive function is one which makes a call to itself in its body, with a smaller (or simpler) input. This repeats until a function call results in no self-calls being made; when this happens we would say the function has reached the <em>base case</em>. Without a base case, a recursive function will call itself endlessly.</p>
+<p>Recall that the approach to solving problems recursively involves:</p>
 <ol type="1">
 <li><p>Assuming we can solve the problem already on smaller inputs, and</p></li>
-<li><p>Exploiting this information to form the solution at bigger inputs.</p></li>
+<li><p>Exploiting this information to form the solution for bigger inputs.</p></li>
 </ol>
 <p>For example,</p>
 <ol type="1">
@@ -2721,7 +2721,7 @@ display: none;
 </script>
 
 </div>
-<p>In the recursive case of this function, the add function calls itself with element 0 excluded (<code>xs[1:]</code>). It then combines the result of the recursive call with the excluded element (<code>xs[0]</code>). You may find this <a href="https://www.youtube.com/watch?v=Px8dgjKeh5I/">YouTube video</a> helpful in trying to understand recursion.</p>
+<p>In the recursive case of this function, the add function calls itself with element 0 excluded (<code>xs[1:]</code>). It then combines the result of the recursive call with the excluded element (<code>xs[0]</code>). You may find this <a href="https://www.youtube.com/watch?v=DUC1qg7ZaRg">YouTube video</a> helpful in trying to understand recursion.</p>
 </section>
 <section id="minimums" class="level2">
 <h2 class="anchored" data-anchor-id="minimums">Minimums</h2>
@@ -2750,11 +2750,11 @@ display: none;
 <div class="idle-filename-header">
 <div class="code-with-filename-file"><pre><svg width="18" height="18" viewbox="0 0 110 110" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
  <defs>
-  <lineargradient id="grad-698a89c8-15528" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
-  <lineargradient id="grad-698a89c8-abde" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e51-ac81" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e51-1829" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
  </defs>
- <path style="fill:url(#grad-698a89c8-15528)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
- <path style="fill:url(#grad-698a89c8-abde)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e51-ac81)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e51-1829)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
 </svg>
 <strong>minimum.py</strong></pre></div>
 <button class="idle-download-btn" data-filename="minimum.py" data-code="def%20minimum%28xs%3A%20list%5Bint%5D%29%20-%3E%20int%3A%0D%0A%20%20%20%20%22%22%22%0D%0A%20%20%20%20Our%20task%20is%20to%20write%20a%20recursive%20method%20to%20solve%20this%20problem.%0D%0A%20%20%20%20Precondition%3A%20The%20input%20list%20has%20at%20least%20one%20element.%0D%0A%0D%0A%20%20%20%20Recursion%20is%20about%20continually%20reducing%20a%20problem%20by%20a%20small%20step%20until%20we%0D%0A%20%20%20%20reach%20a%20base%20case%20-%20that%20is%2C%20a%20case%20where%20the%20result%20is%20trivial%0D%0A%20%20%20%20%28requires%20little%20to%20no%20calculation%29%0D%0A%0D%0A%20%20%20%20Firstly%2C%20we%20assume%20that%20a%20list%20must%20be%20non-empty.%20With%20this%20in%20mind%2C%20the%20%0D%0A%20%20%20%20simplest%20case%20we%20could%20have%20is%20a%20list%20with%20a%20single%20element%2C%20where%20the%0D%0A%20%20%20%20minimum%20element%20is%20simply%20the%20first%20and%20only%20element%20in%20the%20list.%0D%0A%0D%0A%20%20%20%20Now%20to%20write%20this%20method%20recursively%2C%20we%20need%20to%20determine%20the%20relation%0D%0A%20%20%20%20between%20a%20more%20complex%20case%20%28i.e.%20a%20list%20with%202%20or%20more%20elements%29.%20We%20should%0D%0A%20%20%20%20assume%20that%20our%20method%20will%20work%20correctly%20for%20a%20simpler%20case%2C%20and%20use%20that%0D%0A%20%20%20%20to%20build%20up%20to%20a%20larger%20case.%0D%0A%0D%0A%20%20%20%20Consider%20the%20list%3A%0D%0A%20%20%20%20%20%20%20%20values%20%3D%20%5B5%2C%204%2C%20-2%2C%203%2C%2010%5D%0D%0A%0D%0A%20%20%20%20We%20could%20notice%20that%20if%20we%20select%20the%20first%20element%2C%205%2C%20that%20it%20is%20possible%20%0D%0A%20%20%20%20for%20it%20to%20be%20only%20the%20minimum%20element%20if%20it%20is%20%3C%3D%20than%20the%20minimum%20element%0D%0A%20%20%20%20of%20the%20sub%20list%20containing%20all%20the%20other%20elements%20%28i.e.%20%5B4%2C%20-2%2C%203%2C%2010%5D%29%0D%0A%0D%0A%20%20%20%20This%20would%20give%20a%20generalization%20that%20the%20minimum%20of%20values%20is%0D%0A%20%20%20%20%20%20%20%20min%285%2C%20minimum%28%5B4%2C%203%2C%20..%2C%2010%5D%29%29%0D%0A%20%20%20%20%20%20%20%20%28with%20min%20returning%20the%20lowest%20value%20of%20all%20its%20arguments%3B%20i.e.%0D%0A%20%20%20%20%20%20%20%20min%283%2C%20-5%29%20%3D%3E%20-5%3B%20type%20help%28min%29%20for%20more%20info%29%0D%0A%0D%0A%20%20%20%20And%20minimum%28%5B4%2C3%2C%20..%2C10%5D%29%29%20would%20similarly%20be%20equivalent%20to%0D%0A%20%20%20%20%20%20%20%20min%284%2C%20%5B3%2C%20..%2C%2010%5D%29%0D%0A%0D%0A%20%20%20%20And%20so%20we%20can%20see%20that%20we%20could%20achieve%20this%20method%20recursively%2C%20because%0D%0A%20%20%20%20here%205%20is%20the%20first%20element%2C%20so%20in%20every%20non-base%20case%2C%20we%20would%20have%0D%0A%20%20%20%20%20%20%20%20minimum%28values%29%20%3D%3D%20min%28values%5B0%5D%2C%20minimum%28values%5B1%3A%5D%29%0D%0A%20%20%20%20%20%20%20%20%28with%20values%5B0%5D%20being%20the%20first%20element%2C%20and%20values%5B1%3A%5D%20being%20the%20rest%29%0D%0A%0D%0A%20%20%20%20And%20we%20know%20that%20the%20case%20of%20minimum%28values%5B1%3A%5D%29%20is%20simpler%20than%20minimum%28values%29%0D%0A%20%20%20%20because%20values%5B1%3A%5D%20is%20a%20smaller%20list%20values%20xs%20%28it%20has%20one%20less%20element%29%2C%0D%0A%20%20%20%20so%20we%20will%20eventually%20reach%20the%20base%20case.%0D%0A%0D%0A%20%20%20%20So%20therefore%20our%20code%20becomes%3A%0D%0A%20%20%20%20%22%22%22%0D%0A%20%20%20%20%23%20Base%20case%0D%0A%20%20%20%20%23%20If%20a%20list%20has%20one%20element%2C%20this%20is%20the%20smallest%20element%20in%20the%20list%0D%0A%20%20%20%20if%20len%28xs%29%20%3D%3D%201%3A%20%20%20%20%20%20%0D%0A%20%20%20%20%20%20%20%20return%20xs%5B0%5D%0D%0A%20%20%20%0D%0A%20%20%20%20%23%20Non-trivial%20case%0D%0A%20%20%20%20%23%20minimum%28values%29%20%3D%3D%20min%28values%5B0%5D%2C%20minimum%28values%5B1%3A%5D%29%29%0D%0A%20%20%20%20%23%20%20%20--%20which%20approaches%20the%20base%20case%20%20%20%20%20%20%20%20%0D%0A%20%20%20%20return%20min%28xs%5B0%5D%2C%20minimum%28xs%5B1%3A%5D%29%29%0D%0A%0D%0Aprint%28minimum%28%5B5%2C%204%2C%20-2%2C%203%2C%2010%5D%29%29%0D%0Aprint%28minimum%28%5B5%5D%29%29" title="Download minimum.py"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2827,11 +2827,11 @@ display: none;
  Run Code</button>
 <div class="idle-output-header"><svg width="18" height="18" viewbox="0 0 110 110" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
  <defs>
-  <lineargradient id="grad-698a89c8-1755a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
-  <lineargradient id="grad-698a89c8-b79a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e51-1765f" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e51-7c2b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
  </defs>
- <path style="fill:url(#grad-698a89c8-1755a)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
- <path style="fill:url(#grad-698a89c8-b79a)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e51-1765f)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e51-7c2b)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
 </svg>
 Output</div>
 <div class="cell-output cell-output-stdout idle-output-box">
@@ -2920,7 +2920,7 @@ Output</div>
 </section>
 <section id="count-numbers" class="level2">
 <h2 class="anchored" data-anchor-id="count-numbers">Count Numbers</h2>
-<p>In this task, We want to write a function to count the number of numeric elements in a given list. For example:</p>
+<p>Over the next few tasks, we will write some functions to count the number of numeric elements in a given list. For example:</p>
 <div class="idle-terminal console"><div class="idle-line code"><div class="idle-gutter prompt">&gt;&gt;&gt;</div><div class="idle-content"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>count_numbers([<span class="st">&#39;a&#39;</span>, <span class="st">&#39;b&#39;</span>, <span class="dv">0</span>, <span class="dv">123</span>, <span class="op">-</span><span class="dv">14</span>, <span class="st">&#39;cc&#39;</span>, <span class="fl">3.4</span>,  <span class="st">&#39;7030&#39;</span>]) </span></div></div>
 <div class="idle-line output"><div class="idle-gutter"> </div><div class="idle-content"><span class="idle-output">4</span></div></div>
 <div class="idle-line code"><div class="idle-gutter prompt">&gt;&gt;&gt;</div><div class="idle-content"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>count_numbers([<span class="st">&#39;CSSE7030&#39;</span>, <span class="st">&#39;a&#39;</span>, <span class="st">&#39;10&#39;</span>]) </span></div></div>
@@ -2946,14 +2946,14 @@ Output</div>
 <div class="idle-filename-header">
 <div class="code-with-filename-file"><pre><svg width="18" height="18" viewbox="0 0 110 110" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
  <defs>
-  <lineargradient id="grad-698a89c8-11ca5" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
-  <lineargradient id="grad-698a89c8-1046e" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e51-177e5" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e51-137e3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
  </defs>
- <path style="fill:url(#grad-698a89c8-11ca5)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
- <path style="fill:url(#grad-698a89c8-1046e)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e51-177e5)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e51-137e3)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
 </svg>
 <strong>count_nums.py</strong></pre></div>
-<button class="idle-download-btn" data-filename="count_nums.py" data-code="def%20count_numbers%28xs%3A%20list%29%20-%3E%20int%3A%0D%0A%20%20%20%20%22%22%22%0D%0A%20%20%20%20Return%20the%20number%20of%20numeric%20elements%20%28int%20or%20float%29%20in%20%3Cxs%3E.%0D%0A%20%20%20%20%22%22%22%0D%0A%20%20%20%20count%20%3D%200%0D%0A%20%20%20%20for%20x%20in%20xs%3A%0D%0A%20%20%20%20%20%20%20%20if%20type%28x%29%20%3D%3D%20int%20or%20type%28x%29%20%3D%3D%20float%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20count%20%2B%3D%201%0D%0A%20%20%20%20return%20count%0D%0A%0D%0Aprint%28count_numbers%28%5B%27a%27%2C%20%27b%27%2C%200%2C%20123%2C%20-14%2C%20%27cc%27%2C%203.4%2C%20%20%277030%27%5D%29%29%0D%0Aprint%28count_numbers%28%5B%27CSSE7030%27%2C%20%27a%27%2C%20%2710%27%5D%29%20%29%20%20%20%20%20%20%20%20" title="Download count_nums.py"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<button class="idle-download-btn" data-filename="count_nums.py" data-code="def%20count_numbers%28xs%3A%20list%29%20-%3E%20int%3A%0D%0A%20%20%20%20%22%22%22%20Determines%20the%20number%20of%20numeric%20elements%20%28int%20or%20float%29%20in%20xs.%0D%0A%0D%0A%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20xs%3A%20A%20list%20containing%20elements%20of%20any%20type.%0D%0A%20%20%20%20%0D%0A%20%20%20%20Returns%3A%0D%0A%20%20%20%20%20%20%20%20The%20number%20of%20elements%20in%20xs%20that%20are%20either%20an%20int%20or%20float.%0D%0A%20%20%20%20%22%22%22%0D%0A%20%20%20%20count%20%3D%200%0D%0A%20%20%20%20for%20x%20in%20xs%3A%0D%0A%20%20%20%20%20%20%20%20if%20type%28x%29%20%3D%3D%20int%20or%20type%28x%29%20%3D%3D%20float%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20count%20%2B%3D%201%0D%0A%20%20%20%20return%20count%0D%0A%0D%0Aprint%28count_numbers%28%5B%27a%27%2C%20%27b%27%2C%200%2C%20123%2C%20-14%2C%20%27cc%27%2C%203.4%2C%20%20%277030%27%5D%29%29%0D%0Aprint%28count_numbers%28%5B%27CSSE7030%27%2C%20%27a%27%2C%20%2710%27%5D%29%20%29%20%20%20%20%20%20%20%20" title="Download count_nums.py"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
   <polyline points="7 10 12 15 17 10"></polyline>
   <line x1="12" y1="15" x2="12" y2="3"></line>
@@ -2962,28 +2962,33 @@ Output</div>
 </div>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">def</span> count_numbers(xs: <span class="bu">list</span>) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
-<span id="cb4-2"><a href="#cb4-2"></a>    <span class="co">&quot;&quot;&quot;</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a><span class="co">    Return the number of numeric elements (int or float) in &lt;xs&gt;.</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a><span class="co">    &quot;&quot;&quot;</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a>    count <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb4-6"><a href="#cb4-6"></a>    <span class="cf">for</span> x <span class="kw">in</span> xs:</span>
-<span id="cb4-7"><a href="#cb4-7"></a>        <span class="cf">if</span> <span class="bu">type</span>(x) <span class="op">==</span> <span class="bu">int</span> <span class="kw">or</span> <span class="bu">type</span>(x) <span class="op">==</span> <span class="bu">float</span>:</span>
-<span id="cb4-8"><a href="#cb4-8"></a>            count <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb4-9"><a href="#cb4-9"></a>    <span class="cf">return</span> count</span>
-<span id="cb4-10"><a href="#cb4-10"></a></span>
-<span id="cb4-11"><a href="#cb4-11"></a><span class="bu">print</span>(count_numbers([<span class="st">&#39;a&#39;</span>, <span class="st">&#39;b&#39;</span>, <span class="dv">0</span>, <span class="dv">123</span>, <span class="op">-</span><span class="dv">14</span>, <span class="st">&#39;cc&#39;</span>, <span class="fl">3.4</span>,  <span class="st">&#39;7030&#39;</span>]))</span>
-<span id="cb4-12"><a href="#cb4-12"></a><span class="bu">print</span>(count_numbers([<span class="st">&#39;CSSE7030&#39;</span>, <span class="st">&#39;a&#39;</span>, <span class="st">&#39;10&#39;</span>]) )        </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-2"><a href="#cb4-2"></a>    <span class="co">&quot;&quot;&quot; Determines the number of numeric elements (int or float) in xs.</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="co">    Parameters:</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="co">        xs: A list containing elements of any type.</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="co">    </span></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="co">    Returns:</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="co">        The number of elements in xs that are either an int or float.</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb4-10"><a href="#cb4-10"></a>    count <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb4-11"><a href="#cb4-11"></a>    <span class="cf">for</span> x <span class="kw">in</span> xs:</span>
+<span id="cb4-12"><a href="#cb4-12"></a>        <span class="cf">if</span> <span class="bu">type</span>(x) <span class="op">==</span> <span class="bu">int</span> <span class="kw">or</span> <span class="bu">type</span>(x) <span class="op">==</span> <span class="bu">float</span>:</span>
+<span id="cb4-13"><a href="#cb4-13"></a>            count <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb4-14"><a href="#cb4-14"></a>    <span class="cf">return</span> count</span>
+<span id="cb4-15"><a href="#cb4-15"></a></span>
+<span id="cb4-16"><a href="#cb4-16"></a><span class="bu">print</span>(count_numbers([<span class="st">&#39;a&#39;</span>, <span class="st">&#39;b&#39;</span>, <span class="dv">0</span>, <span class="dv">123</span>, <span class="op">-</span><span class="dv">14</span>, <span class="st">&#39;cc&#39;</span>, <span class="fl">3.4</span>,  <span class="st">&#39;7030&#39;</span>]))</span>
+<span id="cb4-17"><a href="#cb4-17"></a><span class="bu">print</span>(count_numbers([<span class="st">&#39;CSSE7030&#39;</span>, <span class="st">&#39;a&#39;</span>, <span class="st">&#39;10&#39;</span>]) )        </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <button class="idle-run-btn"><svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor">
   <polygon points="5 3 19 12 5 21 5 3"></polygon>
 </svg>
  Run Code</button>
 <div class="idle-output-header"><svg width="18" height="18" viewbox="0 0 110 110" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
  <defs>
-  <lineargradient id="grad-698a89c8-152a0" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
-  <lineargradient id="grad-698a89c8-4b3d" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e51-a417" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e51-1064" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
  </defs>
- <path style="fill:url(#grad-698a89c8-152a0)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
- <path style="fill:url(#grad-698a89c8-4b3d)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e51-a417)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e51-1064)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
 </svg>
 Output</div>
 <div class="cell-output cell-output-stdout idle-output-box">
@@ -3113,14 +3118,14 @@ Output</div>
 <div class="idle-filename-header">
 <div class="code-with-filename-file"><pre><svg width="18" height="18" viewbox="0 0 110 110" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
  <defs>
-  <lineargradient id="grad-698a89c8-1489d" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
-  <lineargradient id="grad-698a89c8-174d1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e51-9253" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e51-15645" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
  </defs>
- <path style="fill:url(#grad-698a89c8-1489d)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
- <path style="fill:url(#grad-698a89c8-174d1)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e51-9253)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e51-15645)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
 </svg>
 <strong>count_nums.py</strong></pre></div>
-<button class="idle-download-btn" data-filename="count_nums.py" data-code="def%20count_numbers%28xs%3A%20list%29%20-%3E%20int%3A%0D%0A%20%20%20%20%22%22%22%0D%0A%20%20%20%20Return%20the%20number%20of%20numeric%20elements%20%28int%20or%20float%29%20in%20%3Cxs%3E%20using%20recursion.%0D%0A%20%20%20%20%22%22%22%0D%0A%20%20%20%20%23%20Base%20case%0D%0A%20%20%20%20if%20xs%20%3D%3D%20%5B%5D%3A%0D%0A%20%20%20%20%20%20%20%20return%200%0D%0A%0D%0A%20%20%20%20if%20type%28xs%5B0%5D%29%20%3D%3D%20int%20or%20%20type%28xs%5B0%5D%29%20%3D%3D%20float%3A%0D%0A%20%20%20%20%20%20%20%20return%201%20%2B%20count_numbers%28xs%5B1%3A%5D%29%0D%0A%0D%0A%20%20%20%20return%20count_numbers%28xs%5B1%3A%5D%29%0D%0A%0D%0Aprint%28count_numbers%28%5B%27a%27%2C%20%27b%27%2C%200%2C%20123%2C%20-14%2C%20%27cc%27%2C%203.4%2C%20%20%277030%27%5D%29%29%0D%0Aprint%28count_numbers%28%5B%27CSSE7030%27%2C%20%27a%27%2C%20%2710%27%5D%29%20%29%20%20%20%20%20%20%20%20" title="Download count_nums.py"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<button class="idle-download-btn" data-filename="count_nums.py" data-code="def%20count_numbers%28xs%3A%20list%29%20-%3E%20int%3A%0D%0A%20%20%20%20%22%22%22%20Determines%20the%20number%20of%20numeric%20elements%20%28int%20or%20float%29%20in%20xs.%0D%0A%0D%0A%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20xs%3A%20A%20list%20containing%20elements%20of%20any%20type.%0D%0A%20%20%20%20%0D%0A%20%20%20%20Returns%3A%0D%0A%20%20%20%20%20%20%20%20The%20number%20of%20elements%20in%20xs%20that%20are%20either%20an%20int%20or%20float.%0D%0A%20%20%20%20%22%22%22%0D%0A%20%20%20%20%23%20Base%20case%0D%0A%20%20%20%20if%20xs%20%3D%3D%20%5B%5D%3A%0D%0A%20%20%20%20%20%20%20%20return%200%0D%0A%0D%0A%20%20%20%20if%20type%28xs%5B0%5D%29%20%3D%3D%20int%20or%20%20type%28xs%5B0%5D%29%20%3D%3D%20float%3A%0D%0A%20%20%20%20%20%20%20%20return%201%20%2B%20count_numbers%28xs%5B1%3A%5D%29%0D%0A%0D%0A%20%20%20%20return%20count_numbers%28xs%5B1%3A%5D%29%0D%0A%0D%0Aprint%28count_numbers%28%5B%27a%27%2C%20%27b%27%2C%200%2C%20123%2C%20-14%2C%20%27cc%27%2C%203.4%2C%20%20%277030%27%5D%29%29%0D%0Aprint%28count_numbers%28%5B%27CSSE7030%27%2C%20%27a%27%2C%20%2710%27%5D%29%20%29%20%20%20%20%20%20%20%20" title="Download count_nums.py"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
   <polyline points="7 10 12 15 17 10"></polyline>
   <line x1="12" y1="15" x2="12" y2="3"></line>
@@ -3129,31 +3134,36 @@ Output</div>
 </div>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">def</span> count_numbers(xs: <span class="bu">list</span>) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
-<span id="cb7-2"><a href="#cb7-2"></a>    <span class="co">&quot;&quot;&quot;</span></span>
-<span id="cb7-3"><a href="#cb7-3"></a><span class="co">    Return the number of numeric elements (int or float) in &lt;xs&gt; using recursion.</span></span>
-<span id="cb7-4"><a href="#cb7-4"></a><span class="co">    &quot;&quot;&quot;</span></span>
-<span id="cb7-5"><a href="#cb7-5"></a>    <span class="co"># Base case</span></span>
-<span id="cb7-6"><a href="#cb7-6"></a>    <span class="cf">if</span> xs <span class="op">==</span> []:</span>
-<span id="cb7-7"><a href="#cb7-7"></a>        <span class="cf">return</span> <span class="dv">0</span></span>
-<span id="cb7-8"><a href="#cb7-8"></a></span>
-<span id="cb7-9"><a href="#cb7-9"></a>    <span class="cf">if</span> <span class="bu">type</span>(xs[<span class="dv">0</span>]) <span class="op">==</span> <span class="bu">int</span> <span class="kw">or</span>  <span class="bu">type</span>(xs[<span class="dv">0</span>]) <span class="op">==</span> <span class="bu">float</span>:</span>
-<span id="cb7-10"><a href="#cb7-10"></a>        <span class="cf">return</span> <span class="dv">1</span> <span class="op">+</span> count_numbers(xs[<span class="dv">1</span>:])</span>
-<span id="cb7-11"><a href="#cb7-11"></a></span>
-<span id="cb7-12"><a href="#cb7-12"></a>    <span class="cf">return</span> count_numbers(xs[<span class="dv">1</span>:])</span>
+<span id="cb7-2"><a href="#cb7-2"></a>    <span class="co">&quot;&quot;&quot; Determines the number of numeric elements (int or float) in xs.</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a></span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="co">    Parameters:</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a><span class="co">        xs: A list containing elements of any type.</span></span>
+<span id="cb7-6"><a href="#cb7-6"></a><span class="co">    </span></span>
+<span id="cb7-7"><a href="#cb7-7"></a><span class="co">    Returns:</span></span>
+<span id="cb7-8"><a href="#cb7-8"></a><span class="co">        The number of elements in xs that are either an int or float.</span></span>
+<span id="cb7-9"><a href="#cb7-9"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb7-10"><a href="#cb7-10"></a>    <span class="co"># Base case</span></span>
+<span id="cb7-11"><a href="#cb7-11"></a>    <span class="cf">if</span> xs <span class="op">==</span> []:</span>
+<span id="cb7-12"><a href="#cb7-12"></a>        <span class="cf">return</span> <span class="dv">0</span></span>
 <span id="cb7-13"><a href="#cb7-13"></a></span>
-<span id="cb7-14"><a href="#cb7-14"></a><span class="bu">print</span>(count_numbers([<span class="st">&#39;a&#39;</span>, <span class="st">&#39;b&#39;</span>, <span class="dv">0</span>, <span class="dv">123</span>, <span class="op">-</span><span class="dv">14</span>, <span class="st">&#39;cc&#39;</span>, <span class="fl">3.4</span>,  <span class="st">&#39;7030&#39;</span>]))</span>
-<span id="cb7-15"><a href="#cb7-15"></a><span class="bu">print</span>(count_numbers([<span class="st">&#39;CSSE7030&#39;</span>, <span class="st">&#39;a&#39;</span>, <span class="st">&#39;10&#39;</span>]) )        </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb7-14"><a href="#cb7-14"></a>    <span class="cf">if</span> <span class="bu">type</span>(xs[<span class="dv">0</span>]) <span class="op">==</span> <span class="bu">int</span> <span class="kw">or</span>  <span class="bu">type</span>(xs[<span class="dv">0</span>]) <span class="op">==</span> <span class="bu">float</span>:</span>
+<span id="cb7-15"><a href="#cb7-15"></a>        <span class="cf">return</span> <span class="dv">1</span> <span class="op">+</span> count_numbers(xs[<span class="dv">1</span>:])</span>
+<span id="cb7-16"><a href="#cb7-16"></a></span>
+<span id="cb7-17"><a href="#cb7-17"></a>    <span class="cf">return</span> count_numbers(xs[<span class="dv">1</span>:])</span>
+<span id="cb7-18"><a href="#cb7-18"></a></span>
+<span id="cb7-19"><a href="#cb7-19"></a><span class="bu">print</span>(count_numbers([<span class="st">&#39;a&#39;</span>, <span class="st">&#39;b&#39;</span>, <span class="dv">0</span>, <span class="dv">123</span>, <span class="op">-</span><span class="dv">14</span>, <span class="st">&#39;cc&#39;</span>, <span class="fl">3.4</span>,  <span class="st">&#39;7030&#39;</span>]))</span>
+<span id="cb7-20"><a href="#cb7-20"></a><span class="bu">print</span>(count_numbers([<span class="st">&#39;CSSE7030&#39;</span>, <span class="st">&#39;a&#39;</span>, <span class="st">&#39;10&#39;</span>]) )        </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <button class="idle-run-btn"><svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor">
   <polygon points="5 3 19 12 5 21 5 3"></polygon>
 </svg>
  Run Code</button>
 <div class="idle-output-header"><svg width="18" height="18" viewbox="0 0 110 110" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
  <defs>
-  <lineargradient id="grad-698a89c8-11be5" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
-  <lineargradient id="grad-698a89c8-8812" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e51-fe74" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e51-a462" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
  </defs>
- <path style="fill:url(#grad-698a89c8-11be5)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
- <path style="fill:url(#grad-698a89c8-8812)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e51-fe74)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e51-a462)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
 </svg>
 Output</div>
 <div class="cell-output cell-output-stdout idle-output-box">
@@ -3242,7 +3252,7 @@ Output</div>
 </section>
 <section id="remove-vowels" class="level2">
 <h2 class="anchored" data-anchor-id="remove-vowels">Remove Vowels</h2>
-<p>We want to write a function to remove all vowel characters (<code>a</code>, <code>e</code>, <code>i</code>, <code>o</code>, <code>u</code>) from agiven string. For example:</p>
+<p>Over the next few tasks, we will write some functions to remove all vowel characters (<code>a</code>, <code>e</code>, <code>i</code>, <code>o</code>, <code>u</code>) from a given string. For example:</p>
 <div class="idle-terminal console"><div class="idle-line code"><div class="idle-gutter prompt">&gt;&gt;&gt;</div><div class="idle-content"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>remove_vowels(<span class="st">&#39;recursion&#39;</span>) </span></div></div>
 <div class="idle-line output"><div class="idle-gutter"> </div><div class="idle-content"><span class="idle-output">&#39;rcrsn&#39;</span></div></div>
 <div class="idle-line code"><div class="idle-gutter prompt">&gt;&gt;&gt;</div><div class="idle-content"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>remove_vowels(<span class="st">&#39;iiiaaaoob&#39;</span>) </span></div></div>
@@ -3268,14 +3278,14 @@ Output</div>
 <div class="idle-filename-header">
 <div class="code-with-filename-file"><pre><svg width="18" height="18" viewbox="0 0 110 110" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
  <defs>
-  <lineargradient id="grad-698a89c8-173b9" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
-  <lineargradient id="grad-698a89c8-125bc" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e51-1b07" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e51-17e34" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
  </defs>
- <path style="fill:url(#grad-698a89c8-173b9)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
- <path style="fill:url(#grad-698a89c8-125bc)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e51-1b07)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e51-17e34)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
 </svg>
 <strong>remove_vowels.py</strong></pre></div>
-<button class="idle-download-btn" data-filename="remove_vowels.py" data-code="def%20remove_vowels%28cs%3A%20str%29%20-%3E%20str%3A%0D%0A%20%20%20%20%22%22%22%0D%0A%20%20%20%20%22%22%22%0D%0A%20%20%20%20result%20%3D%20%22%22%0D%0A%20%20%20%20for%20char%20in%20cs%3A%0D%0A%20%20%20%20%20%20%20%20if%20char%20not%20in%20%27aeiou%27%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20result%20%2B%3D%20char%0D%0A%20%20%20%20return%20result%0D%0A%0D%0Aprint%28remove_vowels%28%27recursion%27%29%29%0D%0Aprint%28remove_vowels%28%27iiiaaaoob%27%29%29" title="Download remove_vowels.py"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<button class="idle-download-btn" data-filename="remove_vowels.py" data-code="def%20remove_vowels%28cs%3A%20str%29%20-%3E%20str%3A%0D%0A%20%20%20%20%22%22%22%20Removes%20vowels%20from%20a%20string.%0D%0A%0D%0A%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20cs%3A%20The%20initial%20string%2C%20from%20which%20vowels%20should%20be%20removed.%0D%0A%0D%0A%20%20%20%20Returns%3A%0D%0A%20%20%20%20%20%20%20%20A%20string%20containing%20all%20non-vowel%20characters%20from%20cs.%0D%0A%20%20%20%20%22%22%22%0D%0A%20%20%20%20result%20%3D%20%22%22%0D%0A%20%20%20%20for%20char%20in%20cs%3A%0D%0A%20%20%20%20%20%20%20%20if%20char%20not%20in%20%27aeiou%27%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20result%20%2B%3D%20char%0D%0A%20%20%20%20return%20result%0D%0A%0D%0A%0D%0Aprint%28remove_vowels%28%27recursion%27%29%29%0D%0Aprint%28remove_vowels%28%27iiiaaaoob%27%29%29" title="Download remove_vowels.py"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
   <polyline points="7 10 12 15 17 10"></polyline>
   <line x1="12" y1="15" x2="12" y2="3"></line>
@@ -3284,27 +3294,34 @@ Output</div>
 </div>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">def</span> remove_vowels(cs: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
-<span id="cb9-2"><a href="#cb9-2"></a>    <span class="co">&quot;&quot;&quot;</span></span>
-<span id="cb9-3"><a href="#cb9-3"></a><span class="co">    &quot;&quot;&quot;</span></span>
-<span id="cb9-4"><a href="#cb9-4"></a>    result <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb9-5"><a href="#cb9-5"></a>    <span class="cf">for</span> char <span class="kw">in</span> cs:</span>
-<span id="cb9-6"><a href="#cb9-6"></a>        <span class="cf">if</span> char <span class="kw">not</span> <span class="kw">in</span> <span class="st">&#39;aeiou&#39;</span>:</span>
-<span id="cb9-7"><a href="#cb9-7"></a>            result <span class="op">+=</span> char</span>
-<span id="cb9-8"><a href="#cb9-8"></a>    <span class="cf">return</span> result</span>
-<span id="cb9-9"><a href="#cb9-9"></a></span>
-<span id="cb9-10"><a href="#cb9-10"></a><span class="bu">print</span>(remove_vowels(<span class="st">&#39;recursion&#39;</span>))</span>
-<span id="cb9-11"><a href="#cb9-11"></a><span class="bu">print</span>(remove_vowels(<span class="st">&#39;iiiaaaoob&#39;</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb9-2"><a href="#cb9-2"></a>    <span class="co">&quot;&quot;&quot; Removes vowels from a string.</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a></span>
+<span id="cb9-4"><a href="#cb9-4"></a><span class="co">    Parameters:</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a><span class="co">        cs: The initial string, from which vowels should be removed.</span></span>
+<span id="cb9-6"><a href="#cb9-6"></a></span>
+<span id="cb9-7"><a href="#cb9-7"></a><span class="co">    Returns:</span></span>
+<span id="cb9-8"><a href="#cb9-8"></a><span class="co">        A string containing all non-vowel characters from cs.</span></span>
+<span id="cb9-9"><a href="#cb9-9"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb9-10"><a href="#cb9-10"></a>    result <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb9-11"><a href="#cb9-11"></a>    <span class="cf">for</span> char <span class="kw">in</span> cs:</span>
+<span id="cb9-12"><a href="#cb9-12"></a>        <span class="cf">if</span> char <span class="kw">not</span> <span class="kw">in</span> <span class="st">&#39;aeiou&#39;</span>:</span>
+<span id="cb9-13"><a href="#cb9-13"></a>            result <span class="op">+=</span> char</span>
+<span id="cb9-14"><a href="#cb9-14"></a>    <span class="cf">return</span> result</span>
+<span id="cb9-15"><a href="#cb9-15"></a></span>
+<span id="cb9-16"><a href="#cb9-16"></a></span>
+<span id="cb9-17"><a href="#cb9-17"></a><span class="bu">print</span>(remove_vowels(<span class="st">&#39;recursion&#39;</span>))</span>
+<span id="cb9-18"><a href="#cb9-18"></a><span class="bu">print</span>(remove_vowels(<span class="st">&#39;iiiaaaoob&#39;</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <button class="idle-run-btn"><svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor">
   <polygon points="5 3 19 12 5 21 5 3"></polygon>
 </svg>
  Run Code</button>
 <div class="idle-output-header"><svg width="18" height="18" viewbox="0 0 110 110" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
  <defs>
-  <lineargradient id="grad-698a89c8-1674b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
-  <lineargradient id="grad-698a89c8-12f62" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e51-7a98" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e51-12808" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
  </defs>
- <path style="fill:url(#grad-698a89c8-1674b)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
- <path style="fill:url(#grad-698a89c8-12f62)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e51-7a98)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e51-12808)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
 </svg>
 Output</div>
 <div class="cell-output cell-output-stdout idle-output-box">
@@ -3434,14 +3451,14 @@ b</code></pre>
 <div class="idle-filename-header">
 <div class="code-with-filename-file"><pre><svg width="18" height="18" viewbox="0 0 110 110" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
  <defs>
-  <lineargradient id="grad-698a89c8-73ba" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
-  <lineargradient id="grad-698a89c8-b7f1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e51-12532" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e51-165e" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
  </defs>
- <path style="fill:url(#grad-698a89c8-73ba)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
- <path style="fill:url(#grad-698a89c8-b7f1)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e51-12532)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e51-165e)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
 </svg>
 <strong>remove_vowels.py</strong></pre></div>
-<button class="idle-download-btn" data-filename="remove_vowels.py" data-code="def%20remove_vowels%28cs%3A%20str%29%20-%3E%20str%3A%0D%0A%20%20%20%20%22%22%22%0D%0A%20%20%20%20Return%20the%20string%20%3Cs%3E%20with%20all%20vowels%20removed%20using%20recursion.%0D%0A%20%20%20%20%22%22%22%0D%0A%20%20%20%20%23%20Base%20case%0D%0A%20%20%20%20if%20cs%20%3D%3D%20%22%22%3A%0D%0A%20%20%20%20%20%20%20%20return%20%22%22%0D%0A%0D%0A%20%20%20%20if%20cs%5B0%5D%20in%20%27aeiou%27%3A%0D%0A%20%20%20%20%20%20%20%20return%20remove_vowels%28cs%5B1%3A%5D%29%0D%0A%0D%0A%20%20%20%20return%20cs%5B0%5D%20%2B%20remove_vowels%28cs%5B1%3A%5D%29%0D%0A%0D%0Aprint%28remove_vowels%28%27recursion%27%29%29%0D%0Aprint%28remove_vowels%28%27iiiaaaoob%27%29%29%20%20%20%20%20%20%20%20" title="Download remove_vowels.py"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<button class="idle-download-btn" data-filename="remove_vowels.py" data-code="def%20remove_vowels%28cs%3A%20str%29%20-%3E%20str%3A%0D%0A%20%20%20%20%22%22%22%20Removes%20vowels%20from%20a%20string.%0D%0A%0D%0A%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20cs%3A%20The%20initial%20string%2C%20from%20which%20vowels%20should%20be%20removed.%0D%0A%0D%0A%20%20%20%20Returns%3A%0D%0A%20%20%20%20%20%20%20%20A%20string%20containing%20all%20non-vowel%20characters%20from%20cs.%0D%0A%20%20%20%20%22%22%22%0D%0A%20%20%20%20%23%20Base%20case%0D%0A%20%20%20%20if%20cs%20%3D%3D%20%22%22%3A%0D%0A%20%20%20%20%20%20%20%20return%20%22%22%0D%0A%0D%0A%20%20%20%20if%20cs%5B0%5D%20in%20%27aeiou%27%3A%0D%0A%20%20%20%20%20%20%20%20return%20remove_vowels%28cs%5B1%3A%5D%29%0D%0A%0D%0A%20%20%20%20return%20cs%5B0%5D%20%2B%20remove_vowels%28cs%5B1%3A%5D%29%0D%0A%0D%0Aprint%28remove_vowels%28%27recursion%27%29%29%0D%0Aprint%28remove_vowels%28%27iiiaaaoob%27%29%29%20%20%20%20%20%20%20%20" title="Download remove_vowels.py"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
   <polyline points="7 10 12 15 17 10"></polyline>
   <line x1="12" y1="15" x2="12" y2="3"></line>
@@ -3450,31 +3467,36 @@ b</code></pre>
 </div>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="kw">def</span> remove_vowels(cs: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
-<span id="cb12-2"><a href="#cb12-2"></a>    <span class="co">&quot;&quot;&quot;</span></span>
-<span id="cb12-3"><a href="#cb12-3"></a><span class="co">    Return the string &lt;s&gt; with all vowels removed using recursion.</span></span>
-<span id="cb12-4"><a href="#cb12-4"></a><span class="co">    &quot;&quot;&quot;</span></span>
-<span id="cb12-5"><a href="#cb12-5"></a>    <span class="co"># Base case</span></span>
-<span id="cb12-6"><a href="#cb12-6"></a>    <span class="cf">if</span> cs <span class="op">==</span> <span class="st">&quot;&quot;</span>:</span>
-<span id="cb12-7"><a href="#cb12-7"></a>        <span class="cf">return</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb12-8"><a href="#cb12-8"></a></span>
-<span id="cb12-9"><a href="#cb12-9"></a>    <span class="cf">if</span> cs[<span class="dv">0</span>] <span class="kw">in</span> <span class="st">&#39;aeiou&#39;</span>:</span>
-<span id="cb12-10"><a href="#cb12-10"></a>        <span class="cf">return</span> remove_vowels(cs[<span class="dv">1</span>:])</span>
-<span id="cb12-11"><a href="#cb12-11"></a></span>
-<span id="cb12-12"><a href="#cb12-12"></a>    <span class="cf">return</span> cs[<span class="dv">0</span>] <span class="op">+</span> remove_vowels(cs[<span class="dv">1</span>:])</span>
+<span id="cb12-2"><a href="#cb12-2"></a>    <span class="co">&quot;&quot;&quot; Removes vowels from a string.</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a></span>
+<span id="cb12-4"><a href="#cb12-4"></a><span class="co">    Parameters:</span></span>
+<span id="cb12-5"><a href="#cb12-5"></a><span class="co">        cs: The initial string, from which vowels should be removed.</span></span>
+<span id="cb12-6"><a href="#cb12-6"></a></span>
+<span id="cb12-7"><a href="#cb12-7"></a><span class="co">    Returns:</span></span>
+<span id="cb12-8"><a href="#cb12-8"></a><span class="co">        A string containing all non-vowel characters from cs.</span></span>
+<span id="cb12-9"><a href="#cb12-9"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb12-10"><a href="#cb12-10"></a>    <span class="co"># Base case</span></span>
+<span id="cb12-11"><a href="#cb12-11"></a>    <span class="cf">if</span> cs <span class="op">==</span> <span class="st">&quot;&quot;</span>:</span>
+<span id="cb12-12"><a href="#cb12-12"></a>        <span class="cf">return</span> <span class="st">&quot;&quot;</span></span>
 <span id="cb12-13"><a href="#cb12-13"></a></span>
-<span id="cb12-14"><a href="#cb12-14"></a><span class="bu">print</span>(remove_vowels(<span class="st">&#39;recursion&#39;</span>))</span>
-<span id="cb12-15"><a href="#cb12-15"></a><span class="bu">print</span>(remove_vowels(<span class="st">&#39;iiiaaaoob&#39;</span>))        </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb12-14"><a href="#cb12-14"></a>    <span class="cf">if</span> cs[<span class="dv">0</span>] <span class="kw">in</span> <span class="st">&#39;aeiou&#39;</span>:</span>
+<span id="cb12-15"><a href="#cb12-15"></a>        <span class="cf">return</span> remove_vowels(cs[<span class="dv">1</span>:])</span>
+<span id="cb12-16"><a href="#cb12-16"></a></span>
+<span id="cb12-17"><a href="#cb12-17"></a>    <span class="cf">return</span> cs[<span class="dv">0</span>] <span class="op">+</span> remove_vowels(cs[<span class="dv">1</span>:])</span>
+<span id="cb12-18"><a href="#cb12-18"></a></span>
+<span id="cb12-19"><a href="#cb12-19"></a><span class="bu">print</span>(remove_vowels(<span class="st">&#39;recursion&#39;</span>))</span>
+<span id="cb12-20"><a href="#cb12-20"></a><span class="bu">print</span>(remove_vowels(<span class="st">&#39;iiiaaaoob&#39;</span>))        </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <button class="idle-run-btn"><svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor">
   <polygon points="5 3 19 12 5 21 5 3"></polygon>
 </svg>
  Run Code</button>
 <div class="idle-output-header"><svg width="18" height="18" viewbox="0 0 110 110" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
  <defs>
-  <lineargradient id="grad-698a89c8-172d4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
-  <lineargradient id="grad-698a89c8-9381" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e51-15706" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e51-5f9" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
  </defs>
- <path style="fill:url(#grad-698a89c8-172d4)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
- <path style="fill:url(#grad-698a89c8-9381)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e51-15706)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e51-5f9)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
 </svg>
 Output</div>
 <div class="cell-output cell-output-stdout idle-output-box">
@@ -3572,14 +3594,14 @@ b</code></pre>
 <div class="idle-filename-header">
 <div class="code-with-filename-file"><pre><svg width="18" height="18" viewbox="0 0 110 110" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
  <defs>
-  <lineargradient id="grad-698a89c8-10964" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
-  <lineargradient id="grad-698a89c8-27e2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e51-12510" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e51-936e" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
  </defs>
- <path style="fill:url(#grad-698a89c8-10964)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
- <path style="fill:url(#grad-698a89c8-27e2)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e51-12510)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e51-936e)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
 </svg>
 <strong>person.py</strong></pre></div>
-<button class="idle-download-btn" data-filename="person.py" data-code="class%20Person%3A%0D%0A%20%20%20%20%22%22%22Simple%20class%20for%20modelling%20a%20person%20with%20children%22%22%22%0D%0A%20%20%20%20def%20__init__%28self%2C%20name%3A%20str%29%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22Constructor%0D%0A%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20name%20%28str%29%3A%20name%20of%20the%20Person%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20self._name%20%3D%20name%0D%0A%20%20%20%20%20%20%20%20self._children%20%3D%20%5B%5D%0D%0A%0D%0A%20%20%20%20def%20get_children%28self%29%20-%3E%20list%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22returns%20list%3CPerson%3E%22%22%22%0D%0A%20%20%20%20%20%20%20%20return%20self._children%0D%0A%0D%0A%20%20%20%20def%20add_child%28self%2C%20child%29%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20adds%20the%20person%20as%20a%20child%20provided%0D%0A%20%20%20%20%20%20%20%20they%20are%20not%20already%20a%20child%2C%20and%20child%0D%0A%20%20%20%20%20%20%20%20is%20not%20self%27s%20parent%0D%0A%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20child%28Person%29%3A%20child%20to%20add%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20if%20child%20not%20in%20self._children%20and%20%5C%0D%0A%20%20%20%20%20%20%20%20%20%20%20self%20not%20in%20child.get_children%28%29%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20self._children.append%28child%29%0D%0A%0D%0A%20%20%20%20def%20__repr__%28self%29%3A%0D%0A%20%20%20%20%20%20%20%20return%20f%27Person%28%7Bself._name%7D%29%27" title="Download person.py"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<button class="idle-download-btn" data-filename="person.py" data-code="from%20__future__%20import%20annotations%0D%0A%0D%0A%0D%0Aclass%20Person%3A%0D%0A%20%20%20%20%22%22%22Simple%20class%20for%20modelling%20a%20person%20with%20children%22%22%22%0D%0A%0D%0A%20%20%20%20def%20__init__%28self%2C%20name%3A%20str%29%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22Constructor%20for%20Person.%0D%0A%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20name%20%28str%29%3A%20name%20of%20the%20Person%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20self._name%20%3D%20name%0D%0A%20%20%20%20%20%20%20%20self._children%20%3D%20%5B%5D%0D%0A%0D%0A%20%20%20%20def%20get_children%28self%29%20-%3E%20list%5BPerson%5D%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22%20Returns%20a%20list%20of%20the%20direct%20children%20of%20this%0D%0A%20%20%20%20%20%20%20%20person.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20return%20self._children%0D%0A%0D%0A%20%20%20%20def%20add_child%28self%2C%20child%3A%20Person%29%20-%3E%20None%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22%20Adds%20child%20as%20a%20child%20of%20this%20person%20provided%20they%0D%0A%20%20%20%20%20%20%20%20are%20not%20already%20a%20child%20of%20this%20person%2C%20and%20they%20are%0D%0A%20%20%20%20%20%20%20%20not%20this%20person%27s%20parent.%0D%0A%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20child%28Person%29%3A%20child%20to%20add%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20if%20child%20not%20in%20self._children%20and%20%5C%0D%0A%20%20%20%20%20%20%20%20%20%20%20self%20not%20in%20child.get_children%28%29%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20self._children.append%28child%29%0D%0A%0D%0A%20%20%20%20def%20__repr__%28self%29%20-%3E%20str%3A%0D%0A%20%20%20%20%20%20%20%20return%20f%27Person%28%7Bself._name%7D%29%27" title="Download person.py"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
   <polyline points="7 10 12 15 17 10"></polyline>
   <line x1="12" y1="15" x2="12" y2="3"></line>
@@ -3587,36 +3609,41 @@ b</code></pre>
 </button>
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a><span class="kw">class</span> Person:</span>
-<span id="cb14-2"><a href="#cb14-2"></a>    <span class="co">&quot;&quot;&quot;Simple class for modelling a person with children&quot;&quot;&quot;</span></span>
-<span id="cb14-3"><a href="#cb14-3"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name: <span class="bu">str</span>):</span>
-<span id="cb14-4"><a href="#cb14-4"></a>        <span class="co">&quot;&quot;&quot;Constructor</span></span>
-<span id="cb14-5"><a href="#cb14-5"></a></span>
-<span id="cb14-6"><a href="#cb14-6"></a><span class="co">        Parameters:</span></span>
-<span id="cb14-7"><a href="#cb14-7"></a><span class="co">            name (str): name of the Person</span></span>
-<span id="cb14-8"><a href="#cb14-8"></a><span class="co">        &quot;&quot;&quot;</span></span>
-<span id="cb14-9"><a href="#cb14-9"></a>        <span class="va">self</span>._name <span class="op">=</span> name</span>
-<span id="cb14-10"><a href="#cb14-10"></a>        <span class="va">self</span>._children <span class="op">=</span> []</span>
-<span id="cb14-11"><a href="#cb14-11"></a></span>
-<span id="cb14-12"><a href="#cb14-12"></a>    <span class="kw">def</span> get_children(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">list</span>:</span>
-<span id="cb14-13"><a href="#cb14-13"></a>        <span class="co">&quot;&quot;&quot;returns list&lt;Person&gt;&quot;&quot;&quot;</span></span>
-<span id="cb14-14"><a href="#cb14-14"></a>        <span class="cf">return</span> <span class="va">self</span>._children</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a><span class="im">from</span> __future__ <span class="im">import</span> annotations</span>
+<span id="cb14-2"><a href="#cb14-2"></a></span>
+<span id="cb14-3"><a href="#cb14-3"></a></span>
+<span id="cb14-4"><a href="#cb14-4"></a><span class="kw">class</span> Person:</span>
+<span id="cb14-5"><a href="#cb14-5"></a>    <span class="co">&quot;&quot;&quot;Simple class for modelling a person with children&quot;&quot;&quot;</span></span>
+<span id="cb14-6"><a href="#cb14-6"></a></span>
+<span id="cb14-7"><a href="#cb14-7"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name: <span class="bu">str</span>):</span>
+<span id="cb14-8"><a href="#cb14-8"></a>        <span class="co">&quot;&quot;&quot;Constructor for Person.</span></span>
+<span id="cb14-9"><a href="#cb14-9"></a></span>
+<span id="cb14-10"><a href="#cb14-10"></a><span class="co">        Parameters:</span></span>
+<span id="cb14-11"><a href="#cb14-11"></a><span class="co">            name (str): name of the Person</span></span>
+<span id="cb14-12"><a href="#cb14-12"></a><span class="co">        &quot;&quot;&quot;</span></span>
+<span id="cb14-13"><a href="#cb14-13"></a>        <span class="va">self</span>._name <span class="op">=</span> name</span>
+<span id="cb14-14"><a href="#cb14-14"></a>        <span class="va">self</span>._children <span class="op">=</span> []</span>
 <span id="cb14-15"><a href="#cb14-15"></a></span>
-<span id="cb14-16"><a href="#cb14-16"></a>    <span class="kw">def</span> add_child(<span class="va">self</span>, child):</span>
-<span id="cb14-17"><a href="#cb14-17"></a>        <span class="co">&quot;&quot;&quot;</span></span>
-<span id="cb14-18"><a href="#cb14-18"></a><span class="co">        adds the person as a child provided</span></span>
-<span id="cb14-19"><a href="#cb14-19"></a><span class="co">        they are not already a child, and child</span></span>
-<span id="cb14-20"><a href="#cb14-20"></a><span class="co">        is not self&#39;s parent</span></span>
+<span id="cb14-16"><a href="#cb14-16"></a>    <span class="kw">def</span> get_children(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">list</span>[Person]:</span>
+<span id="cb14-17"><a href="#cb14-17"></a>        <span class="co">&quot;&quot;&quot; Returns a list of the direct children of this</span></span>
+<span id="cb14-18"><a href="#cb14-18"></a><span class="co">        person.</span></span>
+<span id="cb14-19"><a href="#cb14-19"></a><span class="co">        &quot;&quot;&quot;</span></span>
+<span id="cb14-20"><a href="#cb14-20"></a>        <span class="cf">return</span> <span class="va">self</span>._children</span>
 <span id="cb14-21"><a href="#cb14-21"></a></span>
-<span id="cb14-22"><a href="#cb14-22"></a><span class="co">        Parameters:</span></span>
-<span id="cb14-23"><a href="#cb14-23"></a><span class="co">            child(Person): child to add</span></span>
-<span id="cb14-24"><a href="#cb14-24"></a><span class="co">        &quot;&quot;&quot;</span></span>
-<span id="cb14-25"><a href="#cb14-25"></a>        <span class="cf">if</span> child <span class="kw">not</span> <span class="kw">in</span> <span class="va">self</span>._children <span class="kw">and</span> <span class="op">\</span></span>
-<span id="cb14-26"><a href="#cb14-26"></a>           <span class="va">self</span> <span class="kw">not</span> <span class="kw">in</span> child.get_children():</span>
-<span id="cb14-27"><a href="#cb14-27"></a>            <span class="va">self</span>._children.append(child)</span>
-<span id="cb14-28"><a href="#cb14-28"></a></span>
-<span id="cb14-29"><a href="#cb14-29"></a>    <span class="kw">def</span> <span class="fu">__repr__</span>(<span class="va">self</span>):</span>
-<span id="cb14-30"><a href="#cb14-30"></a>        <span class="cf">return</span> <span class="ss">f&#39;Person(</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>_name<span class="sc">}</span><span class="ss">)&#39;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb14-22"><a href="#cb14-22"></a>    <span class="kw">def</span> add_child(<span class="va">self</span>, child: Person) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
+<span id="cb14-23"><a href="#cb14-23"></a>        <span class="co">&quot;&quot;&quot; Adds child as a child of this person provided they</span></span>
+<span id="cb14-24"><a href="#cb14-24"></a><span class="co">        are not already a child of this person, and they are</span></span>
+<span id="cb14-25"><a href="#cb14-25"></a><span class="co">        not this person&#39;s parent.</span></span>
+<span id="cb14-26"><a href="#cb14-26"></a></span>
+<span id="cb14-27"><a href="#cb14-27"></a><span class="co">        Parameters:</span></span>
+<span id="cb14-28"><a href="#cb14-28"></a><span class="co">            child(Person): child to add</span></span>
+<span id="cb14-29"><a href="#cb14-29"></a><span class="co">        &quot;&quot;&quot;</span></span>
+<span id="cb14-30"><a href="#cb14-30"></a>        <span class="cf">if</span> child <span class="kw">not</span> <span class="kw">in</span> <span class="va">self</span>._children <span class="kw">and</span> <span class="op">\</span></span>
+<span id="cb14-31"><a href="#cb14-31"></a>           <span class="va">self</span> <span class="kw">not</span> <span class="kw">in</span> child.get_children():</span>
+<span id="cb14-32"><a href="#cb14-32"></a>            <span class="va">self</span>._children.append(child)</span>
+<span id="cb14-33"><a href="#cb14-33"></a></span>
+<span id="cb14-34"><a href="#cb14-34"></a>    <span class="kw">def</span> <span class="fu">__repr__</span>(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
+<span id="cb14-35"><a href="#cb14-35"></a>        <span class="cf">return</span> <span class="ss">f&#39;Person(</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>_name<span class="sc">}</span><span class="ss">)&#39;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <script>
 (function() {
   try {
@@ -3693,8 +3720,8 @@ b</code></pre>
 </div>
 <p>Add 2 recursive methods for this class:</p>
 <ul>
-<li><p><code>num_descendants</code>: which takes no arguments and returns the total number of descendants that the person has (ie. number of children + number of grandchildren +number of great-grandchildren etc.)</p></li>
-<li><p><code>has_descendant</code>: which takes another <code>Person</code> object as a parameter and returns <code>True</code> if the provided <code>Person</code> object is a descendant of this <code>Person</code> and <code>False</code> otherwise (ie. if the person is a child, or grandchild etc.)</p></li>
+<li><p><code>num_descendants</code>: which takes no arguments and returns the total number of descendants that the person has (ie. number of children + number of grandchildren + number of great-grandchildren, etc.)</p></li>
+<li><p><code>has_descendant</code>: which takes another <code>Person</code> object as a parameter and returns <code>True</code> if the provided <code>Person</code> object is a descendant of the <code>Person</code> on which the method is called (ie. if the person is a child, or grandchild etc. of <code>self</code>) and <code>False</code> otherwise.</p></li>
 </ul>
 <p>Use this family to test your code and add more members as required!</p>
 <pre><code>Bob                                  Fred
@@ -3744,14 +3771,14 @@ b</code></pre>
 <div class="idle-filename-header">
 <div class="code-with-filename-file"><pre><svg width="18" height="18" viewbox="0 0 110 110" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
  <defs>
-  <lineargradient id="grad-698a89c8-175b6" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
-  <lineargradient id="grad-698a89c8-55d6" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e51-f6df" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e51-8790" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
  </defs>
- <path style="fill:url(#grad-698a89c8-175b6)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
- <path style="fill:url(#grad-698a89c8-55d6)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e51-f6df)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e51-8790)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
 </svg>
 <strong>person.py</strong></pre></div>
-<button class="idle-download-btn" data-filename="person.py" data-code="class%20Person%3A%0D%0A%20%20%20%20%22%22%22Simple%20class%20for%20modelling%20a%20person%20with%20children%22%22%22%0D%0A%20%20%20%20def%20__init__%28self%2C%20name%3A%20str%29%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22Constructor%0D%0A%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20name%20%28str%29%3A%20name%20of%20the%20Person%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20self._name%20%3D%20name%0D%0A%20%20%20%20%20%20%20%20self._children%20%3D%20%5B%5D%0D%0A%0D%0A%20%20%20%20def%20get_children%28self%29%20-%3E%20list%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22returns%20list%3CPerson%3E%22%22%22%0D%0A%20%20%20%20%20%20%20%20return%20self._children%0D%0A%0D%0A%20%20%20%20def%20add_child%28self%2C%20child%29%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20adds%20the%20person%20as%20a%20child%20provided%0D%0A%20%20%20%20%20%20%20%20they%20are%20not%20already%20a%20child%2C%20and%20child%0D%0A%20%20%20%20%20%20%20%20is%20not%20self%27s%20parent%0D%0A%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20child%28Person%29%3A%20child%20to%20add%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20if%20child%20not%20in%20self._children%20and%20%5C%0D%0A%20%20%20%20%20%20%20%20%20%20%20self%20not%20in%20child.get_children%28%29%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20self._children.append%28child%29%0D%0A%0D%0A%20%20%20%20def%20num_descendants%28self%29%20-%3E%20int%3A%0D%0A%0D%0A%20%20%20%20%20%20%20%20%23%20base%20-%20start%20with%200%20descendants%0D%0A%20%20%20%20%20%20%20%20descendants%20%3D%200%0D%0A%20%20%20%20%20%20%20%20for%20child%20in%20self._children%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%23%20for%20each%20child%2C%20add%201%20for%20the%20child%20themselves%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%23%20then%20add%20the%20child%27s%20children%20as%20descendants%20as%20well%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20descendants%20%2B%3D%201%20%2B%20child.num_descendants%28%29%0D%0A%20%20%20%20%20%20%20%20return%20descendants%0D%0A%0D%0A%20%20%20%20def%20has_descendant%28self%2C%20person%29%20-%3E%20bool%3A%0D%0A%0D%0A%20%20%20%20%20%20%20%20%23%20base%20case%20-%20is%20this%20your%20child%3F%0D%0A%20%20%20%20%20%20%20%20if%20person%20in%20self._children%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20True%0D%0A%0D%0A%20%20%20%20%20%20%20%20%23%20recursively%20check%20children%0D%0A%20%20%20%20%20%20%20%20for%20child%20in%20self._children%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%23%20is%20this%20your%20child%27s%20child%3F%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20child.has_descendant%28person%29%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20True%0D%0A%0D%0A%20%20%20%20%20%20%20%20%23%20base%20case%20-%20person%20is%20not%20your%20child%20or%20your%20children%27s%20child%0D%0A%20%20%20%20%20%20%20%20return%20False%0D%0A%0D%0A%20%20%20%20def%20__repr__%28self%29%3A%0D%0A%20%20%20%20%20%20%20%20return%20f%27Person%28%7Bself._name%7D%29%27%0D%0A%0D%0Abob%20%3D%20Person%28%27Bob%27%29%0D%0Afred%20%3D%20Person%28%27Fred%27%29%0D%0A%0D%0Abob_jr%20%3D%20Person%28%27Bob%20Jr.%27%29%0D%0Abob.add_child%28bob_jr%29%0D%0A%0D%0Abobby%20%3D%20Person%28%27Bobby%27%29%0D%0Abob_jr.add_child%28bobby%29%0D%0A%0D%0Alil_bobby_tables%20%3D%20Person%28%22Lil%27%20Bobby%20Tables%22%29%0D%0Abobby.add_child%28lil_bobby_tables%29%0D%0A%0D%0Amortimer%20%3D%20Person%28%27Mortimer%27%29%0D%0Abobby.add_child%28mortimer%29%0D%0A%0D%0Aprint%28bob.num_descendants%28%29%29%0D%0Aprint%28fred.num_descendants%28%29%29%0D%0Aprint%28bob.has_descendant%28mortimer%29%29%0D%0Aprint%28mortimer.has_descendant%28bob%29%29" title="Download person.py"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<button class="idle-download-btn" data-filename="person.py" data-code="from%20__future__%20import%20annotations%0D%0A%0D%0A%0D%0Aclass%20Person%3A%0D%0A%20%20%20%20%22%22%22Simple%20class%20for%20modelling%20a%20person%20with%20children%22%22%22%0D%0A%0D%0A%20%20%20%20def%20__init__%28self%2C%20name%3A%20str%29%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22Constructor%20for%20Person.%0D%0A%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20name%20%28str%29%3A%20name%20of%20the%20Person%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20self._name%20%3D%20name%0D%0A%20%20%20%20%20%20%20%20self._children%20%3D%20%5B%5D%0D%0A%0D%0A%20%20%20%20def%20get_children%28self%29%20-%3E%20list%5BPerson%5D%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22%20Returns%20a%20list%20of%20the%20direct%20children%20of%20this%0D%0A%20%20%20%20%20%20%20%20person.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20return%20self._children%0D%0A%0D%0A%20%20%20%20def%20add_child%28self%2C%20child%3A%20Person%29%20-%3E%20None%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22%20Adds%20child%20as%20a%20child%20of%20this%20person%20provided%20they%0D%0A%20%20%20%20%20%20%20%20are%20not%20already%20a%20child%20of%20this%20person%2C%20and%20they%20are%0D%0A%20%20%20%20%20%20%20%20not%20this%20person%27s%20parent.%0D%0A%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20child%28Person%29%3A%20child%20to%20add%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20if%20child%20not%20in%20self._children%20and%20%5C%0D%0A%20%20%20%20%20%20%20%20%20%20%20self%20not%20in%20child.get_children%28%29%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20self._children.append%28child%29%0D%0A%0D%0A%20%20%20%20def%20num_descendants%28self%29%20-%3E%20int%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22%20Returns%20the%20total%20number%20of%20descendants%20this%20person%20has.%20%22%22%22%0D%0A%0D%0A%20%20%20%20%20%20%20%20%23%20base%20-%20start%20with%200%20descendants%0D%0A%20%20%20%20%20%20%20%20descendants%20%3D%200%0D%0A%20%20%20%20%20%20%20%20for%20child%20in%20self._children%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%23%20for%20each%20child%2C%20add%201%20for%20the%20child%20themselves%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%23%20then%20add%20the%20child%27s%20children%20as%20descendants%20as%20well%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20descendants%20%2B%3D%201%20%2B%20child.num_descendants%28%29%0D%0A%20%20%20%20%20%20%20%20return%20descendants%0D%0A%0D%0A%20%20%20%20def%20has_descendant%28self%2C%20person%3A%20Person%29%20-%3E%20bool%3A%0D%0A%20%20%20%20%20%20%20%20%22%22%22%20Determines%20whether%20person%20is%20a%20descendant%20of%20self.%0D%0A%0D%0A%20%20%20%20%20%20%20%20Parameters%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20person%3A%20The%20potential%20descendant.%0D%0A%0D%0A%20%20%20%20%20%20%20%20Returns%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20True%20if%20person%20is%20a%20descendant%20of%20self%2C%20and%20False%20otherwise.%0D%0A%20%20%20%20%20%20%20%20%22%22%22%0D%0A%20%20%20%20%20%20%20%20%23%20base%20case%20-%20is%20this%20your%20child%3F%0D%0A%20%20%20%20%20%20%20%20if%20person%20in%20self._children%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20True%0D%0A%0D%0A%20%20%20%20%20%20%20%20%23%20recursively%20check%20children%0D%0A%20%20%20%20%20%20%20%20for%20child%20in%20self._children%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%23%20is%20this%20your%20child%27s%20child%3F%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20child.has_descendant%28person%29%3A%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20True%0D%0A%0D%0A%20%20%20%20%20%20%20%20%23%20base%20case%20-%20person%20is%20not%20your%20child%20or%20your%20children%27s%20child%0D%0A%20%20%20%20%20%20%20%20return%20False%0D%0A%0D%0A%20%20%20%20def%20__repr__%28self%29%3A%0D%0A%20%20%20%20%20%20%20%20return%20f%27Person%28%7Bself._name%7D%29%27%0D%0A%0D%0A%0D%0Abob%20%3D%20Person%28%27Bob%27%29%0D%0Afred%20%3D%20Person%28%27Fred%27%29%0D%0A%0D%0Abob_jr%20%3D%20Person%28%27Bob%20Jr.%27%29%0D%0Abob.add_child%28bob_jr%29%0D%0A%0D%0Abobby%20%3D%20Person%28%27Bobby%27%29%0D%0Abob_jr.add_child%28bobby%29%0D%0A%0D%0Alil_bobby_tables%20%3D%20Person%28%22Lil%27%20Bobby%20Tables%22%29%0D%0Abobby.add_child%28lil_bobby_tables%29%0D%0A%0D%0Amortimer%20%3D%20Person%28%27Mortimer%27%29%0D%0Abobby.add_child%28mortimer%29%0D%0A%0D%0Aprint%28bob.num_descendants%28%29%29%0D%0Aprint%28fred.num_descendants%28%29%29%0D%0Aprint%28bob.has_descendant%28mortimer%29%29%0D%0Aprint%28mortimer.has_descendant%28bob%29%29" title="Download person.py"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
   <polyline points="7 10 12 15 17 10"></polyline>
   <line x1="12" y1="15" x2="12" y2="3"></line>
@@ -3759,92 +3786,106 @@ b</code></pre>
 </button>
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a><span class="kw">class</span> Person:</span>
-<span id="cb16-2"><a href="#cb16-2"></a>    <span class="co">&quot;&quot;&quot;Simple class for modelling a person with children&quot;&quot;&quot;</span></span>
-<span id="cb16-3"><a href="#cb16-3"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name: <span class="bu">str</span>):</span>
-<span id="cb16-4"><a href="#cb16-4"></a>        <span class="co">&quot;&quot;&quot;Constructor</span></span>
-<span id="cb16-5"><a href="#cb16-5"></a></span>
-<span id="cb16-6"><a href="#cb16-6"></a><span class="co">        Parameters:</span></span>
-<span id="cb16-7"><a href="#cb16-7"></a><span class="co">            name (str): name of the Person</span></span>
-<span id="cb16-8"><a href="#cb16-8"></a><span class="co">        &quot;&quot;&quot;</span></span>
-<span id="cb16-9"><a href="#cb16-9"></a>        <span class="va">self</span>._name <span class="op">=</span> name</span>
-<span id="cb16-10"><a href="#cb16-10"></a>        <span class="va">self</span>._children <span class="op">=</span> []</span>
-<span id="cb16-11"><a href="#cb16-11"></a></span>
-<span id="cb16-12"><a href="#cb16-12"></a>    <span class="kw">def</span> get_children(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">list</span>:</span>
-<span id="cb16-13"><a href="#cb16-13"></a>        <span class="co">&quot;&quot;&quot;returns list&lt;Person&gt;&quot;&quot;&quot;</span></span>
-<span id="cb16-14"><a href="#cb16-14"></a>        <span class="cf">return</span> <span class="va">self</span>._children</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a><span class="im">from</span> __future__ <span class="im">import</span> annotations</span>
+<span id="cb16-2"><a href="#cb16-2"></a></span>
+<span id="cb16-3"><a href="#cb16-3"></a></span>
+<span id="cb16-4"><a href="#cb16-4"></a><span class="kw">class</span> Person:</span>
+<span id="cb16-5"><a href="#cb16-5"></a>    <span class="co">&quot;&quot;&quot;Simple class for modelling a person with children&quot;&quot;&quot;</span></span>
+<span id="cb16-6"><a href="#cb16-6"></a></span>
+<span id="cb16-7"><a href="#cb16-7"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name: <span class="bu">str</span>):</span>
+<span id="cb16-8"><a href="#cb16-8"></a>        <span class="co">&quot;&quot;&quot;Constructor for Person.</span></span>
+<span id="cb16-9"><a href="#cb16-9"></a></span>
+<span id="cb16-10"><a href="#cb16-10"></a><span class="co">        Parameters:</span></span>
+<span id="cb16-11"><a href="#cb16-11"></a><span class="co">            name (str): name of the Person</span></span>
+<span id="cb16-12"><a href="#cb16-12"></a><span class="co">        &quot;&quot;&quot;</span></span>
+<span id="cb16-13"><a href="#cb16-13"></a>        <span class="va">self</span>._name <span class="op">=</span> name</span>
+<span id="cb16-14"><a href="#cb16-14"></a>        <span class="va">self</span>._children <span class="op">=</span> []</span>
 <span id="cb16-15"><a href="#cb16-15"></a></span>
-<span id="cb16-16"><a href="#cb16-16"></a>    <span class="kw">def</span> add_child(<span class="va">self</span>, child):</span>
-<span id="cb16-17"><a href="#cb16-17"></a>        <span class="co">&quot;&quot;&quot;</span></span>
-<span id="cb16-18"><a href="#cb16-18"></a><span class="co">        adds the person as a child provided</span></span>
-<span id="cb16-19"><a href="#cb16-19"></a><span class="co">        they are not already a child, and child</span></span>
-<span id="cb16-20"><a href="#cb16-20"></a><span class="co">        is not self&#39;s parent</span></span>
+<span id="cb16-16"><a href="#cb16-16"></a>    <span class="kw">def</span> get_children(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">list</span>[Person]:</span>
+<span id="cb16-17"><a href="#cb16-17"></a>        <span class="co">&quot;&quot;&quot; Returns a list of the direct children of this</span></span>
+<span id="cb16-18"><a href="#cb16-18"></a><span class="co">        person.</span></span>
+<span id="cb16-19"><a href="#cb16-19"></a><span class="co">        &quot;&quot;&quot;</span></span>
+<span id="cb16-20"><a href="#cb16-20"></a>        <span class="cf">return</span> <span class="va">self</span>._children</span>
 <span id="cb16-21"><a href="#cb16-21"></a></span>
-<span id="cb16-22"><a href="#cb16-22"></a><span class="co">        Parameters:</span></span>
-<span id="cb16-23"><a href="#cb16-23"></a><span class="co">            child(Person): child to add</span></span>
-<span id="cb16-24"><a href="#cb16-24"></a><span class="co">        &quot;&quot;&quot;</span></span>
-<span id="cb16-25"><a href="#cb16-25"></a>        <span class="cf">if</span> child <span class="kw">not</span> <span class="kw">in</span> <span class="va">self</span>._children <span class="kw">and</span> <span class="op">\</span></span>
-<span id="cb16-26"><a href="#cb16-26"></a>           <span class="va">self</span> <span class="kw">not</span> <span class="kw">in</span> child.get_children():</span>
-<span id="cb16-27"><a href="#cb16-27"></a>            <span class="va">self</span>._children.append(child)</span>
-<span id="cb16-28"><a href="#cb16-28"></a></span>
-<span id="cb16-29"><a href="#cb16-29"></a>    <span class="kw">def</span> num_descendants(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
-<span id="cb16-30"><a href="#cb16-30"></a></span>
-<span id="cb16-31"><a href="#cb16-31"></a>        <span class="co"># base - start with 0 descendants</span></span>
-<span id="cb16-32"><a href="#cb16-32"></a>        descendants <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb16-33"><a href="#cb16-33"></a>        <span class="cf">for</span> child <span class="kw">in</span> <span class="va">self</span>._children:</span>
-<span id="cb16-34"><a href="#cb16-34"></a>            <span class="co"># for each child, add 1 for the child themselves</span></span>
-<span id="cb16-35"><a href="#cb16-35"></a>            <span class="co"># then add the child&#39;s children as descendants as well</span></span>
-<span id="cb16-36"><a href="#cb16-36"></a>            descendants <span class="op">+=</span> <span class="dv">1</span> <span class="op">+</span> child.num_descendants()</span>
-<span id="cb16-37"><a href="#cb16-37"></a>        <span class="cf">return</span> descendants</span>
-<span id="cb16-38"><a href="#cb16-38"></a></span>
-<span id="cb16-39"><a href="#cb16-39"></a>    <span class="kw">def</span> has_descendant(<span class="va">self</span>, person) <span class="op">-&gt;</span> <span class="bu">bool</span>:</span>
-<span id="cb16-40"><a href="#cb16-40"></a></span>
-<span id="cb16-41"><a href="#cb16-41"></a>        <span class="co"># base case - is this your child?</span></span>
-<span id="cb16-42"><a href="#cb16-42"></a>        <span class="cf">if</span> person <span class="kw">in</span> <span class="va">self</span>._children:</span>
-<span id="cb16-43"><a href="#cb16-43"></a>            <span class="cf">return</span> <span class="va">True</span></span>
+<span id="cb16-22"><a href="#cb16-22"></a>    <span class="kw">def</span> add_child(<span class="va">self</span>, child: Person) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
+<span id="cb16-23"><a href="#cb16-23"></a>        <span class="co">&quot;&quot;&quot; Adds child as a child of this person provided they</span></span>
+<span id="cb16-24"><a href="#cb16-24"></a><span class="co">        are not already a child of this person, and they are</span></span>
+<span id="cb16-25"><a href="#cb16-25"></a><span class="co">        not this person&#39;s parent.</span></span>
+<span id="cb16-26"><a href="#cb16-26"></a></span>
+<span id="cb16-27"><a href="#cb16-27"></a><span class="co">        Parameters:</span></span>
+<span id="cb16-28"><a href="#cb16-28"></a><span class="co">            child(Person): child to add</span></span>
+<span id="cb16-29"><a href="#cb16-29"></a><span class="co">        &quot;&quot;&quot;</span></span>
+<span id="cb16-30"><a href="#cb16-30"></a>        <span class="cf">if</span> child <span class="kw">not</span> <span class="kw">in</span> <span class="va">self</span>._children <span class="kw">and</span> <span class="op">\</span></span>
+<span id="cb16-31"><a href="#cb16-31"></a>           <span class="va">self</span> <span class="kw">not</span> <span class="kw">in</span> child.get_children():</span>
+<span id="cb16-32"><a href="#cb16-32"></a>            <span class="va">self</span>._children.append(child)</span>
+<span id="cb16-33"><a href="#cb16-33"></a></span>
+<span id="cb16-34"><a href="#cb16-34"></a>    <span class="kw">def</span> num_descendants(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
+<span id="cb16-35"><a href="#cb16-35"></a>        <span class="co">&quot;&quot;&quot; Returns the total number of descendants this person has. &quot;&quot;&quot;</span></span>
+<span id="cb16-36"><a href="#cb16-36"></a></span>
+<span id="cb16-37"><a href="#cb16-37"></a>        <span class="co"># base - start with 0 descendants</span></span>
+<span id="cb16-38"><a href="#cb16-38"></a>        descendants <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb16-39"><a href="#cb16-39"></a>        <span class="cf">for</span> child <span class="kw">in</span> <span class="va">self</span>._children:</span>
+<span id="cb16-40"><a href="#cb16-40"></a>            <span class="co"># for each child, add 1 for the child themselves</span></span>
+<span id="cb16-41"><a href="#cb16-41"></a>            <span class="co"># then add the child&#39;s children as descendants as well</span></span>
+<span id="cb16-42"><a href="#cb16-42"></a>            descendants <span class="op">+=</span> <span class="dv">1</span> <span class="op">+</span> child.num_descendants()</span>
+<span id="cb16-43"><a href="#cb16-43"></a>        <span class="cf">return</span> descendants</span>
 <span id="cb16-44"><a href="#cb16-44"></a></span>
-<span id="cb16-45"><a href="#cb16-45"></a>        <span class="co"># recursively check children</span></span>
-<span id="cb16-46"><a href="#cb16-46"></a>        <span class="cf">for</span> child <span class="kw">in</span> <span class="va">self</span>._children:</span>
-<span id="cb16-47"><a href="#cb16-47"></a>            <span class="co"># is this your child&#39;s child?</span></span>
-<span id="cb16-48"><a href="#cb16-48"></a>            <span class="cf">if</span> child.has_descendant(person):</span>
-<span id="cb16-49"><a href="#cb16-49"></a>                <span class="cf">return</span> <span class="va">True</span></span>
+<span id="cb16-45"><a href="#cb16-45"></a>    <span class="kw">def</span> has_descendant(<span class="va">self</span>, person: Person) <span class="op">-&gt;</span> <span class="bu">bool</span>:</span>
+<span id="cb16-46"><a href="#cb16-46"></a>        <span class="co">&quot;&quot;&quot; Determines whether person is a descendant of self.</span></span>
+<span id="cb16-47"><a href="#cb16-47"></a></span>
+<span id="cb16-48"><a href="#cb16-48"></a><span class="co">        Parameters:</span></span>
+<span id="cb16-49"><a href="#cb16-49"></a><span class="co">            person: The potential descendant.</span></span>
 <span id="cb16-50"><a href="#cb16-50"></a></span>
-<span id="cb16-51"><a href="#cb16-51"></a>        <span class="co"># base case - person is not your child or your children&#39;s child</span></span>
-<span id="cb16-52"><a href="#cb16-52"></a>        <span class="cf">return</span> <span class="va">False</span></span>
-<span id="cb16-53"><a href="#cb16-53"></a></span>
-<span id="cb16-54"><a href="#cb16-54"></a>    <span class="kw">def</span> <span class="fu">__repr__</span>(<span class="va">self</span>):</span>
-<span id="cb16-55"><a href="#cb16-55"></a>        <span class="cf">return</span> <span class="ss">f&#39;Person(</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>_name<span class="sc">}</span><span class="ss">)&#39;</span></span>
-<span id="cb16-56"><a href="#cb16-56"></a></span>
-<span id="cb16-57"><a href="#cb16-57"></a>bob <span class="op">=</span> Person(<span class="st">&#39;Bob&#39;</span>)</span>
-<span id="cb16-58"><a href="#cb16-58"></a>fred <span class="op">=</span> Person(<span class="st">&#39;Fred&#39;</span>)</span>
-<span id="cb16-59"><a href="#cb16-59"></a></span>
-<span id="cb16-60"><a href="#cb16-60"></a>bob_jr <span class="op">=</span> Person(<span class="st">&#39;Bob Jr.&#39;</span>)</span>
-<span id="cb16-61"><a href="#cb16-61"></a>bob.add_child(bob_jr)</span>
-<span id="cb16-62"><a href="#cb16-62"></a></span>
-<span id="cb16-63"><a href="#cb16-63"></a>bobby <span class="op">=</span> Person(<span class="st">&#39;Bobby&#39;</span>)</span>
-<span id="cb16-64"><a href="#cb16-64"></a>bob_jr.add_child(bobby)</span>
-<span id="cb16-65"><a href="#cb16-65"></a></span>
-<span id="cb16-66"><a href="#cb16-66"></a>lil_bobby_tables <span class="op">=</span> Person(<span class="st">&quot;Lil&#39; Bobby Tables&quot;</span>)</span>
-<span id="cb16-67"><a href="#cb16-67"></a>bobby.add_child(lil_bobby_tables)</span>
-<span id="cb16-68"><a href="#cb16-68"></a></span>
-<span id="cb16-69"><a href="#cb16-69"></a>mortimer <span class="op">=</span> Person(<span class="st">&#39;Mortimer&#39;</span>)</span>
-<span id="cb16-70"><a href="#cb16-70"></a>bobby.add_child(mortimer)</span>
-<span id="cb16-71"><a href="#cb16-71"></a></span>
-<span id="cb16-72"><a href="#cb16-72"></a><span class="bu">print</span>(bob.num_descendants())</span>
-<span id="cb16-73"><a href="#cb16-73"></a><span class="bu">print</span>(fred.num_descendants())</span>
-<span id="cb16-74"><a href="#cb16-74"></a><span class="bu">print</span>(bob.has_descendant(mortimer))</span>
-<span id="cb16-75"><a href="#cb16-75"></a><span class="bu">print</span>(mortimer.has_descendant(bob))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb16-51"><a href="#cb16-51"></a><span class="co">        Returns:</span></span>
+<span id="cb16-52"><a href="#cb16-52"></a><span class="co">            True if person is a descendant of self, and False otherwise.</span></span>
+<span id="cb16-53"><a href="#cb16-53"></a><span class="co">        &quot;&quot;&quot;</span></span>
+<span id="cb16-54"><a href="#cb16-54"></a>        <span class="co"># base case - is this your child?</span></span>
+<span id="cb16-55"><a href="#cb16-55"></a>        <span class="cf">if</span> person <span class="kw">in</span> <span class="va">self</span>._children:</span>
+<span id="cb16-56"><a href="#cb16-56"></a>            <span class="cf">return</span> <span class="va">True</span></span>
+<span id="cb16-57"><a href="#cb16-57"></a></span>
+<span id="cb16-58"><a href="#cb16-58"></a>        <span class="co"># recursively check children</span></span>
+<span id="cb16-59"><a href="#cb16-59"></a>        <span class="cf">for</span> child <span class="kw">in</span> <span class="va">self</span>._children:</span>
+<span id="cb16-60"><a href="#cb16-60"></a>            <span class="co"># is this your child&#39;s child?</span></span>
+<span id="cb16-61"><a href="#cb16-61"></a>            <span class="cf">if</span> child.has_descendant(person):</span>
+<span id="cb16-62"><a href="#cb16-62"></a>                <span class="cf">return</span> <span class="va">True</span></span>
+<span id="cb16-63"><a href="#cb16-63"></a></span>
+<span id="cb16-64"><a href="#cb16-64"></a>        <span class="co"># base case - person is not your child or your children&#39;s child</span></span>
+<span id="cb16-65"><a href="#cb16-65"></a>        <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb16-66"><a href="#cb16-66"></a></span>
+<span id="cb16-67"><a href="#cb16-67"></a>    <span class="kw">def</span> <span class="fu">__repr__</span>(<span class="va">self</span>):</span>
+<span id="cb16-68"><a href="#cb16-68"></a>        <span class="cf">return</span> <span class="ss">f&#39;Person(</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>_name<span class="sc">}</span><span class="ss">)&#39;</span></span>
+<span id="cb16-69"><a href="#cb16-69"></a></span>
+<span id="cb16-70"><a href="#cb16-70"></a></span>
+<span id="cb16-71"><a href="#cb16-71"></a>bob <span class="op">=</span> Person(<span class="st">&#39;Bob&#39;</span>)</span>
+<span id="cb16-72"><a href="#cb16-72"></a>fred <span class="op">=</span> Person(<span class="st">&#39;Fred&#39;</span>)</span>
+<span id="cb16-73"><a href="#cb16-73"></a></span>
+<span id="cb16-74"><a href="#cb16-74"></a>bob_jr <span class="op">=</span> Person(<span class="st">&#39;Bob Jr.&#39;</span>)</span>
+<span id="cb16-75"><a href="#cb16-75"></a>bob.add_child(bob_jr)</span>
+<span id="cb16-76"><a href="#cb16-76"></a></span>
+<span id="cb16-77"><a href="#cb16-77"></a>bobby <span class="op">=</span> Person(<span class="st">&#39;Bobby&#39;</span>)</span>
+<span id="cb16-78"><a href="#cb16-78"></a>bob_jr.add_child(bobby)</span>
+<span id="cb16-79"><a href="#cb16-79"></a></span>
+<span id="cb16-80"><a href="#cb16-80"></a>lil_bobby_tables <span class="op">=</span> Person(<span class="st">&quot;Lil&#39; Bobby Tables&quot;</span>)</span>
+<span id="cb16-81"><a href="#cb16-81"></a>bobby.add_child(lil_bobby_tables)</span>
+<span id="cb16-82"><a href="#cb16-82"></a></span>
+<span id="cb16-83"><a href="#cb16-83"></a>mortimer <span class="op">=</span> Person(<span class="st">&#39;Mortimer&#39;</span>)</span>
+<span id="cb16-84"><a href="#cb16-84"></a>bobby.add_child(mortimer)</span>
+<span id="cb16-85"><a href="#cb16-85"></a></span>
+<span id="cb16-86"><a href="#cb16-86"></a><span class="bu">print</span>(bob.num_descendants())</span>
+<span id="cb16-87"><a href="#cb16-87"></a><span class="bu">print</span>(fred.num_descendants())</span>
+<span id="cb16-88"><a href="#cb16-88"></a><span class="bu">print</span>(bob.has_descendant(mortimer))</span>
+<span id="cb16-89"><a href="#cb16-89"></a><span class="bu">print</span>(mortimer.has_descendant(bob))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <button class="idle-run-btn"><svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor">
   <polygon points="5 3 19 12 5 21 5 3"></polygon>
 </svg>
  Run Code</button>
 <div class="idle-output-header"><svg width="18" height="18" viewbox="0 0 110 110" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
  <defs>
-  <lineargradient id="grad-698a89c8-1116" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
-  <lineargradient id="grad-698a89c8-ea4c" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e51-16ffa" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3776ab;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#264e70;stop-opacity:1"></stop></lineargradient>
+  <lineargradient id="grad-698d0e51-e4e7" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1"></stop><stop offset="100%" style="stop-color:#ffe873;stop-opacity:1"></stop></lineargradient>
  </defs>
- <path style="fill:url(#grad-698a89c8-1116)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
- <path style="fill:url(#grad-698a89c8-ea4c)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e51-16ffa)" d="M 54.9,0 C 50.3,0 45.9,0.4 42.1,1.1 30.7,3.1 28.7,7.3 28.7,15 v 10.2 h 26.8 v 3.4 h -26.8 -10 c -7.8,0 -14.6,4.7 -16.7,13.6 -2.5,10.2 -2.6,16.6 0,27.2 1.9,7.9 6.4,13.6 14.2,13.6 h 9.2 v -12.2 c 0,-8.8 7.6,-16.6 16.7,-16.6 h 26.8 c 7.4,0 13.4,-6.1 13.4,-13.6 v -25.5 c 0,-7.2 -6.1,-12.7 -13.4,-13.9 C 64.3,0.3 59.5,0 54.9,0 Z m -14.5,8.2 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.3,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
+ <path style="fill:url(#grad-698d0e51-e4e7)" d="m 85.6,28.6 v 11.9 c 0,9.2 -7.8,17 -16.7,17 h -26.8 c -7.3,0 -13.4,6.3 -13.4,13.6 v 25.5 c 0,7.3 6.3,11.5 13.4,13.6 8.5,2.5 16.6,3 26.8,0 6.7,-2 13.4,-5.9 13.4,-13.6 V 86.5 h -26.8 v -3.4 h 26.8 13.4 c 7.8,0 10.7,-5.4 13.4,-13.6 2.8,-8.4 2.7,-16.5 0,-27.2 -1.9,-7.7 -5.6,-13.6 -13.4,-13.6 z m -15,64.6 c 2.8,0 5,2.3 5,5.1 0,2.8 -2.2,5.1 -5,5.1 -2.8,0 -5,-2.3 -5,-5.1 0,-2.8 2.2,-5.1 5,-5.1 z" />
 </svg>
 Output</div>
 <div class="cell-output cell-output-stdout idle-output-box">
