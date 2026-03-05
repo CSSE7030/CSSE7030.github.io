@@ -3462,7 +3462,7 @@ Note
 <p>This function should return the number of hours (as a <em>float</em>) that you have spent on the assignment. The purpose of this function is to enable you to verify that you understand how to submit to Gradescope as soon as possible (see <a href="#assignment-submission">Assignment Submission</a>), and to allow us to gauge difficulty level of this assignment in order to provide the best possible assistance. You will not be marked differently for spending more or less time on the assignment.</p>
 <p>If the Gradescope tests have been released, you must ensure this function passes the relevant test before seeking help regarding Gradescope issues for any of the later functions. The test will only ensure you have created a function with the correct name and number of arguments, which returns a float and does not prompt for input. You will not be marked incorrect for returning the ‘wrong’ number of hours.</p>
 <p><u>Example:</u></p>
-<div id="2adcfb60" class="cell" data-execution_count="2">
+<div id="cb6697e4" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> num_hours()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>3.1415962</code></pre>
@@ -3473,25 +3473,25 @@ Note
 <h4 class="anchored" data-anchor-id="task-has_wonguess-str-target-str---bool">Task 2 <code>has_won(guess: str, target: str) -&gt; bool</code></h4>
 <p>Returns True if the guess matches the target, False otherwise.</p>
 <p><u>Example:</u></p>
-<div id="d1ba9b75" class="cell" data-execution_count="3">
+<div id="154fc36d" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> has_won(<span class="st">&quot;password&quot;</span>, <span class="st">&quot;password&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>True</code></pre>
 </div>
 </div>
-<div id="358c9894" class="cell" data-execution_count="4">
+<div id="a11027b5" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> has_won(<span class="st">&quot;Password&quot;</span>, <span class="st">&quot;password&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>False</code></pre>
 </div>
 </div>
-<div id="c257301a" class="cell" data-execution_count="5">
+<div id="08d42024" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> has_won(<span class="st">&quot;p4ssword&quot;</span>, <span class="st">&quot;password&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>False</code></pre>
 </div>
 </div>
-<div id="ac1ab7de" class="cell" data-execution_count="6">
+<div id="4c0ad8e7" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> has_won(<span class="st">&quot;This word is WeiRd!!!111!!!&quot;</span>, <span class="st">&quot;This word is WeiRd!!!111!!!&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>True</code></pre>
@@ -3502,24 +3502,24 @@ Note
 <h4 class="anchored" data-anchor-id="task-get_max_guesses---int">Task 3 <code>get_max_guesses() -&gt; int</code></h4>
 <p>Prompt the user to enter the desired number of guesses for a game. The guess number must be a whole number between 5 and 9 (inclusive). The function should keep prompting the user until a valid number is entered.</p>
 <p><u>Example:</u></p>
-<div id="5a96a89e" class="cell" data-execution_count="7">
+<div id="e52bec37" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> get_max_guesses()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre><code>Please enter the number of guesses you require to guess the secret word. 6
 6</code></pre>
-<div id="e4036716" class="cell" data-execution_count="8">
+<div id="a062f788" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> get_max_guesses()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre><code>Please enter the number of guesses you require to guess the secret word. 5.0
 Please enter the number of guesses you require to guess the secret word. 5
 5</code></pre>
-<div id="4dfcfdd7" class="cell" data-execution_count="9">
+<div id="8460c85b" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> get_max_guesses()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre><code>Please enter the number of guesses you require to guess the secret word. seven
 Please enter the number of guesses you require to guess the secret word. 7
 7</code></pre>
-<div id="09c20a1b" class="cell" data-execution_count="10">
+<div id="516b7d0f" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> get_max_guesses()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre><code>Please enter the number of guesses you require to guess the secret word. 12
@@ -3549,19 +3549,19 @@ Note
 </div>
 </div>
 <p><u>Example:</u></p>
-<div id="f5338d4d" class="cell" data-execution_count="11">
+<div id="1da8fbf9" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> create_board(<span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
 <pre><code>[]</code></pre>
 </div>
 </div>
-<div id="4ac4aec1" class="cell" data-execution_count="12">
+<div id="7276e5cb" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> create_board(<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="8">
 <pre><code>[(&#39;------&#39;, &#39;------&#39;)]</code></pre>
 </div>
 </div>
-<div id="05244f21" class="cell" data-execution_count="13">
+<div id="3b98e579" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> create_board(<span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
 <pre><code>[(&#39;------&#39;, &#39;------&#39;),
@@ -3572,7 +3572,7 @@ Note
  (&#39;------&#39;, &#39;------&#39;)]</code></pre>
 </div>
 </div>
-<div id="eb5f47de" class="cell" data-execution_count="14">
+<div id="f796ed6d" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> create_board(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="10">
 <pre><code>[(&#39;------&#39;, &#39;------&#39;),
@@ -3590,7 +3590,20 @@ Note
 </section>
 <section id="task-display_boardboard-listtuplestr-str---none" class="level4">
 <h4 class="anchored" data-anchor-id="task-display_boardboard-listtuplestr-str---none">Task 5 <code>display_board(board: list[tuple[str, str]]) -&gt; None</code></h4>
-<p><em>Prints</em> the given board to the screen in a visually appealing format. See the below examples for the correct format. Note that Gradescope requires your output to match <em>exactly</em> (including whitespace).</p>
+<p><em>Prints</em> the given board to the screen in a visually appealing format. See the below examples for the correct format. Note that Gradescope requires your output to match <em>exactly</em> (including whitespace). You can assume that all entries in the board have exactly six characters.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -3605,7 +3618,7 @@ Tip
 </div>
 </div>
 <p><u>Example:</u></p>
-<div id="c402f6cb" class="cell" data-execution_count="15">
+<div id="3a7ce677" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> create_board(<span class="dv">5</span>)</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> display_board(board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3627,15 +3640,15 @@ Feedback: ------
 -----------------------</code></pre>
 </div>
 </div>
-<div id="4edb419a" class="cell" data-execution_count="16">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> [(<span class="st">&quot;planet&quot;</span>, <span class="st">&quot;GYBYYB&quot;</span>), (<span class="st">&quot;PENCIL&quot;</span>, <span class="st">&quot;GGGGGG&quot;</span>), (<span class="st">&quot;------&quot;</span>, <span class="st">&quot;------&quot;</span>)]</span>
+<div id="bd50cb6f" class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> [(<span class="st">&quot;planet&quot;</span>, <span class="st">&quot;GYBYYB&quot;</span>), (<span class="st">&quot;pencil&quot;</span>, <span class="st">&quot;GGGGGG&quot;</span>), (<span class="st">&quot;------&quot;</span>, <span class="st">&quot;------&quot;</span>)]</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> display_board(board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>-----------------------
 Guess 1:  planet
 Feedback: GYBYYB
 -----------------------
-Guess 2:  PENCIL
+Guess 2:  pencil
 Feedback: GGGGGG
 -----------------------
 Guess 3:  ------
@@ -3643,19 +3656,16 @@ Feedback: ------
 -----------------------</code></pre>
 </div>
 </div>
-<div id="bffaee96" class="cell" data-execution_count="17">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> [(<span class="st">&quot;random&quot;</span>, <span class="st">&quot;data&quot;</span>), (<span class="st">&quot;because this is&quot;</span>), (<span class="st">&quot;a test&quot;</span>)]</span>
+<div id="8371ab90" class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> [(<span class="st">&quot;random&quot;</span>, <span class="st">&quot;YYYYGB&quot;</span>), (<span class="st">&quot;dragon&quot;</span>, <span class="st">&quot;GGGGGG&quot;</span>)]</span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> display_board(board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>-----------------------
 Guess 1:  random
-Feedback: data
+Feedback: YYYYGB
 -----------------------
-Guess 2:  b
-Feedback: e
------------------------
-Guess 3:  a
-Feedback:  
+Guess 2:  dragon
+Feedback: GGGGGG
 -----------------------</code></pre>
 </div>
 </div>
@@ -3677,19 +3687,20 @@ Important
 </div>
 </div>
 <p><u>Example:</u></p>
-<div id="108b08b2" class="cell" data-execution_count="18">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> generate_secret_word()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="27b76690" class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> seed(<span class="dv">7030</span>)</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> generate_secret_word()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="14">
 <pre><code>&#39;pencil&#39;</code></pre>
 </div>
 </div>
-<div id="9c594b05" class="cell" data-execution_count="19">
+<div id="6feabe9f" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> generate_secret_word()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="15">
 <pre><code>&#39;dragon&#39;</code></pre>
 </div>
 </div>
-<div id="067c16d7" class="cell" data-execution_count="20">
+<div id="b82aaa1d" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> generate_secret_word()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="16">
 <pre><code>&#39;bright&#39;</code></pre>
@@ -3700,19 +3711,19 @@ Important
 <h4 class="anchored" data-anchor-id="task-validate_inputcommand-str---bool">Task 7 <code>validate_input(command: str) -&gt; bool</code></h4>
 <p>Returns a boolean that is True if (and only if) the given command is of a valid format. Possible valid command formats are given in <a href="#tbl-commands" class="quarto-xref">Table 2</a>.</p>
 <p><u>Example:</u></p>
-<div id="9c3dbfc2" class="cell" data-execution_count="21">
+<div id="70c74c22" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> validate_input(<span class="st">&quot;h&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="17">
 <pre><code>True</code></pre>
 </div>
 </div>
-<div id="e3571b06" class="cell" data-execution_count="22">
+<div id="32c94cba" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> validate_input(<span class="st">&quot;H&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="18">
 <pre><code>True</code></pre>
 </div>
 </div>
-<div id="3487b3dd" class="cell" data-execution_count="23">
+<div id="0c097038" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> validate_input(<span class="st">&quot;Help&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -3723,13 +3734,13 @@ Invalid guess! Guess must be 6 alphabetic characters
 <pre><code>False</code></pre>
 </div>
 </div>
-<div id="2ad0aa9d" class="cell" data-execution_count="24">
+<div id="73f0542a" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> validate_input(<span class="st">&quot;pencil&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="20">
 <pre><code>True</code></pre>
 </div>
 </div>
-<div id="11d37d06" class="cell" data-execution_count="25">
+<div id="85ca6bb1" class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> validate_input(<span class="st">&quot;Pencil&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -3740,7 +3751,7 @@ Invalid guess! Guess must consist of unique lowercase characters
 <pre><code>False</code></pre>
 </div>
 </div>
-<div id="513fc4f2" class="cell" data-execution_count="26">
+<div id="ede4f236" class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> validate_input(<span class="st">&quot;penccl&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -3751,7 +3762,7 @@ Invalid guess! Guess must consist of unique lowercase characters
 <pre><code>False</code></pre>
 </div>
 </div>
-<div id="464b62cc" class="cell" data-execution_count="27">
+<div id="14f73b26" class="cell" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> validate_input(<span class="st">&quot;pen123&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -3762,7 +3773,7 @@ Invalid guess! Guess must be 6 alphabetic characters
 <pre><code>False</code></pre>
 </div>
 </div>
-<div id="2de08830" class="cell" data-execution_count="28">
+<div id="2cf5c80c" class="cell" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb57"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> validate_input(<span class="st">&quot;qQ&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -3773,7 +3784,7 @@ Invalid guess! Guess must be 6 alphabetic characters
 <pre><code>False</code></pre>
 </div>
 </div>
-<div id="882bdf73" class="cell" data-execution_count="29">
+<div id="6c966ad3" class="cell" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb60"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> validate_input(<span class="st">&quot;hq&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -3784,7 +3795,7 @@ Invalid guess! Guess must be 6 alphabetic characters
 <pre><code>False</code></pre>
 </div>
 </div>
-<div id="82df46ca" class="cell" data-execution_count="30">
+<div id="73b23873" class="cell" data-execution_count="30">
 <div class="sourceCode cell-code" id="cb63"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> validate_input(<span class="st">&quot;&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -3800,19 +3811,19 @@ Invalid guess! Guess must be 6 alphabetic characters
 <h4 class="anchored" data-anchor-id="task-get_command---str">Task 8 <code>get_command() -&gt; str</code></h4>
 <p>Repeatedly prompts the user until they enter a valid command, at which point that command is returned. If the given command is not valid, <code>ENTER_COMMAND_MESSAGE</code> (given in <code>support.py</code>) will be printed to the screen. The possible valid commands are given in <a href="#tbl-commands" class="quarto-xref">Table 2</a>.</p>
 <p><u>Example:</u></p>
-<div id="cbc827e4" class="cell" data-execution_count="31">
+<div id="07a571ee" class="cell" data-execution_count="31">
 <div class="sourceCode cell-code" id="cb66"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> get_command()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre><code>Please enter your guess (h to see valid format): Help
 Invalid guess! Guess must be 6 alphabetic characters
 Please enter your guess (h to see valid format): H
 &#39;H&#39;</code></pre>
-<div id="7e7aacf3" class="cell" data-execution_count="32">
+<div id="845c4a4c" class="cell" data-execution_count="32">
 <div class="sourceCode cell-code" id="cb68"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> get_command()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre><code>Please enter your guess (h to see valid format): bright
 &#39;bright&#39;</code></pre>
-<div id="f9117473" class="cell" data-execution_count="33">
+<div id="916b7303" class="cell" data-execution_count="33">
 <div class="sourceCode cell-code" id="cb70"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> get_command()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre><code>Please enter your guess (h to see valid format): brie
@@ -3830,25 +3841,25 @@ Please enter your guess (h to see valid format): planet
 <h4 class="anchored" data-anchor-id="task-get_feedbackguess-str-target-str---str">Task 9 <code>get_feedback(guess: str, target: str) -&gt; str</code></h4>
 <p>Give feedback indicating how closely a guess matches a target word. Symbols and their meaning are described in <a href="#tbl-symbols" class="quarto-xref">Table 1</a>. Both guess and target will be the same length as <code>GUESS_LENGTH</code>, as defined in <code>support.py</code>. Both guess and target will contain unique letters.</p>
 <p><u>Example:</u></p>
-<div id="db0afc4f" class="cell" data-execution_count="34">
+<div id="d101f491" class="cell" data-execution_count="34">
 <div class="sourceCode cell-code" id="cb72"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> get_feedback(<span class="st">&quot;forest&quot;</span>, <span class="st">&quot;bright&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="27">
 <pre><code>&#39;BBYBBG&#39;</code></pre>
 </div>
 </div>
-<div id="f1f582be" class="cell" data-execution_count="35">
+<div id="82ad3b05" class="cell" data-execution_count="35">
 <div class="sourceCode cell-code" id="cb74"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> get_feedback(<span class="st">&quot;rocket&quot;</span>, <span class="st">&quot;rocket&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="28">
 <pre><code>&#39;GGGGGG&#39;</code></pre>
 </div>
 </div>
-<div id="612caa2e" class="cell" data-execution_count="36">
+<div id="b93bc4ec" class="cell" data-execution_count="36">
 <div class="sourceCode cell-code" id="cb76"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> get_feedback(<span class="st">&quot;123456&quot;</span>, <span class="st">&quot;joking&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="29">
 <pre><code>&#39;BBBBBB&#39;</code></pre>
 </div>
 </div>
-<div id="09623422" class="cell" data-execution_count="37">
+<div id="fa9a7515" class="cell" data-execution_count="37">
 <div class="sourceCode cell-code" id="cb78"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> get_feedback(<span class="st">&quot;123456&quot;</span>, <span class="st">&quot;132876&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="30">
 <pre><code>&#39;GYYBBG&#39;</code></pre>
@@ -3859,7 +3870,7 @@ Please enter your guess (h to see valid format): planet
 <h4 class="anchored" data-anchor-id="task-update_boardboard-listtuple-guess_num-int-guess-str-target-str---none">Task 10 <code>update_board(board: list[tuple], guess_num: int, guess: str, target: str) -&gt; None</code></h4>
 <p>Update a game board to incorporate a new guess and its corresponding feedback. This function must not return anything.</p>
 <p><u>Example:</u></p>
-<div id="e74173a5" class="cell" data-execution_count="38">
+<div id="d78c7699" class="cell" data-execution_count="38">
 <div class="sourceCode cell-code" id="cb80"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> create_board(<span class="dv">5</span>)</span>
 <span id="cb80-2"><a href="#cb80-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> display_board(board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3881,7 +3892,7 @@ Feedback: ------
 -----------------------</code></pre>
 </div>
 </div>
-<div id="143915be" class="cell" data-execution_count="39">
+<div id="c61c90c7" class="cell" data-execution_count="39">
 <div class="sourceCode cell-code" id="cb82"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> guess_num <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb82-2"><a href="#cb82-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> guess <span class="op">=</span> <span class="st">&quot;planet&quot;</span></span>
 <span id="cb82-3"><a href="#cb82-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> target <span class="op">=</span> generate_secret_word()</span>
@@ -3906,7 +3917,7 @@ Feedback: ------
 -----------------------</code></pre>
 </div>
 </div>
-<div id="567fccdb" class="cell" data-execution_count="40">
+<div id="967efe2a" class="cell" data-execution_count="40">
 <div class="sourceCode cell-code" id="cb84"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> guess_num <span class="op">=</span> <span class="dv">2</span></span>
 <span id="cb84-2"><a href="#cb84-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> guess <span class="op">=</span> <span class="st">&quot;flight&quot;</span></span>
 <span id="cb84-3"><a href="#cb84-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> update_board(board, guess_num, guess, target)</span>
@@ -3934,6 +3945,19 @@ Feedback: ------
 <section id="task-display_keyboardkeyboard-dictstr-str---none" class="level4">
 <h4 class="anchored" data-anchor-id="task-display_keyboardkeyboard-dictstr-str---none">Task 11 <code>display_keyboard(keyboard: dict[str, str]) -&gt; None</code></h4>
 <p><em>Prints</em> the given keyboard to the screen in a visually appealing format. See the below examples for the correct format. Note that Gradescope requires your output to match <em>exactly</em> (including whitespace).</p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You must use <code>create_keyboard</code> from <code>support.py</code> to make a keyboard before displaying it.</p>
+</div>
+</div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -3948,7 +3972,7 @@ Tip
 </div>
 </div>
 <p><u>Example:</u></p>
-<div id="79c856a0" class="cell" data-execution_count="41">
+<div id="75b03480" class="cell" data-execution_count="41">
 <div class="sourceCode cell-code" id="cb86"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> keyboard <span class="op">=</span> create_keyboard()</span>
 <span id="cb86-2"><a href="#cb86-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> display_keyboard(keyboard)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3966,7 +3990,7 @@ y: -    z: -
 -----------------------</code></pre>
 </div>
 </div>
-<div id="379d6396" class="cell" data-execution_count="42">
+<div id="a3dfd634" class="cell" data-execution_count="42">
 <div class="sourceCode cell-code" id="cb88"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> keyboard <span class="op">=</span> create_keyboard()</span>
 <span id="cb88-2"><a href="#cb88-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> keyboard[<span class="st">&quot;p&quot;</span>] <span class="op">=</span> <span class="st">&quot;G&quot;</span></span>
 <span id="cb88-3"><a href="#cb88-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> keyboard[<span class="st">&quot;l&quot;</span>] <span class="op">=</span> <span class="st">&quot;Y&quot;</span></span>
@@ -3990,7 +4014,7 @@ y: -    z: -
 -----------------------</code></pre>
 </div>
 </div>
-<div id="1bf27ce7" class="cell" data-execution_count="43">
+<div id="8ba1d092" class="cell" data-execution_count="43">
 <div class="sourceCode cell-code" id="cb90"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> dodgy <span class="op">=</span> {</span>
 <span id="cb90-2"><a href="#cb90-2" aria-hidden="true" tabindex="-1"></a>    <span class="dv">1</span>: <span class="dv">2</span>,</span>
 <span id="cb90-3"><a href="#cb90-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;three&quot;</span>: <span class="fl">4.0</span>,</span>
@@ -4010,7 +4034,7 @@ try: this?
 <h4 class="anchored" data-anchor-id="task-update_keyboardboard-listtuple-keyboard-dictstr-str-guess_num-int---none">Task 12 <code>update_keyboard(board: list[tuple], keyboard: dict[str, str], guess_num: int) -&gt; None</code></h4>
 <p>Update a keyboard to incorporate a board’s entry. Letters with green feedback remain green and cannot have their status changed. This function must not return anything.</p>
 <p><u>Example:</u></p>
-<div id="2836fe76" class="cell" data-execution_count="44">
+<div id="3eb02535" class="cell" data-execution_count="44">
 <div class="sourceCode cell-code" id="cb92"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> create_board(<span class="dv">5</span>)</span>
 <span id="cb92-2"><a href="#cb92-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> keyboard <span class="op">=</span> create_keyboard()</span>
 <span id="cb92-3"><a href="#cb92-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> display_board(board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -4033,7 +4057,7 @@ Feedback: ------
 -----------------------</code></pre>
 </div>
 </div>
-<div id="39038df7" class="cell" data-execution_count="45">
+<div id="d5828f38" class="cell" data-execution_count="45">
 <div class="sourceCode cell-code" id="cb94"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> display_keyboard(keyboard)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Keyboard:
@@ -4050,7 +4074,7 @@ y: -    z: -
 -----------------------</code></pre>
 </div>
 </div>
-<div id="025e9424" class="cell" data-execution_count="46">
+<div id="f33fec45" class="cell" data-execution_count="46">
 <div class="sourceCode cell-code" id="cb96"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> guess_num <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb96-2"><a href="#cb96-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> guess <span class="op">=</span> <span class="st">&quot;planet&quot;</span></span>
 <span id="cb96-3"><a href="#cb96-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> target <span class="op">=</span> generate_secret_word()</span>
@@ -4076,7 +4100,7 @@ Feedback: ------
 -----------------------</code></pre>
 </div>
 </div>
-<div id="66017ff0" class="cell" data-execution_count="47">
+<div id="34bd0993" class="cell" data-execution_count="47">
 <div class="sourceCode cell-code" id="cb98"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> display_keyboard(keyboard)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Keyboard:
@@ -4093,7 +4117,7 @@ y: -    z: -
 -----------------------</code></pre>
 </div>
 </div>
-<div id="8fc6bcea" class="cell" data-execution_count="48">
+<div id="b4def131" class="cell" data-execution_count="48">
 <div class="sourceCode cell-code" id="cb100"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> guess_num <span class="op">=</span> <span class="dv">2</span></span>
 <span id="cb100-2"><a href="#cb100-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> guess <span class="op">=</span> <span class="st">&quot;flight&quot;</span></span>
 <span id="cb100-3"><a href="#cb100-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> update_board(board, guess_num, guess, target)</span>
@@ -4118,7 +4142,7 @@ Feedback: ------
 -----------------------</code></pre>
 </div>
 </div>
-<div id="66363a49" class="cell" data-execution_count="49">
+<div id="76449787" class="cell" data-execution_count="49">
 <div class="sourceCode cell-code" id="cb102"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> display_keyboard(keyboard)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Keyboard:
@@ -4135,7 +4159,7 @@ y: -    z: -
 -----------------------</code></pre>
 </div>
 </div>
-<div id="96c86f88" class="cell" data-execution_count="50">
+<div id="6c0d470a" class="cell" data-execution_count="50">
 <div class="sourceCode cell-code" id="cb104"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb104-1"><a href="#cb104-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> guess_num <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb104-2"><a href="#cb104-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> guess <span class="op">=</span> <span class="st">&quot;flight&quot;</span></span>
 <span id="cb104-3"><a href="#cb104-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> update_keyboard(board, keyboard, guess_num)</span>
@@ -4160,7 +4184,7 @@ Feedback: ------
 -----------------------</code></pre>
 </div>
 </div>
-<div id="435706b5" class="cell" data-execution_count="51">
+<div id="dc0a8547" class="cell" data-execution_count="51">
 <div class="sourceCode cell-code" id="cb106"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb106-1"><a href="#cb106-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> display_keyboard(keyboard)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Keyboard:
@@ -4291,7 +4315,7 @@ Important
 <p>You are encouraged to complete <em>both</em> parts A and B of the <a href="https://web.library.uq.edu.au/library-services/it/learnuq-blackboard-help/academic-integrity-modules">academic integrity modules</a> <em>before</em> starting this assignment. Submitted assignments will be electronically checked for potential cases of plagiarism.</p>
 <!-- 
 
-::: {#bccf1630 .cell execution_count=52}
+::: {#9ab3c3ba .cell execution_count=52}
 ``` {.python .cell-code}
 >>> pass
 ```
