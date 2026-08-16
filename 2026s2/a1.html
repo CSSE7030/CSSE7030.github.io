@@ -3426,14 +3426,14 @@ Note
 <h4 class="anchored" data-anchor-id="task-get_board_sizeboard-listliststr---int">Task 1 <code>get_board_size(board: list[list[str]]) -&gt; int</code></h4>
 <p>This function should return the size of the given board. You may assume the board is square (has the same number of rows and columns).</p>
 <p><u>Examples:</u></p>
-<div id="112badfa" class="cell" data-execution_count="2">
+<div id="f48ea47d" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> [[EMPTY, EMPTY], [EMPTY, EMPTY]]</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> get_board_size(board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>2</code></pre>
 </div>
 </div>
-<div id="0d825919" class="cell" data-execution_count="3">
+<div id="1c03b92e" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> [[PLAYER_1, EMPTY, PLAYER_1, PLAYER_2], [EMPTY, EMPTY, PLAYER_2, PLAYER_1], [EMPTY, EMPTY, EMPTY, EMPTY], [PLAYER_1, PLAYER_1, PLAYER_1, PLAYER_1]]</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> get_board_size(board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
@@ -3445,14 +3445,14 @@ Note
 <h4 class="anchored" data-anchor-id="task-count_piecesboard-listliststr---tupleint-int">Task 2 <code>count_pieces(board: list[list[str]]) -&gt; tuple[int, int]</code></h4>
 <p>Counts the pieces on the given board and returns a tuple containing the number of pieces belonging to Player 1 and Player 2, respectively.</p>
 <p><u>Examples:</u></p>
-<div id="aecb6bf5" class="cell" data-execution_count="4">
+<div id="efb1cfb8" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> [[PLAYER_1, PLAYER_2], [PLAYER_2, EMPTY]]</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> count_pieces(board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>(1, 2)</code></pre>
 </div>
 </div>
-<div id="532f1a3c" class="cell" data-execution_count="5">
+<div id="3542b836" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> [[PLAYER_1, EMPTY, PLAYER_1, PLAYER_2], [EMPTY, EMPTY, PLAYER_2, PLAYER_1], [EMPTY, EMPTY, EMPTY, EMPTY], [PLAYER_1, PLAYER_1, PLAYER_1, PLAYER_1]]</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> count_pieces(board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
@@ -3477,7 +3477,7 @@ Tip
 </div>
 </div>
 <p><u>Examples:</u></p>
-<div id="2d418ee6" class="cell" data-execution_count="6">
+<div id="2993dd8a" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> create_initial_board(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>[[&#39;.&#39;, &#39;.&#39;, &#39;.&#39;, &#39;.&#39;],
@@ -3486,7 +3486,7 @@ Tip
  [&#39;.&#39;, &#39;.&#39;, &#39;.&#39;, &#39;.&#39;]]</code></pre>
 </div>
 </div>
-<div id="c8299267" class="cell" data-execution_count="7">
+<div id="a8c43780" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> create_initial_board(<span class="dv">8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
 <pre><code>[[&#39;.&#39;, &#39;.&#39;, &#39;.&#39;, &#39;.&#39;, &#39;.&#39;, &#39;.&#39;, &#39;.&#39;, &#39;.&#39;],
@@ -3504,7 +3504,7 @@ Tip
 <h4 class="anchored" data-anchor-id="task-displayboard-listliststr---none">Task 4 <code>display(board: list[list[str]]) -&gt; None</code></h4>
 <p>Prints the board in a user-friendly format.</p>
 <p><u>Examples:</u></p>
-<div id="54f18e40" class="cell" data-execution_count="8">
+<div id="ebca1595" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> create_initial_board(<span class="dv">4</span>)</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> display(board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3516,7 +3516,7 @@ Tip
 --------------------</code></pre>
 </div>
 </div>
-<div id="80ce5aa9" class="cell" data-execution_count="9">
+<div id="b6cd2fb4" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> [[PLAYER_1, EMPTY, PLAYER_1, PLAYER_2], [EMPTY, EMPTY, PLAYER_2, PLAYER_1], [EMPTY, EMPTY, EMPTY, EMPTY], [PLAYER_1, PLAYER_1, PLAYER_1, PLAYER_1]]</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> display(board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3533,7 +3533,7 @@ Tip
 <h4 class="anchored" data-anchor-id="task-show_outcomeboard-listliststr---none">Task 5 <code>show_outcome(board: list[list[str]]) -&gt; None</code></h4>
 <p>Show the outcome of a completed game of Reversi. This function does not need to check that the game has concluded, that will be handled by later functions.</p>
 <p><u>Examples:</u></p>
-<div id="fb2fab75" class="cell" data-execution_count="10">
+<div id="f07d184d" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> [[PLAYER_1, PLAYER_2], [PLAYER_2, EMPTY]]</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> show_outcome(board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3546,7 +3546,7 @@ Player 2 (O): 2 pieces
 Player 2 wins!</code></pre>
 </div>
 </div>
-<div id="034ad72f" class="cell" data-execution_count="11">
+<div id="12fd6a14" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> create_initial_board(<span class="dv">4</span>)</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> show_outcome(board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3561,7 +3561,7 @@ Player 2 (O): 2 pieces
 The game is a draw.</code></pre>
 </div>
 </div>
-<div id="b96265f0" class="cell" data-execution_count="12">
+<div id="a3c35e54" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> [[PLAYER_1, EMPTY, PLAYER_1, PLAYER_2], [EMPTY, EMPTY, PLAYER_2, PLAYER_1], [EMPTY, EMPTY, EMPTY, EMPTY], [PLAYER_1, PLAYER_1, PLAYER_1, PLAYER_1]]</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> show_outcome(board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3580,7 +3580,7 @@ Player 1 wins!</code></pre>
 <section id="task-is_validcommand-str-board-listliststr---bool" class="level4">
 <h4 class="anchored" data-anchor-id="task-is_validcommand-str-board-listliststr---bool">Task 6 <code>is_valid(command: str, board: list[list[str]]) -&gt; bool</code></h4>
 <p>Returns a boolean that is True if (and only if) the given command is of a valid format, in the context of the given board. Possible valid command formats are given in <a href="#tbl-actions" class="quarto-xref">Table 1</a>. Commands should be <em>case insensitive</em>. This function should not be responsible for determining whether a move can be made, only whether the move is expressed in the correct format. If the given command is not valid, an error message is printed.</p>
-<div id="fee007bc" class="cell" data-execution_count="13">
+<div id="4e441340" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> create_initial_board(<span class="dv">4</span>)</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> is_valid(<span class="st">&quot;Help&quot;</span>, board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3591,21 +3591,21 @@ Player 1 wins!</code></pre>
 </div>
 </div>
 <p><u>Examples:</u></p>
-<div id="d5c38e80" class="cell" data-execution_count="14">
+<div id="feed778e" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> create_initial_board(<span class="dv">4</span>)</span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> is_valid(<span class="st">&quot;H&quot;</span>, board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="14">
 <pre><code>True</code></pre>
 </div>
 </div>
-<div id="3d83a247" class="cell" data-execution_count="15">
+<div id="c7526e88" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> create_initial_board(<span class="dv">4</span>)</span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> is_valid(<span class="st">&quot;h&quot;</span>, board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="15">
 <pre><code>True</code></pre>
 </div>
 </div>
-<div id="ae0ebb1d" class="cell" data-execution_count="16">
+<div id="9369aa57" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> create_initial_board(<span class="dv">4</span>)</span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> is_valid(<span class="st">&quot;1 2&quot;</span>, board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3615,14 +3615,14 @@ Player 1 wins!</code></pre>
 <pre><code>False</code></pre>
 </div>
 </div>
-<div id="7f1ec3c1" class="cell" data-execution_count="17">
+<div id="30c5f4ee" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> create_initial_board(<span class="dv">4</span>)</span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> is_valid(<span class="st">&quot;1,2&quot;</span>, board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="17">
 <pre><code>True</code></pre>
 </div>
 </div>
-<div id="e6820a5c" class="cell" data-execution_count="18">
+<div id="fb3b3fdd" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> create_initial_board(<span class="dv">4</span>)</span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> is_valid(<span class="st">&quot;0,3&quot;</span>, board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3632,7 +3632,7 @@ Player 1 wins!</code></pre>
 <pre><code>False</code></pre>
 </div>
 </div>
-<div id="53f55a46" class="cell" data-execution_count="19">
+<div id="2f076d30" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> create_initial_board(<span class="dv">4</span>)</span>
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> is_valid(<span class="st">&quot;o,3&quot;</span>, board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3642,7 +3642,7 @@ Player 1 wins!</code></pre>
 <pre><code>False</code></pre>
 </div>
 </div>
-<div id="9dbd65ee" class="cell" data-execution_count="20">
+<div id="18f42d12" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> create_initial_board(<span class="dv">4</span>)</span>
 <span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> is_valid(<span class="st">&quot;1&quot;</span>, board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3652,7 +3652,7 @@ Player 1 wins!</code></pre>
 <pre><code>False</code></pre>
 </div>
 </div>
-<div id="ba4c8078" class="cell" data-execution_count="21">
+<div id="59948810" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> create_initial_board(<span class="dv">4</span>)</span>
 <span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> is_valid(<span class="st">&quot;6,7&quot;</span>, board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3662,7 +3662,7 @@ Player 1 wins!</code></pre>
 <pre><code>False</code></pre>
 </div>
 </div>
-<div id="a5242942" class="cell" data-execution_count="22">
+<div id="bfe7d94a" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> create_initial_board(<span class="dv">4</span>)</span>
 <span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> is_valid(<span class="st">&quot;&quot;</span>, board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3675,15 +3675,15 @@ Player 1 wins!</code></pre>
 </section>
 <section id="task-get_commandboard-listliststr---str" class="level4">
 <h4 class="anchored" data-anchor-id="task-get_commandboard-listliststr---str">Task 7 <code>get_command(board: list[list[str]]) -&gt; str</code></h4>
-<p>Repeatedly prompts the user until they enter a valid command. Returns the first valid command entered by the user. The user’s command will be <em>case insensitive</em>..</p>
+<p>Repeatedly prompts the user until they enter a valid command. Returns the first valid command entered by the user. The user’s command will be <em>case insensitive</em>.</p>
 <p><u>Examples:</u> <!-- XXX these aren't live so ensure they line up --></p>
-<div id="8984f8c8" class="cell" data-execution_count="23">
+<div id="26246055" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> make_initial_board(<span class="dv">4</span>)</span>
 <span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> get_command(board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre><code>Enter your move: h
 &#39;h&#39;</code></pre>
-<div id="00ba3687" class="cell" data-execution_count="24">
+<div id="2b54ab3d" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> make_initial_board(<span class="dv">4</span>)</span>
 <span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> get_command(board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -3691,7 +3691,7 @@ Player 1 wins!</code></pre>
 Invalid command.
 Enter your move: H
 &#39;H&#39;</code></pre>
-<div id="65c79b2c" class="cell" data-execution_count="25">
+<div id="17f0e188" class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> make_initial_board(<span class="dv">4</span>)</span>
 <span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> get_command(board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -3729,7 +3729,7 @@ Warning
 </div>
 </div>
 <p><u>Examples:</u></p>
-<div id="ac28cdbe" class="cell" data-execution_count="26">
+<div id="2030d826" class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> [[EMPTY, EMPTY, EMPTY, EMPTY], [EMPTY, PLAYER_1, EMPTY, EMPTY], [EMPTY, PLAYER_2, PLAYER_2, EMPTY], [EMPTY, EMPTY, EMPTY, EMPTY]]</span>
 <span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> display(board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3741,13 +3741,13 @@ Warning
 --------------------</code></pre>
 </div>
 </div>
-<div id="58cf922d" class="cell" data-execution_count="27">
+<div id="2646e40a" class="cell" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb58"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> can_flip_line(board, (<span class="dv">0</span>, <span class="dv">1</span>), <span class="st">&quot;down&quot;</span>, PLAYER_2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="24">
 <pre><code>True</code></pre>
 </div>
 </div>
-<div id="763b3093" class="cell" data-execution_count="28">
+<div id="d9af4c75" class="cell" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb60"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> [[EMPTY, EMPTY, EMPTY, EMPTY], [EMPTY, PLAYER_1, EMPTY, EMPTY], [EMPTY, PLAYER_2, PLAYER_2, EMPTY], [EMPTY, EMPTY, EMPTY, EMPTY]]</span>
 <span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> display(board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3759,13 +3759,13 @@ Warning
 --------------------</code></pre>
 </div>
 </div>
-<div id="421925ba" class="cell" data-execution_count="29">
+<div id="efc80e34" class="cell" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb62"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> can_flip_line(board, (<span class="dv">3</span>, <span class="dv">0</span>), <span class="st">&quot;left&quot;</span>, PLAYER_2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="26">
 <pre><code>False</code></pre>
 </div>
 </div>
-<div id="d6e91799" class="cell" data-execution_count="30">
+<div id="41ca9e22" class="cell" data-execution_count="30">
 <div class="sourceCode cell-code" id="cb64"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> [[EMPTY, EMPTY, EMPTY, EMPTY], [EMPTY, PLAYER_1, EMPTY, EMPTY], [EMPTY, PLAYER_2, PLAYER_2, EMPTY], [EMPTY, EMPTY, EMPTY, EMPTY]]</span>
 <span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> display(board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3777,13 +3777,13 @@ Warning
 --------------------</code></pre>
 </div>
 </div>
-<div id="731fb7a7" class="cell" data-execution_count="31">
+<div id="dad7c88e" class="cell" data-execution_count="31">
 <div class="sourceCode cell-code" id="cb66"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> can_flip_line(board, (<span class="dv">3</span>, <span class="dv">0</span>), <span class="st">&quot;right&quot;</span>, PLAYER_2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="28">
 <pre><code>False</code></pre>
 </div>
 </div>
-<div id="475b005d" class="cell" data-execution_count="32">
+<div id="58773feb" class="cell" data-execution_count="32">
 <div class="sourceCode cell-code" id="cb68"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> [[EMPTY, EMPTY, EMPTY, EMPTY], [EMPTY, PLAYER_1, EMPTY, EMPTY], [EMPTY, PLAYER_2, PLAYER_2, EMPTY], [EMPTY, EMPTY, EMPTY, EMPTY]]</span>
 <span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> display(board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3795,7 +3795,7 @@ Warning
 --------------------</code></pre>
 </div>
 </div>
-<div id="32a73815" class="cell" data-execution_count="33">
+<div id="8810912f" class="cell" data-execution_count="33">
 <div class="sourceCode cell-code" id="cb70"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> can_flip_line(board, (<span class="dv">3</span>, <span class="dv">3</span>), <span class="st">&quot;up-left&quot;</span>, PLAYER_1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="30">
 <pre><code>True</code></pre>
@@ -3827,7 +3827,7 @@ Warning
 </div>
 </div>
 <p><u>Examples:</u></p>
-<div id="e08108dc" class="cell" data-execution_count="34">
+<div id="7bc79dc4" class="cell" data-execution_count="34">
 <div class="sourceCode cell-code" id="cb72"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> [[EMPTY, EMPTY, EMPTY, EMPTY], [EMPTY, PLAYER_1, EMPTY, EMPTY], [EMPTY, PLAYER_2, PLAYER_2, EMPTY], [EMPTY, EMPTY, EMPTY, EMPTY]]</span>
 <span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> display(board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3839,13 +3839,13 @@ Warning
 --------------------</code></pre>
 </div>
 </div>
-<div id="38dce89e" class="cell" data-execution_count="35">
+<div id="42c2b3ab" class="cell" data-execution_count="35">
 <div class="sourceCode cell-code" id="cb74"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> can_flip_line(board, (<span class="dv">0</span>, <span class="dv">1</span>), <span class="st">&quot;down&quot;</span>, PLAYER_2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="32">
 <pre><code>True</code></pre>
 </div>
 </div>
-<div id="fe649404" class="cell" data-execution_count="36">
+<div id="39cd58b1" class="cell" data-execution_count="36">
 <div class="sourceCode cell-code" id="cb76"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> flip_line(board, (<span class="dv">0</span>, <span class="dv">1</span>), <span class="st">&quot;down&quot;</span>, PLAYER_2)</span>
 <span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> display(board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3857,7 +3857,7 @@ Warning
 --------------------</code></pre>
 </div>
 </div>
-<div id="71fb92a3" class="cell" data-execution_count="37">
+<div id="36ebf025" class="cell" data-execution_count="37">
 <div class="sourceCode cell-code" id="cb78"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> [[EMPTY, EMPTY, EMPTY, EMPTY], [EMPTY, PLAYER_1, EMPTY, EMPTY], [EMPTY, PLAYER_2, PLAYER_2, EMPTY], [EMPTY, EMPTY, EMPTY, EMPTY]]</span>
 <span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> display(board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3869,13 +3869,13 @@ Warning
 --------------------</code></pre>
 </div>
 </div>
-<div id="9fed36ae" class="cell" data-execution_count="38">
+<div id="89cc1ede" class="cell" data-execution_count="38">
 <div class="sourceCode cell-code" id="cb80"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> can_flip_line(board, (<span class="dv">3</span>, <span class="dv">3</span>), <span class="st">&quot;up-left&quot;</span>, PLAYER_1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="35">
 <pre><code>True</code></pre>
 </div>
 </div>
-<div id="825ac256" class="cell" data-execution_count="39">
+<div id="c5c29570" class="cell" data-execution_count="39">
 <div class="sourceCode cell-code" id="cb82"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> flip_line(board, (<span class="dv">3</span>, <span class="dv">3</span>), <span class="st">&quot;up-left&quot;</span>, PLAYER_1)</span>
 <span id="cb82-2"><a href="#cb82-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> display(board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3894,7 +3894,7 @@ Warning
 <p><code>pos</code> is a (row, column) tuple that uses zero-based indexing.</p>
 <p>This function only checks whether the move can be made; it does not modify the board.</p>
 <p><u>Examples:</u></p>
-<div id="cd49cb01" class="cell" data-execution_count="40">
+<div id="74d1820e" class="cell" data-execution_count="40">
 <div class="sourceCode cell-code" id="cb84"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> [[EMPTY, EMPTY, EMPTY, EMPTY], [EMPTY, PLAYER_1, EMPTY, EMPTY], [EMPTY, PLAYER_2, PLAYER_2, EMPTY], [EMPTY, EMPTY, EMPTY, EMPTY]]</span>
 <span id="cb84-2"><a href="#cb84-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> display(board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3906,13 +3906,13 @@ Warning
 --------------------</code></pre>
 </div>
 </div>
-<div id="627675f5" class="cell" data-execution_count="41">
+<div id="91534563" class="cell" data-execution_count="41">
 <div class="sourceCode cell-code" id="cb86"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> can_make_move(board, (<span class="dv">0</span>, <span class="dv">1</span>), PLAYER_2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="38">
 <pre><code>True</code></pre>
 </div>
 </div>
-<div id="591e9485" class="cell" data-execution_count="42">
+<div id="8d4eeb51" class="cell" data-execution_count="42">
 <div class="sourceCode cell-code" id="cb88"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> [[EMPTY, EMPTY, EMPTY, EMPTY], [EMPTY, PLAYER_1, EMPTY, EMPTY], [EMPTY, PLAYER_2, PLAYER_2, EMPTY], [EMPTY, EMPTY, EMPTY, EMPTY]]</span>
 <span id="cb88-2"><a href="#cb88-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> display(board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3924,13 +3924,13 @@ Warning
 --------------------</code></pre>
 </div>
 </div>
-<div id="1609350a" class="cell" data-execution_count="43">
+<div id="9e11be54" class="cell" data-execution_count="43">
 <div class="sourceCode cell-code" id="cb90"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> can_make_move(board, (<span class="dv">3</span>, <span class="dv">0</span>), PLAYER_2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="40">
 <pre><code>False</code></pre>
 </div>
 </div>
-<div id="eac08da1" class="cell" data-execution_count="44">
+<div id="59560fff" class="cell" data-execution_count="44">
 <div class="sourceCode cell-code" id="cb92"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> [[EMPTY, EMPTY, EMPTY, EMPTY], [EMPTY, PLAYER_1, EMPTY, EMPTY], [EMPTY, PLAYER_2, PLAYER_2, EMPTY], [EMPTY, EMPTY, EMPTY, EMPTY]]</span>
 <span id="cb92-2"><a href="#cb92-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> display(board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3942,7 +3942,7 @@ Warning
 --------------------</code></pre>
 </div>
 </div>
-<div id="b189f3e8" class="cell" data-execution_count="45">
+<div id="d1d775dc" class="cell" data-execution_count="45">
 <div class="sourceCode cell-code" id="cb94"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> can_make_move(board, (<span class="dv">3</span>, <span class="dv">3</span>), PLAYER_1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="42">
 <pre><code>True</code></pre>
@@ -3954,7 +3954,7 @@ Warning
 <p>Performs a move for <code>player</code> at <code>pos</code>, as described in the <a href="#gameplay">Gameplay</a> section. The player’s piece is placed at <code>pos</code>, and all opponent pieces that are captured as a result of the move are flipped to belong to player.</p>
 <p><code>pos</code> is a (row, column) tuple that uses zero-based indexing. You may assume that the move has already been checked for validity and can be successfully performed.</p>
 <p><u>Examples:</u></p>
-<div id="31fb1cdc" class="cell" data-execution_count="46">
+<div id="3972b139" class="cell" data-execution_count="46">
 <div class="sourceCode cell-code" id="cb96"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> [[EMPTY, EMPTY, EMPTY, EMPTY], [EMPTY, PLAYER_1, EMPTY, EMPTY], [EMPTY, PLAYER_2, PLAYER_2, EMPTY], [EMPTY, EMPTY, EMPTY, EMPTY]]</span>
 <span id="cb96-2"><a href="#cb96-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> display(board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3966,13 +3966,13 @@ Warning
 --------------------</code></pre>
 </div>
 </div>
-<div id="4d6cb94f" class="cell" data-execution_count="47">
+<div id="1903bce1" class="cell" data-execution_count="47">
 <div class="sourceCode cell-code" id="cb98"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> can_make_move(board, (<span class="dv">0</span>, <span class="dv">1</span>), PLAYER_2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="44">
 <pre><code>True</code></pre>
 </div>
 </div>
-<div id="eaa4e779" class="cell" data-execution_count="48">
+<div id="e499942a" class="cell" data-execution_count="48">
 <div class="sourceCode cell-code" id="cb100"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> make_move(board, (<span class="dv">0</span>, <span class="dv">1</span>), PLAYER_2)</span>
 <span id="cb100-2"><a href="#cb100-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> display(board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3984,7 +3984,7 @@ Warning
 --------------------</code></pre>
 </div>
 </div>
-<div id="93f49614" class="cell" data-execution_count="49">
+<div id="f9a4299e" class="cell" data-execution_count="49">
 <div class="sourceCode cell-code" id="cb102"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> [[EMPTY, EMPTY, EMPTY, EMPTY], [EMPTY, PLAYER_1, EMPTY, EMPTY], [EMPTY, PLAYER_2, PLAYER_2, EMPTY], [EMPTY, EMPTY, EMPTY, EMPTY]]</span>
 <span id="cb102-2"><a href="#cb102-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> display(board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3996,13 +3996,13 @@ Warning
 --------------------</code></pre>
 </div>
 </div>
-<div id="5756da2f" class="cell" data-execution_count="50">
+<div id="7a8ae831" class="cell" data-execution_count="50">
 <div class="sourceCode cell-code" id="cb104"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb104-1"><a href="#cb104-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> can_make_move(board, (<span class="dv">3</span>, <span class="dv">3</span>), PLAYER_1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="47">
 <pre><code>True</code></pre>
 </div>
 </div>
-<div id="7bff26cc" class="cell" data-execution_count="51">
+<div id="08896f09" class="cell" data-execution_count="51">
 <div class="sourceCode cell-code" id="cb106"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb106-1"><a href="#cb106-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> make_move(board, (<span class="dv">3</span>, <span class="dv">3</span>), PLAYER_1)</span>
 <span id="cb106-2"><a href="#cb106-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> display(board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -4019,7 +4019,7 @@ Warning
 <h4 class="anchored" data-anchor-id="task-has_valid_moveboard-listliststr-player-str---bool">Task 12 <code>has_valid_move(board: list[list[str]], player: str) -&gt; bool</code></h4>
 <p>Returns whether player has at least one valid move on the given board.</p>
 <p><u>Examples:</u></p>
-<div id="4642eec5" class="cell" data-execution_count="52">
+<div id="fb718a5d" class="cell" data-execution_count="52">
 <div class="sourceCode cell-code" id="cb108"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb108-1"><a href="#cb108-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> [[EMPTY, EMPTY, EMPTY, EMPTY], [EMPTY, PLAYER_1, EMPTY, EMPTY], [EMPTY, PLAYER_2, PLAYER_2, EMPTY], [EMPTY, EMPTY, EMPTY, EMPTY]]</span>
 <span id="cb108-2"><a href="#cb108-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> display(board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -4031,13 +4031,13 @@ Warning
 --------------------</code></pre>
 </div>
 </div>
-<div id="5540540f" class="cell" data-execution_count="53">
+<div id="a59fec20" class="cell" data-execution_count="53">
 <div class="sourceCode cell-code" id="cb110"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb110-1"><a href="#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> has_valid_move(board, PLAYER_1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="50">
 <pre><code>True</code></pre>
 </div>
 </div>
-<div id="0bdc977d" class="cell" data-execution_count="54">
+<div id="6764323d" class="cell" data-execution_count="54">
 <div class="sourceCode cell-code" id="cb112"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb112-1"><a href="#cb112-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> board <span class="op">=</span> [[PLAYER_1, PLAYER_1, PLAYER_1, PLAYER_1], [PLAYER_1, PLAYER_1, PLAYER_1, PLAYER_1], [PLAYER_1, PLAYER_1, PLAYER_2, EMPTY], [PLAYER_1, PLAYER_1, EMPTY, EMPTY]]</span>
 <span id="cb112-2"><a href="#cb112-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> display(board)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -4049,7 +4049,7 @@ Warning
 --------------------</code></pre>
 </div>
 </div>
-<div id="337a9c82" class="cell" data-execution_count="55">
+<div id="cdac8213" class="cell" data-execution_count="55">
 <div class="sourceCode cell-code" id="cb114"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb114-1"><a href="#cb114-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> has_valid_move(board, PLAYER_2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="52">
 <pre><code>False</code></pre>
